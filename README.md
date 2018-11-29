@@ -1,6 +1,6 @@
 ## Self-driven learning
 
-`stay foolish, stay hungry.`
+`Stay foolish, stay hungry.`
 
 Kaggle, Leetcode...
 
