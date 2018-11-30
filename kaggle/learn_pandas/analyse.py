@@ -9,6 +9,7 @@ import pandas as pd
 pd.set_option('display.max_rows', 5)
 
 reviews = pd.read_csv('../datasets/winemag-data-130k-v2.csv', index_col=0)
+
 # 中位数
 median_points = reviews.points.median()
 # 去重后的字段列表
