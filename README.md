@@ -2,10 +2,13 @@
 Starting from this **specific point**:
 - 1.5 years after Master's degree
 - 4 months since leaving Huawei
-- Skilled in Python, ML
-- Unskilled in DSA, DL, Data mining 
- 
-> `Stay foolish, stay hungry.`
-> `Live and learn.`
+- Tools: PyCharm, OneNote, MarkdownPad
+- Skilled in Python, DSA
+- Unskilled in ML, DL, Data mining 
+
+**Quotes**
+- `Live and learn.`
+- `Stay foolish, stay hungry.`
+- `Practice makes perfect.`
 
 2018.9.17 - present
