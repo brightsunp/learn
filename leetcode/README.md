@@ -1,5 +1,5 @@
 ## Learning from Leetcode
-Record valuable solutions **in my opinion**
+Record valuable solutions **in my opinion**.
 - Data Structures
 - Algorithms
 
