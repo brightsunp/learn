@@ -32,4 +32,4 @@ print(val_y.head(10))
 
 # 4. Calculate MAE
 val_mae = mean_absolute_error(val_predictions, val_y)
-print(val_mae)
+print('Validation MAE: {:,.0f}'.format(val_mae))
