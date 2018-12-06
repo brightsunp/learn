@@ -27,7 +27,7 @@ reindexed = reviews.rename_axis('wines', axis='index')
 powerlifting_meets = pd.read_csv("../datasets/powerlifting_meets.csv")
 powerlifting_competitors = pd.read_csv("../datasets/openpowerlifting.csv")
 
-# 最简单的联接
+# 联接：merge/concat/join
 simple_combined = powerlifting_meets.append(powerlifting_competitors)
 # simple_combined = pd.concat([powerlifting_meets, powerlifting_competitors])
 # 根据外键联接
