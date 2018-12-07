@@ -4,8 +4,9 @@ Record valuable solutions **in my opinion**.
 - Algorithms
 
 **Links**
-- Leetcode's page: [https://leetcode.com/brightsunp/](https://leetcode.com/brightsunp/)
-- Online training: [https://leetcode.com/problemset/all/](https://leetcode.com/problemset/all/)
-- Daily Coding Problem: [https://www.dailycodingproblem.com/subscribe](https://www.dailycodingproblem.com/subscribe)
+- [Leetcode's Page](https://leetcode.com/brightsunp/)
+- [Leetcode online training](https://leetcode.com/problemset/all/)
+- [Daily Coding Problem](https://www.dailycodingproblem.com/subscribe)
+- [Cracking the Coding Interview](https://github.com/careercup/CtCI-6th-Edition)
 
 2018.9.17 - present

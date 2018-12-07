@@ -4,7 +4,7 @@ Starting from this **specific point**:
 - 4 months since leaving Huawei
 - Tools: PyCharm, OneNote, MarkdownPad
 - Skilled in Python, DSA
-- Unskilled in ML, DL, Data mining 
+- Unskilled in ML, DL, Data Mining 
 
 **Quotes**
 - `Live and learn.`
