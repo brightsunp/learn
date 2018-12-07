@@ -6,6 +6,7 @@ __date__ = '2018/12/4'
 '''
 
 
+# 238. Product of Array Except Self
 class Solution1(object):
     def productExceptSelf(self, nums):
         """
@@ -13,7 +14,6 @@ class Solution1(object):
         :rtype: List[int]
         """
         # split: left * right
-        # no need to calc: ProductOfEntireNums
         left, right = [1], [1]
         for num in nums[:-1]:
             left.append(left[-1] * num)
@@ -25,6 +25,14 @@ class Solution1(object):
         for i in range(n):
             res.append(left[i] * right[n-1-i])
         return res
+
+
+# 297. Serialize and Deserialize Binary Tree
+class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
 
 
 class Solution2(object):
@@ -75,6 +83,7 @@ class Solution2(object):
         return root
 
 
+# 41. First Missing Positive
 class Solution3(object):
     def firstMissingPositive(self, nums):
         """
