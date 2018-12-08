@@ -85,7 +85,7 @@ class Solution2(object):
 
 # 41. First Missing Positive
 class Solution3(object):
-    def firstMissingPositive(self, nums):
+    def firstMissingPositive1(self, nums):
         """
         :type nums: List[int]
         :rtype: int
@@ -101,21 +101,23 @@ class Solution3(object):
                 return i+1
         return n+1
 
+    def firstMissingPositive2(self, nums):    
         # use set
-        # s = set()
-        # max_num = 0
-        # for num in nums:
-        #     if num > 0:
-        #         s.add(num)
-        #         max_num = max(max_num, num)
-        # for i in range(1, max_num+1):
-        #     if i not in s:
-        #         return i
-        # return max_num+1
+        s = set()
+        max_num = 0
+        for num in nums:
+            if num > 0:
+                s.add(num)
+                max_num = max(max_num, num)
+        for i in range(1, max_num+1):
+            if i not in s:
+                return i
+        return max_num+1
 
-
+        
+# 198. House Robber
 class Solution4(object):
-    def rob(self, nums):
+    def rob1(self, nums):
         """
         :type nums: List[int]
         :rtype: int
@@ -125,12 +127,13 @@ class Solution4(object):
         for num in nums:
             pre, cur = cur, max(pre + num, cur)
         return cur
-
-        # n = len(nums)
-        # if not n:
-        #     return 0
-        # dp = [0] * (n+1)
-        # dp[1] = nums[0]
-        # for i in range(2, n+1):
-        #     dp[i] = max(dp[i-1], nums[i-1]+dp[i-2])
-        # return dp[n]
+    
+    def rob2(self, nums):
+        n = len(nums)
+        if not n:
+            return 0
+        dp = [0] * (n+1)
+        dp[1] = nums[0]
+        for i in range(2, n+1):
+            dp[i] = max(dp[i-1], nums[i-1]+dp[i-2])
+        return dp[n]
