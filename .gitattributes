@@ -2,7 +2,6 @@
 *.go linguist-language=python
 # lfs
 kaggle/datasets/ResNet-50 filter=lfs diff=lfs merge=lfs -text
-kaggle/datasets/seefood filter=lfs diff=lfs merge=lfs -text
 kaggle/datasets/AER_credit_card_data.csv filter=lfs diff=lfs merge=lfs -text
 kaggle/datasets/imagenet_class_index.json filter=lfs diff=lfs merge=lfs -text
 kaggle/datasets/openpowerlifting.csv filter=lfs diff=lfs merge=lfs -text
