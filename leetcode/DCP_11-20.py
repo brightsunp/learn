@@ -47,8 +47,6 @@ class Solution2(object):
             
 
 # Reservoir sampling
-import random
-
 class Solution3(object):
     def getRandom(self, stream):
         # uniform probability: 1/(i+1)
@@ -145,4 +143,3 @@ class Solution7(object):
             curA = curA.next if curA else headB
             curB = curB.next if curB else headA
         return curA
-        
