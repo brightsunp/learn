@@ -8,5 +8,6 @@ __pycache__
 *.pyc
 
 # Data
+datasets/
 seefood/
 dogs/
