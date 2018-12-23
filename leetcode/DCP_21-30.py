@@ -106,7 +106,84 @@ class Solution3(object):
 
 
 # Lock a binary tree
-# 44. Wildcard Matching
-# 10. Regular Expression Matching
 
-     
+
+# 44. Wildcard Matching
+class Solution5_1(object):
+    def isMatch(self, s, p):
+        """
+        :type s: str
+        :type p: str
+        :rtype: bool
+        """
+        # dp[i][j]: if s[:i] matches p[:j]
+        m, n = len(s), len(p)
+        dp = [[False for _ in range(n+1)] for _ in range(m+1)]
+        dp[0][0] = True
+        for j in range(1, n+1):
+            if p[j-1] == '*':
+                dp[0][j] = dp[0][j-1]
+                
+        for i in range(1, m+1):
+            for j in range(1, n+1):
+                if p[j-1] == '*':
+                    # key point: j forward or i forward
+                    dp[i][j] = dp[i][j-1] or dp[i-1][j]
+                elif p[j-1] == '?' or p[j-1] == s[i-1]:
+                    dp[i][j] = dp[i-1][j-1]
+        return dp[m][n]
+
+        
+# 10. Regular Expression Matching
+class Solution5_2(object):
+    def isMatch(self, s, p):
+        """
+        :type s: str
+        :type p: str
+        :rtype: bool
+        """
+        # dp[i][j]: if s[:i] matches p[:j]
+        m, n = len(s), len(p)
+        dp = [[False for _ in range(n+1)] for _ in range(m+1)]
+        dp[0][0] = True
+        
+        for i in range(m+1):
+            for j in range(1, n+1):
+                if j > 1 and p[j-1] == '*':
+                    # preceding pattern repeats 0 or more times
+                    dp[i][j] = dp[i][j-2]
+                    if i > 0 and (p[j-2] == '.' or p[j-2] == s[i-1]):
+                        dp[i][j] = dp[i][j] or dp[i-1][j]
+                elif i > 0 and (p[j-1] == '.' or p[j-1] == s[i-1]):
+                    dp[i][j] = dp[i-1][j-1]
+        return dp[m][n]
+
+
+# Run-length encoding and decoding
+class Solution6(object):
+    def encode(self, s):
+        """
+        :input s: 'AAAABBBCCDAA'
+        :output encoded_s: '4A3B2C1D2A'
+        """
+        res = []
+        count, pre = 0, '#'
+        for i, char in enumerate(s):
+            if char == pre:
+                count += 1
+            else:
+                # find switch pos
+                if pre != '#':
+                    res.append(str(count)+pre)
+                count, pre = 1, char
+            if i == len(s)-1:
+                res.append(str(count)+pre)
+        return ''.join(res)
+
+    def decode(self, s):
+        res = []
+        for i in range(0, len(s), 2):
+            cur = s[i:i+2]
+            count, char = int(cur[0]), cur[1]
+            res.append(char * count)
+        return ''.join(res)
