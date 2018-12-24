@@ -187,3 +187,29 @@ class Solution6(object):
             count, char = int(cur[0]), cur[1]
             res.append(char * count)
         return ''.join(res)
+
+
+# 42. Trapping Rain Water
+class Solution7(object):
+    def trap(self, height):
+        """
+        :type height: List[int]
+        :rtype: int
+        """
+        # cur_holder = max(min(left_max_height, right_max_height)-cur_height, 0)
+        # two pointers: just avoid those two-step comparision
+        res, left_max, right_max, lo, hi = 0, 0, 0, 0, len(height) - 1
+        while lo <= hi:
+            if height[lo] < height[hi]:
+                if height[lo] > left_max:
+                    left_max = height[lo]
+                else:
+                    res += left_max - height[lo]
+                lo += 1
+            else:
+                if height[hi] > right_max:
+                    right_max = height[hi]
+                else:
+                    res += right_max - height[hi]
+                hi -= 1
+        return res
