@@ -13,7 +13,7 @@ class Solution1(object):
         :type intervals: List[List[int]]
         :rtype: int
         """
-        # find maximum number of rooms for lectures at a time
+        # find maximum number of lectures at a time
         arr, dep = tuple(zip(*intervals))
         arr = sorted(arr)
         dep = sorted(dep)
@@ -21,7 +21,7 @@ class Solution1(object):
         i = j = 0
         # merge process of mergeSort
         while i < len(arr) and j < len(dep):
-            if (arr[i] < dep[j]):
+            if arr[i] < dep[j]:
                 cur, i = cur+1, i+1
                 res = max(res, cur)
             else:
@@ -106,6 +106,50 @@ class Solution3(object):
 
 
 # Lock a binary tree
+class Solution4(object):
+    def __init__(self, val, left=None, right=None, parent=None):
+        self.val = val
+        self.left = left
+        self.right = right
+        self.parent = parent
+        
+        self._is_locked = False
+        self.locked_descendants_count = 0
+
+    def _can_lock_or_unlock(self):
+        if self.locked_descendants_count > 0:
+            return False
+        cur = self.parent
+        while cur:
+            if cur._is_locked:
+                return False
+            cur = cur.parent
+        return True
+
+    def is_locked(self):
+        return self._is_locked
+
+    def lock(self):
+        if self._can_lock_or_unlock():
+            # increment count in all ancestors
+            self._is_locked = True
+            cur = self.parent
+            while cur:
+                cur.locked_descendants_count += 1
+                cur = cur.parent
+            return True
+        return False
+
+    def unlock(self):
+        if self._can_lock_or_unlock():
+            # decrement count in all ancestors
+            self._is_locked = False
+            cur = self.parent
+            while cur:
+                cur.locked_descendants_count -= 1
+                cur = cur.parent
+            return True
+        return False
 
 
 # 44. Wildcard Matching
