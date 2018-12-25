@@ -1,40 +1,70 @@
-#!/usr/bin/python
-# coding=utf-8
-'''
-__author__ = 'sunp'
-__date__ = '2018/12/24'
-'''
+#!/usr/bin/env python
+# coding: utf-8
 
+# In[1]:
+
+
+# set environments
+get_ipython().run_line_magic('matplotlib', 'inline')
 import pandas as pd
-import matplotlib.pyplot as plt
 
+
+# In[2]:
+
+
+# read data
 reviews = pd.read_csv('../datasets/winemag-data-130k-v2.csv', index_col=0)
-print(reviews.head(5))
+reviews.head()
 
-# 1. Bar chart
+
+# In[3]:
+
+
+# 1. Bat chart
 # nominal variables
-reviews['province'].value_counts().head(10).plot.bar()
-# (reviews['province'].value_counts().head(10) / len(reviews)).plot.bar()
-plt.show()
+reviews.province.value_counts().head(10).plot.bar()
+
+
+# In[4]:
+
+
 # ordinal variables
-reviews['points'].value_counts().sort_index().plot.bar()
-plt.show()
+reviews.points.value_counts().sort_index().plot.bar()
+
+
+# In[5]:
+
 
 # 2. Line chart
-# used if: 1)many unique values; 2)ordinal variables
-reviews['points'].value_counts().sort_index().plot.line()
-plt.show()
-# Area charts: bottom shaded in
-reviews['points'].value_counts().sort_index().plot.area()
-plt.show()
+# if many unique values
+reviews.points.value_counts().sort_index().plot.line()
+
+
+# In[6]:
+
+
+# Area chart: with bottom shaded in
+reviews.points.value_counts().sort_index().plot.area()
+
+
+# In[7]:
+
 
 # 3. Histogram
 # break into even intervals
-reviews[reviews['price'] < 200]['price'].plot.hist()
-plt.show()
-# how to deal with skewed data
-reviews['price'].plot.hist()
-plt.show()
-# ordinal variables
-reviews['points'].plot.hist()
-plt.show()
+reviews[reviews.price < 200].price.plot.hist()
+
+
+# In[8]:
+
+
+# skewed data
+reviews.price.plot.hist()
+
+
+# In[9]:
+
+
+# compare to line chart
+reviews.points.plot.hist()
+
