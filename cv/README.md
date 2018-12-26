@@ -41,7 +41,8 @@
 ---
 
 # 开源项目
-- [learn](https://github.com/brightsunp/learn)：不断充电，记录自己学习算法和ML模型的过程。
+- [learn](https://github.com/brightsunp/learn)：不断充电，记录自己学习和工作的总结。
+- [implement-ML-models](https://github.com/brightsunp/implement-ML-models)：手写 ML 模型，加深对算法原理的理解。
 - [dfld_crawler](https://github.com/brightsunp/dfld_crawler)：一个简单的 `Scrapy` 爬虫，抓取简历判别模型的验证数据。
 
 ---
