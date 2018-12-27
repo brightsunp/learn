@@ -4,7 +4,7 @@
 - Email：[sunp@whu.edu.cn](mailto:sunp@whu.edu.cn)
 - Github：[https://github.com/brightsunp](https://github.com/brightsunp)
 - 技术博客：[https://brightsunp.github.io/](https://brightsunp.github.io/)
-- 期望职位：NLP / 算法 / 数据挖掘
+- 期望职位：NLP / 机器学习 / 算法 / 数据挖掘
 
 ---
 
@@ -34,16 +34,16 @@
 - 在日常的运维中，我开发和重构了常用的工具类，将任务落实为自动化脚本，提升了整个团队的工作效率，荣获团队的“明日之星奖”。
 
 ### 运营商 GUI 项目
-- 界面可视化项目：采用 `wxPython` 框架，便于用户进行 license 文件的相关操作。
+- 界面可视化项目：采用 `wxPython` 框架，便于用户对 license 文件进行操作。
 - 在此项目中，我负责数据分析、处理、存储等模块的开发，用 `gettext` 实现了中英文切换。
 - 我参与了团队代码的交叉 review，设计和编写 test-driven 代码，使得项目零缺陷交付。
 
 ---
 
 # 开源项目
-- [learn](https://github.com/brightsunp/learn)：不断充电，记录自己学习和工作的总结。
+- [learn](https://github.com/brightsunp/learn)：不断充电，记录自己对学习和工作的总结。
 - [implement-ML-models](https://github.com/brightsunp/implement-ML-models)：手写 ML 模型，加深对算法原理的理解。
-- [dfld_crawler](https://github.com/brightsunp/dfld_crawler)：一个简单的 `Scrapy` 爬虫，抓取简历判别模型的验证数据。
+- [dfld_crawler](https://github.com/brightsunp/dfld_crawler)：一个简单的 `Scrapy` 爬虫，用来抓取简历判别模型的验证数据。
 
 ---
 
