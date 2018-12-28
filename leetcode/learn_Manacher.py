@@ -35,8 +35,6 @@ The above solution is quite concise. However, nothing can stop us optimizing qua
 Step 1. transform 'abba' => '^#a#b#b#a#$': avoid even-length-palindromes and bounds
 Step 2. calculate each position's LPS: use symmetry to avoid redundant calculation
 '''
-
-
 class Solution1_2(object):
     def longestPalindrome(self, s):
         """
@@ -86,7 +84,7 @@ class Solution2_1(object):
 
 class Solution2_2(object):
     def shortestPalindrome(self, s):
-        # startswith implemented in C
+        # startswith implemented in C: avoid slow compare loop in Python
         r = s[::-1]
         for i in range(len(s) + 1):
             if s.startswith(r[i:]):

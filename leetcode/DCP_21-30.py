@@ -15,8 +15,7 @@ class Solution1(object):
         """
         # find maximum number of lectures at a time
         arr, dep = tuple(zip(*intervals))
-        arr = sorted(arr)
-        dep = sorted(dep)
+        arr, dep = sorted(arr), sorted(dep)
         res = cur = 0
         i = j = 0
         # merge process of mergeSort
@@ -220,8 +219,7 @@ class Solution6(object):
                 if pre != '#':
                     res.append(str(count)+pre)
                 count, pre = 1, char
-            if i == len(s)-1:
-                res.append(str(count)+pre)
+        res.append(str(count)+pre)
         return ''.join(res)
 
     def decode(self, s):
