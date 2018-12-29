@@ -52,3 +52,27 @@ class Solution1_2(object):
             insort(win, nums[i])
             res.append(win[(k-1)/2]*1.0 if odd else (win[k/2-1]+win[k/2])/2.0)
         return res
+
+
+# 75. Sort Colors
+class Solution2(object):
+    def sortColors(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: void Do not return anything, modify nums in-place instead.
+        """
+        # mind blowing from counting-sort
+        n0 = n1 = n2 = -1
+        for num in nums:
+            if num == 0:
+                n2, n1, n0 = n2+1, n1+1, n0+1
+                nums[n2] = 2
+                nums[n1] = 1
+                nums[n0] = 0
+            elif num == 1:
+                n2, n1 = n2+1, n1+1
+                nums[n2] = 2
+                nums[n1] = 1
+            else:
+                n2 += 1
+                nums[n2] = 2
