@@ -76,3 +76,98 @@ class Solution2(object):
             else:
                 n2 += 1
                 nums[n2] = 2
+
+
+# 289. Game of Life
+class Solution3(object):
+    def gameOfLife(self, board):
+        """
+        :type board: List[List[int]]
+        :rtype: void Do not return anything, modify board in-place instead.
+        """
+        # use 2-bits to store independent states: [cur, pre]
+        if not board or len(board) == 0:
+            return
+        m, n = len(board), len(board[0])
+
+        for i in range(m):
+            for j in range(n):
+                lives = self.live_neighbors(board, i, j, m, n)
+                # 01 -> 11
+                if board[i][j] == 1 and lives in [2, 3]:
+                    board[i][j] = 3
+                # 00 -> 10
+                if board[i][j] == 0 and lives == 3:
+                    board[i][j] = 2
+
+        for i in range(m):
+            for j in range(n):
+                # update cur state
+                board[i][j] >>= 1
+
+    def live_neighbors(self, board, i, j, m, n):
+        lives = 0
+        for x in range(max(0, i - 1), min(m, i + 2)):
+            for y in range(max(0, j - 1), min(n, j + 2)):
+                lives += board[x][y] & 1
+        lives -= board[i][j] & 1
+        return lives
+
+
+# 136. Single Number
+from functools import reduce
+
+class Solution4_1(object):
+    def singleNumber1(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        d = {}
+        for num in nums:
+            d[num] = d.get(num, 0) + 1
+        for k, v in d.items():
+            if v == 1:
+                return k
+
+    def singleNumber2(self, nums):
+        # use 1-bit to store num
+        return reduce(lambda x, y: x ^ y, nums)
+
+
+# 137. Single Number II
+class Solution4_2(object):
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        # use 2-bits to store nums: [a, b]
+        a = b = 0
+        for num in nums:
+            # a stores num, b stores True/False
+            a = a ^ num & ~b
+            # b stores num, a stores True/False
+            b = b ^ num & ~a
+        # b == 0 in this problem
+        return a
+
+
+# 260. Single Number III
+class Solution4_3(object):
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        # two-pass: a != b, so (a ^ b) has at least one '1'
+        ans = reduce(lambda x, y: x ^ y, nums)
+        # get last '1' set bit
+        ans &= -ans
+        res = [0, 0]
+        for num in nums:
+            if num & ans == 0:
+                res[0] ^= num
+            else:
+                res[1] ^= num
+        return res
