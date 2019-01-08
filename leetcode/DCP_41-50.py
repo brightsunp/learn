@@ -5,6 +5,8 @@ __author__ = 'sunp'
 __date__ = '2019/1/7'
 '''
 
+import random
+
 
 class Solution1(object):
     '''Facebook
@@ -65,8 +67,22 @@ class Solution4(object):
     pass
 
 
+class Solution5(object):
+    '''Two Sigma
+
+    Using a function rand5() that returns an integer from 1 to 5 (inclusive) with uniform probability, implement a function rand7() that returns an integer from 1 to 7 (inclusive).
+    '''
+    def rand7(self):
+        # 1-bit: rand() in [1, N]
+        # 2-bits: (rand()-1)*N + rand()
+        x = 22
+        while x > 21:
+            x = (self.rand5()-1)*5 + self.rand5()
+        return 1 + x % 7
+
+    def rand5(self):
+        return random.randint(1, 5)
+
+
 if __name__ == '__main__':
-    sol = Solution2()
-    s = [2,3,6,7]
-    k = 7
-    print(sol.combinationSum(s, k))
+    pass
