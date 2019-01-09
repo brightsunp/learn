@@ -7,7 +7,6 @@ __date__ = '2019/1/8'
 
 
 # 187. Repeated DNA Sequences
-# https://leetcode.com/problems/repeated-dna-sequences/discuss/53867/Clean-Java-solution-(hashmap-%2B-bits-manipulation)
 class Solution1(object):
     def findRepeatedDnaSequences1(self, s):
         # hashmap
@@ -38,15 +37,13 @@ class Solution1(object):
 class Solution2(object):
     def rangeBitwiseAnd1(self, m, n):
         # recursive
-        return self.rangeBitwiseAnd1(m >> 1, n >> 1) << 1 if m < n else m
+        return self.rangeBitwiseAnd1(m >> 1, n >> 1) << 1 if m != n else m
 
     def rangeBitwiseAnd2(self, m, n):
-        # iterative
+        # count zeros
         count = 0
-        while m < n:
-            m >>= 1
-            n >>= 1
-            count += 1
+        while m != n:
+            m, n, count = m >> 1, n >> 1, count + 1
         return m << count
 
 
@@ -73,3 +70,36 @@ class Solution3(object):
                     res = max(res, len(words[i]) * len(words[j]))
         return res
 
+
+# 371. Sum of Two Integers
+class Solution4(object):
+    def add(self, a, b):
+        # 32-bits integer max (MIN = 0x80000000)
+        MAX = 0x7FFFFFFF
+        # mask to get last 32 bits
+        mask = 0xFFFFFFFF
+        while b != 0:
+            a, b = (a ^ b) & mask, ((a & b) << 1) & mask
+        # if a is negative, get a's 32 bits complement positive first
+        # then get 32-bit positive's Python complement negative
+        return a if a <= MAX else ~(a ^ mask)
+
+    def multiply(self, a, b):
+        a = a if a >= 0 else self.add(~a, 1)
+        b = b if b >= 0 else self.add(~b, 1)
+        product = 0
+        while b != 0:
+            if b & 1:
+                product = self.add(product, a)
+            a, b = a << 1, b >> 1
+        return product if a^b >= 0 else self.add(~product, 1)
+
+
+# 190. Reverse Bits
+class Solution5(object):
+    def reverseBits(self, n):
+        res = 0
+        for i in range(32):
+            res = (res << 1) | (n & 1)
+            n >>= 1
+        return res

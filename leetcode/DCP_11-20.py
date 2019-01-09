@@ -5,17 +5,72 @@ __author__ = 'sunp'
 __date__ = '2018/12/14'
 '''
 
+import random
 
-# 340. Longest Substring with At Most K Distinct Characters
+
 class Solution1(object):
-    def lengthOfLongestSubstringKDistinct(self, s, k):
-        """
-        :type s: str
-        :type k: int
-        :rtype: int
-        """
+    '''Twitter*
+
+    Implement an autocomplete system. That is, given a query string s and a set of all possible query strings, return all strings in the set that have s as a prefix.
+    For example, given the query string de and the set of strings [dog, deer, deal], return [deer, deal].
+    Hint: Try preprocessing the dictionary into a more efficient data structure to speed up queries.
+    '''
+    def autoComplete(self, words, prefix):
+        trie = self.build_trie(words)
+        # startsWith
+        cur = trie
+        for char in prefix:
+            cur = cur.get(char)
+            if not cur:
+                return []
+        res, stack = [], [cur]
+        while stack:
+            to_search = stack.pop()
+            for k, v in to_search.items():
+                if k == 'word':
+                    res.append(v)
+                else:
+                    stack.append(v)
+        return res
+
+    def build_trie(self, words):
+        trie = {}
+        for word in words:
+            # insert
+            cur = trie
+            for char in word:
+                cur = cur.setdefault(char, {})
+            # isLeaf & search
+            cur['word'] = word
+        return trie
+
+
+class Solution2(object):
+    '''Amazon
+
+    There exists a staircase with N steps, and you can climb up either 1 or 2 steps at a time. Given N, write a function that returns the number of unique ways you can climb the staircase. The order of the steps matters.
+    For example, if N is 4, then there are 5 unique ways:
+
+    1, 1, 1, 1
+    2, 1, 1
+    1, 2, 1
+    1, 1, 2
+    2, 2
+    What if, instead of being able to climb 1 or 2 steps at a time, you could climb any number from a set of positive integers X? For example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.
+    '''
+    def climb(self, n):
+        pass
+
+
+class Solution3(object):
+    '''Amazon*
+
+    Given an integer k and a string s, find the length of the longest substring that contains at most k distinct characters.
+    For example, given s = "abcba" and k = 2, the longest substring with k distinct characters is "bcb".
+    '''
+    def longestSubstringKDistinct(self, s, k):
         # maintain a valid window
-        left = max_len = 0
+        max_len = max_left = left = 0
         counter = {}
         for right in range(len(s)):
             counter[s[right]] = counter.get(s[right], 0) + 1
@@ -24,43 +79,55 @@ class Solution1(object):
                 if counter[s[left]] == 0:
                     counter.pop(s[left])
                 left += 1
-            max_len = max(max_len, right-left+1)
-        return max_len
+            if right-left+1 > max_len:
+                max_len, max_left = right-left+1, left
+        return s[max_left:max_left+max_len]
 
 
-# Monte Carlo method
-import random
+class Solution4(object):
+    '''Google*
 
-class Solution2(object):
+    The area of a circle is defined as πr^2. Estimate π to 3 decimal places using a Monte Carlo method.
+    Hint: The basic equation of a circle is x^2 + y^2 = r^2.
+    '''
     def estimatePi(self):
-        """
-        :rtype: str
-        """
+        # Process [estimatePi] completed: 579.40 secs.
         count = 0
-        for i in xrange(10**9):
-            # random float between [0, 1)
+        for i in range(10**9):
             x = random.random()
             y = random.random()
             if x**2 + y**2 < 1:
                 count += 1
-        return '{:.3f}'.format(count * 4.0 / 10**9)
-            
+        return '{:.4f}'.format(count * 4.0 / 10**9)
 
-# Reservoir sampling
-class Solution3(object):
-    def getRandom(self, stream):
-        # uniform probability: 1/(i+1)
+
+class Solution5(object):
+    '''Facebook*
+
+    Given a stream of elements too large to store in memory, pick a random element from the stream with uniform probability.
+    '''
+    def getRandom(self, stream, n):
+        # uniform probability: 1/(i+1), i=n-1 => 1/n
         res = None
-        for i, e in enumerate(stream):
-            if i == 0:
-                res = e
-            elif random.randint(1, i+1) == 1:
-                res = e
+        for i in range(n):
+            if random.randrange(i+1) == 0:
+                res = stream[i]
+        return res
+
+    def getRandomK(self, stream, n, k):
+        # Reservoir sampling
+        res = []
+        for i in range(k):
+            res.append(stream[i])
+        for i in range(k, n):
+            j = random.randrange(i+1)
+            if j < k:
+                res[j] = stream[i]
         return res
 
  
 # 388. Longest Absolute File Path
-class Solution4(object):
+class Solution6(object):
     def lengthLongestPath(self, input):
         """
         :type input: str
@@ -80,7 +147,7 @@ class Solution4(object):
 
 
 # 239. Sliding Window Maximum
-class Solution5(object):
+class Solution7(object):
     def maxSlidingWindow(self, nums, k):
         """
         :type nums: List[int]
@@ -103,7 +170,7 @@ class Solution5(object):
 
         
 # 265. Paint House II
-class Solution6(object):
+class Solution8(object):
     def minCost(self, costs):
         """
         :type costs: List[List[int]]
@@ -128,7 +195,7 @@ class Solution6(object):
 
         
 # 160. Intersection of Two Linked Lists
-class Solution7(object):
+class Solution9(object):
     def getIntersectionNode(self, headA, headB):
         """
         :type head1, head1: ListNode
@@ -143,3 +210,11 @@ class Solution7(object):
             curA = curA.next if curA else headB
             curB = curB.next if curB else headA
         return curA
+
+
+if __name__ == '__main__':
+    test1 = Solution1()
+    print(test1.autoComplete(['dog', 'deer', 'deal'], 'de'))
+
+    test4 = Solution4()
+    print(test4.estimatePi())

@@ -84,5 +84,26 @@ class Solution5(object):
         return random.randint(1, 5)
 
 
+class Solution6(object):
+    '''Amazon
+
+    Given a string, find the longest palindromic contiguous substring. If there are more than one with the maximum length, return any one.
+    For example, the longest palindromic substring of "aabcdcb" is "bcdcb". The longest palindromic substring of "bananas" is "anana".
+    '''
+    def longestPalindrome(self, s):
+        # O(n^2) time and O(1) space
+        max_len = start = 0
+        for i in range(len(s)):
+            cur_len = max(self.extend(s, i, i), self.extend(s, i-1, i))
+            if cur_len > max_len:
+                max_len, start = cur_len, i - cur_len//2
+        return s[start:start+max_len]
+
+    def extend(self, s, left, right):
+        while left >= 0 and right < len(s) and s[left] == s[right]:
+            left, right = left-1, right+1
+        return right-left-1
+
+
 if __name__ == '__main__':
     pass

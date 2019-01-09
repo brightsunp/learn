@@ -1,12 +1,12 @@
 ## Learning from Leetcode
-Record valuable solutions **in my opinion**.
+Practice and summarize.
 - Data Structures
 - Algorithms
 
 **Links**
 - [Leetcode's Page](https://leetcode.com/brightsunp/)
-- [Leetcode online training](https://leetcode.com/problemset/all/)
-- [Daily Coding Problem](https://www.dailycodingproblem.com/subscribe)
+- [Algorithms from GeeksforGeeks](https://www.geeksforgeeks.org/fundamentals-of-algorithms/)
+- [Daily Coding Problem](https://www.dailycodingproblem.com/)
 - [Cracking the Coding Interview](https://github.com/careercup/CtCI-6th-Edition)
 
 2018.9.17 - present
