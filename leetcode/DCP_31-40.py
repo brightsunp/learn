@@ -7,6 +7,7 @@ __date__ = '2018/12/27'
 
 from heapq import heappush, heappushpop
 from bisect import bisect_left, insort
+from functools import reduce
 
 
 class Solution1(object):
@@ -166,15 +167,11 @@ class Solution9(object):
         return lives
 
 
-# 136. Single Number
-from functools import reduce
-
-class Solution4_1(object):
+class Solution10_1(object):
+    '''
+    Single Number
+    '''
     def singleNumber1(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
         d = {}
         for num in nums:
             d[num] = d.get(num, 0) + 1
@@ -187,21 +184,13 @@ class Solution4_1(object):
         return reduce(lambda x, y: x ^ y, nums)
 
 
-# 137. Single Number II
-class Solution4_2(object):
-    '''Google
+class Solution10_2(object):
+    '''Google*
 
     Given an array of integers where every integer occurs three times except for one integer, which only occurs once, find and return the non-duplicated integer.
-
-For example, given [6, 1, 3, 3, 3, 6, 6], return 1. Given [13, 19, 13, 13], return 19.
-
-Do this in O(N) time and O(1) space.
+    For example, given [6, 1, 3, 3, 3, 6, 6], return 1. Given [13, 19, 13, 13], return 19.
     '''
     def singleNumber(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
         # use 2-bits to store nums: [a, b]
         a = b = 0
         for num in nums:
@@ -213,13 +202,11 @@ Do this in O(N) time and O(1) space.
         return a
 
 
-# 260. Single Number III
-class Solution4_3(object):
+class Solution10_3(object):
+    '''
+    Single Number III
+    '''
     def singleNumber(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[int]
-        """
         # two-pass: a != b, so (a ^ b) has at least one '1'
         ans = reduce(lambda x, y: x ^ y, nums)
         # get last '1' set bit
