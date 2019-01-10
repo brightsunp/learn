@@ -6,18 +6,17 @@ __date__ = '2018/12/20'
 '''
 
 
-# Minimum number of rooms required
 class Solution1(object):
+    '''Snapchat*
+
+    Given an array of time intervals (start, end) for classroom lectures (possibly overlapping), find the minimum number of rooms required.
+    For example, given [(30, 75), (0, 50), (60, 150)], you should return 2.
+    '''
     def findRoom(self, intervals):
-        """
-        :type intervals: List[List[int]]
-        :rtype: int
-        """
         # find maximum number of lectures at a time
         arr, dep = tuple(zip(*intervals))
         arr, dep = sorted(arr), sorted(dep)
-        res = cur = 0
-        i = j = 0
+        i = j = cur = res = 0
         # merge process of mergeSort
         while i < len(arr) and j < len(dep):
             if arr[i] < dep[j]:
@@ -28,17 +27,17 @@ class Solution1(object):
         return res
         
 
-# 139. Word Break
 class Solution2_1(object):
+    '''Microsoft*
+
+    Given a dictionary of words and a string made up of those words (no spaces), return the original sentence in a list. If there is more than one possible reconstruction, return any of them. If there is no possible reconstruction, then return null.
+    For example, given the set of words 'bed', 'bath', 'bedbath', 'and', 'beyond', and the string "bedbathandbeyond", return either ['bed', 'bath', 'and', 'beyond] or ['bedbath', 'and', 'beyond'].
+    '''
     def wordBreak(self, s, wordDict):
-        """
-        :type s: str
-        :type wordDict: List[str]
-        :rtype: bool
-        """
         # dp: record if current makes it True
         n = len(s)
-        if not n: return True
+        if not n:
+            return True
         dp = [False for _ in range(n+1)]
         for i in range(1, n+1):
             if not dp[i] and s[:i] in wordDict:
@@ -49,15 +48,12 @@ class Solution2_1(object):
                         dp[j] = True
         return dp[n]
         
-    
-# 140. Word Break II        
+
 class Solution2_2(object):
+    '''
+    Word Break II
+    '''
     def wordBreak(self, s, wordDict):
-        """
-        :type s: str
-        :type wordDict: List[str]
-        :rtype: List[str]
-        """
         # find all solutions
         return self.dfs(s, wordDict, {})
     
@@ -77,13 +73,19 @@ class Solution2_2(object):
         return res
 
 
-# 63. Unique Paths II
 class Solution3(object):
+    '''Google
+
+    You are given an M by N matrix consisting of booleans that represents a board. Each True boolean represents a wall. Each False boolean represents a tile you can walk on. Given this matrix, a start coordinate, and an end coordinate, return the minimum number of steps required to reach the end coordinate from the start. If there is no possible path, then return null. You can move up, left, down, and right. You cannot move through walls. You cannot wrap around the edges of the board.
+
+    For example, given the following board:
+    [[f, f, f, f],
+    [t, t, f, t],
+    [f, f, f, f],
+    [f, f, f, f]]
+    and start = (3, 0) (bottom left) and end = (0, 0) (top left), the minimum number of steps required to reach the end is 7, since we would need to go through (1, 2) because there is a wall everywhere else on the second row.
+    '''
     def uniquePathsWithObstacles(self, obstacleGrid):
-        """
-        :type obstacleGrid: List[List[int]]
-        :rtype: int
-        """
         # some difference from UniquePaths
         # first row or column: if i obstacle, i+next all 0
         # other rows: if i&j obstacle, just dp[i][j] = 0
@@ -104,8 +106,16 @@ class Solution3(object):
         return dp[m-1][n-1]
 
 
-# Lock a binary tree
 class Solution4(object):
+    '''Google*
+
+    Implement locking in a binary tree. A binary tree node can be locked or unlocked only if all of its descendants or ancestors are not locked.
+
+    - is_locked, which returns whether the node is locked
+    - lock, which attempts to lock the node. If it cannot be locked, then it should return false. Otherwise, it should lock it and return true.
+    - unlock, which unlocks the node. If it cannot be unlocked, then it should return false. Otherwise, it should unlock it and return true.
+    You may augment the node to add parent pointers or any other property you would like. You may assume the class is used in a single-threaded program, so there is no need for actual locks or mutexes. Each method should run in O(h), where h is the height of the tree.
+    '''
     def __init__(self, val, left=None, right=None, parent=None):
         self.val = val
         self.left = left
@@ -151,14 +161,11 @@ class Solution4(object):
         return False
 
 
-# 44. Wildcard Matching
 class Solution5_1(object):
+    '''
+    Wildcard Matching
+    '''
     def isMatch(self, s, p):
-        """
-        :type s: str
-        :type p: str
-        :rtype: bool
-        """
         # dp[i][j]: if s[:i] matches p[:j]
         m, n = len(s), len(p)
         dp = [[False for _ in range(n+1)] for _ in range(m+1)]
@@ -176,15 +183,17 @@ class Solution5_1(object):
                     dp[i][j] = dp[i-1][j-1]
         return dp[m][n]
 
-        
-# 10. Regular Expression Matching
+
 class Solution5_2(object):
+    '''Facebook*
+
+    Implement regular expression matching with the following special characters:
+
+    . (period) which matches any single character
+    * (asterisk) which matches zero or more of the preceding element
+    That is, implement a function that takes in a string and a valid regular expression and returns whether or not the string matches the regular expression.
+    '''
     def isMatch(self, s, p):
-        """
-        :type s: str
-        :type p: str
-        :rtype: bool
-        """
         # dp[i][j]: if s[:i] matches p[:j]
         m, n = len(s), len(p)
         dp = [[False for _ in range(n+1)] for _ in range(m+1)]
@@ -202,13 +211,48 @@ class Solution5_2(object):
         return dp[m][n]
 
 
-# Run-length encoding and decoding
 class Solution6(object):
+    '''Google
+
+    Given a singly linked list and an integer k, remove the kth last element from the list. k is guaranteed to be smaller than the length of the list.
+    The list is very long, so making more than one pass is prohibitively expensive. Do this in constant space and in one pass.
+    '''
+    pass
+
+
+class Solution7(object):
+    '''Facebook
+
+    Given a string of round, curly, and square open and closing brackets, return whether the brackets are balanced (well-formed).
+    For example, given the string "([])[]({})", you should return true.
+    Given the string "([)]" or "((()", you should return false.
+    '''
+    pass
+
+
+class Solution8(object):
+    '''Palantir
+
+    Write an algorithm to justify text. Given a sequence of words and an integer line length k, return a list of strings which represents each line, fully justified.
+    More specifically, you should have as many words as possible in each line. There should be at least one space between each word. Pad extra spaces when necessary so that each line has exactly length k. Spaces should be distributed as equally as possible, with the extra spaces, if any, distributed starting from the left.
+    If you can only fit one word on a line, then you should pad the right-hand side with spaces.
+    Each word is guaranteed not to be longer than k.
+
+    For example, given the list of words ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"] and k = 16, you should return the following:
+    ["the  quick brown", # 1 extra space on the left
+    "fox  jumps  over", # 2 extra spaces distributed evenly
+    "the   lazy   dog"] # 4 extra spaces distributed evenly
+    '''
+    pass
+
+
+class Solution9(object):
+    '''Amazon
+
+    Run-length encoding is a fast and simple method of encoding strings. The basic idea is to represent repeated successive characters as a single count and character. For example, the string "AAAABBBCCDAA" would be encoded as "4A3B2C1D2A".
+    Implement run-length encoding and decoding. You can assume the string to be encoded have no digits and consists solely of alphabetic characters. You can assume the string to be decoded is valid.
+    '''
     def encode(self, s):
-        """
-        :input s: 'AAAABBBCCDAA'
-        :output encoded_s: '4A3B2C1D2A'
-        """
         res = []
         count, pre = 0, '#'
         for i, char in enumerate(s):
@@ -231,13 +275,16 @@ class Solution6(object):
         return ''.join(res)
 
 
-# 42. Trapping Rain Water
-class Solution7(object):
+class Solution10(object):
+    '''Facebook
+
+    You are given an array of non-negative integers that represents a two-dimensional elevation map where each element is unit-width wall and the integer is the height. Suppose it will rain and all spots between two walls get filled up.
+    Compute how many units of water remain trapped on the map in O(N) time and O(1) space.
+
+For example, given the input [2, 1, 2], we can hold 1 unit of water in the middle.
+Given the input [3, 0, 1, 3, 0, 5], we can hold 3 units in the first index, 2 in the second, and 3 in the fourth index (we cannot hold 5 since it would run off to the left), so we can trap 8 units of water.
+    '''
     def trap(self, height):
-        """
-        :type height: List[int]
-        :rtype: int
-        """
         # cur_holder = max(min(left_max_height, right_max_height)-cur_height, 0)
         # two pointers: just avoid those two-step comparision
         res, left_max, right_max, lo, hi = 0, 0, 0, 0, len(height) - 1

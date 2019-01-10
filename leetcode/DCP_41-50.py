@@ -105,5 +105,49 @@ class Solution6(object):
         return right-left-1
 
 
+class Solution7(object):
+    '''Facebook
+
+    Given a array of numbers representing the stock prices of a company in chronological order, write a function that calculates the maximum profit you could have made from buying and selling that stock once. You must buy before you can sell it.
+    For example, given [9, 11, 8, 5, 7, 10], you should return 5, since you could buy the stock at 5 dollars and sell it at 10 dollars.
+    '''
+    def buyOnce(self, prices):
+        if len(prices) < 2:
+            return 0
+        max_profit = max_cur = 0
+        for i in range(1, len(prices)):
+            # sell to get cur_profit
+            max_cur = max(0, max_cur+prices[i]-prices[i-1])
+            max_profit = max(max_profit, max_cur)
+        return max_profit
+
+    def buyAsMany(self, prices):
+        if len(prices) < 2:
+            return 0
+        profit = 0
+        for i in range(1, len(prices)):
+            # sell only if price increased
+            profit += max(0, prices[i]-prices[i-1])
+        return profit
+
+    def buyAtMostK(self, prices, k):
+        '''Not so hard to understand.
+        https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/discuss/54113/A-Concise-DP-Solution-in-Java/55579
+        '''
+        n = len(prices)
+        # avoid MemoryError
+        if k >= (n>>1):
+            return self.buyAsMany(prices)
+        dp = [[0] * n for _ in range(k+1)]
+        for i in range(1, k+1):
+            # reduce O(knn) to O(kn)
+            tmp = -prices[0]
+            for j in range(1, n):
+                # sell or not sell
+                dp[i][j] = max(dp[i][j-1], prices[j]+tmp)
+                tmp = max(tmp, dp[i-1][j-1]-prices[j])
+        return dp[k][n-1]
+
+
 if __name__ == '__main__':
     pass
