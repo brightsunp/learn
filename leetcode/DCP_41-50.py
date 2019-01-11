@@ -149,5 +149,103 @@ class Solution7(object):
         return dp[k][n-1]
 
 
+class TreeNode(object):
+    def __init__(self, val, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+
+class Solution8_1(object):
+    '''Google
+
+    Given pre-order and in-order traversals of a binary tree, write a function to reconstruct the tree. You may assume that duplicates do not exist in the tree.
+
+    For example, given the following preorder traversal:
+    [a, b, d, e, c, f, g]
+    And the following inorder traversal:
+    [d, b, e, a, f, c, g]
+    You should return the following tree:
+        a
+       / \
+      b   c
+     / \ / \
+    d  e f  g
+    '''
+    def buildTree1(self, preorder, inorder):
+        # recursive1 [284ms]
+        if not preorder:
+            return None
+        root = TreeNode(preorder[0])
+        pos = inorder.index(preorder[0])
+        root.left = self.buildTree1(preorder[1:pos+1], inorder[:pos])
+        root.right = self.buildTree1(preorder[pos+1:], inorder[pos+1:])
+        return root
+
+    def buildTree2(self, preorder, inorder):
+        # recursive2 [48ms]
+        self.in_map = {val: i for i, val in enumerate(inorder)}
+        self.preorder = preorder
+        self.inorder = inorder
+        return self.helper(0, len(preorder), 0, len(inorder))
+
+    def helper(self, pre_beg, pre_end, in_beg, in_end):
+        if pre_beg >= pre_end:
+            return None
+        root = TreeNode(self.preorder[pre_beg])
+        in_root = self.in_map[root.val]
+        offset = in_root - in_beg
+        root.left = self.helper(pre_beg+1, pre_beg+offset+1, in_beg, in_root)
+        root.right = self.helper(pre_beg+offset+1, pre_end, in_root+1, in_end)
+        return root
+
+    def buildTree3(self, preorder, inorder):
+        # iterative [48ms]
+        if not preorder:
+            return None
+        root = TreeNode(preorder[0])
+        stack = [root]
+        i, j = 1, 0
+        while i < len(preorder):
+            cur = TreeNode(preorder[i])
+            mark = None
+            # comes to an end of the left node
+            while stack and stack[-1].val == inorder[j]:
+                mark = stack.pop()
+                j += 1
+            if mark:
+                mark.right = cur
+            else:
+                stack[-1].left = cur
+            stack.append(cur)
+            i += 1
+        return root
+
+
+class Solution8_2(object):
+    '''
+    Construct Binary Tree from Preorder and Postorder Traversal
+    '''
+    def constructFromPrePost(self, pre, post):
+        # iterative
+        if not pre:
+            return None
+        root = TreeNode(pre[0])
+        stack = [root]
+        i, j = 1, 0
+        while i < len(pre):
+            cur = TreeNode(pre[i])
+            while stack and stack[-1].val == post[j]:
+                stack.pop()
+                j += 1
+            if stack[-1].left:
+                stack[-1].right = cur
+            else:
+                stack[-1].left = cur
+            stack.append(cur)
+            i += 1
+        return root
+
+
 if __name__ == '__main__':
     pass
