@@ -18,7 +18,7 @@ class Solution1(object):
 
 
 class Solution2(object):
-    '''Google
+    '''Google*
 
     Given a list of integers S and a target number k, write a function that returns a subset of S that adds up to k. If such a subset cannot be made, then return null.
     Integers can appear more than once in the list. You may assume all numbers in the list are positive.
@@ -53,18 +53,40 @@ class Solution3(object):
     - max(), which returns the maximum value in the stack currently. If there are no elements in the stack, then it should throw an error or return null.
     Each method should run in constant time.
     '''
-    pass
+    def __init__(self):
+        # each element is a tuple (val, cur_max)
+        self.stack = []
+
+    def push(self, val):
+        cur_max = self.stack[-1][1] if self.stack else 0
+        cur_max = max(cur_max, val)
+        self.stack.append((val, cur_max))
+
+    def pop(self):
+        return self.stack.pop()[0] if self.stack else None
+
+    def max(self):
+        return self.stack[-1][1] if self.stack else None
 
 
 class Solution4(object):
-    '''Google
+    '''Google*
 
     We can determine how "out of order" an array A is by counting the number of inversions it has. Two elements A[i] and A[j] form an inversion if A[i] > A[j] but i < j. That is, a smaller element appears after a larger element.
-    Given an array, count the number of inversions it has. Do this faster than O(N^2) time.
-    You may assume each element in the array is distinct.
+    Given an array, count the number of inversions it has. Do this faster than O(N^2) time. You may assume each element in the array is distinct.
     For example, a sorted list has zero inversions. The array [2, 4, 1, 3, 5] has three inversions: (2, 1), (4, 1), and (4, 3). The array [5, 4, 3, 2, 1] has ten inversions: every distinct pair forms an inversion.
     '''
-    pass
+    def countInversions1(self, nums):
+        # O(n^2)
+        count = 0
+        for i, pre in enumerate(nums):
+            for cur in nums[i+1:]:
+                count += 1 if pre > cur else 0
+        return count
+        
+    def countInversions2(self, nums):
+        # O(nlogn): mergeSort
+        pass
 
 
 class Solution5(object):
@@ -106,7 +128,7 @@ class Solution6(object):
 
 
 class Solution7(object):
-    '''Facebook
+    '''Facebook*
 
     Given a array of numbers representing the stock prices of a company in chronological order, write a function that calculates the maximum profit you could have made from buying and selling that stock once. You must buy before you can sell it.
     For example, given [9, 11, 8, 5, 7, 10], you should return 5, since you could buy the stock at 5 dollars and sell it at 10 dollars.
@@ -157,7 +179,7 @@ class TreeNode(object):
 
 
 class Solution8_1(object):
-    '''Google
+    '''Google*
 
     Given pre-order and in-order traversals of a binary tree, write a function to reconstruct the tree. You may assume that duplicates do not exist in the tree.
 
@@ -247,5 +269,82 @@ class Solution8_2(object):
         return root
 
 
+class Solution9(object):
+    '''Amazon
+
+    Given an array of numbers, find the maximum sum of any contiguous subarray of the array. Do this in O(N) time.
+    For example, given the array [34, -50, 42, 14, -5, 86], the maximum sum would be 137, since we would take elements 42, 14, -5, and 86.
+    Given the array [-5, -1, -8, -9], the maximum sum would be 0, since we would not take any elements.
+    '''
+    def maxSumSubarray(self, nums):
+        # f(n) = max(f(n-1)+num, 0)
+        res = pre = 0
+        for num in nums:
+            pre = max(pre+num, 0)
+            res = max(res, pre)
+        return res
+
+
+class Solution10(object):
+    '''Microsoft*
+    
+    Suppose an arithmetic expression is given as a binary tree. Each leaf is an integer and each internal node is one of '+', '−', '∗', or '/'.
+    Given the root to such a tree, write a function to evaluate it.
+    For example, given the following tree:
+
+        *
+       / \
+      +    +
+     / \  / \
+    3  2  4  5
+    You should return 45, as it is (3 + 2) * (4 + 5).
+    https://blog.csdn.net/mhxy199288/article/details/38025319
+    '''
+    def evaluate(self, root):
+        # Reverse Polish: postorder traverse
+        self.vals = []
+        self.postorder(root)
+        stack = []
+        for val in self.vals:
+            if isinstance(val, int):
+                stack.append(val)
+            else:
+                a = stack.pop()
+                b = stack.pop()
+                stack.append(self.operate(a, b, val))
+        # one element remains in the stack
+        return stack[0]
+        
+    def postorder(self, root):
+        if not root:
+            return
+        self.postorder(root.left)
+        self.postorder(root.right)
+        self.vals.append(root.val)
+        
+    def operate(self, a, b, operator):
+        d = {'+': a+b, '-': a-b, '*': a*b, '/': a/b}
+        return d[operator]
+
+
 if __name__ == '__main__':
-    pass
+    test2 = Solution2()
+    print(test2.combinationSum([12, 1, 61, 5, 9, 2], 24))
+    
+    test4 = Solution4()
+    print(test4.countInversions1([2, 4, 1, 3, 5]))
+    print(test4.countInversions2([2, 4, 1, 3, 5]))
+    
+    test9 = Solution9()
+    print(test9.maxSumSubarray([34, -50, 42, 14, -5, 86]))
+    print(test9.maxSumSubarray([-5, -1, -8, -9]))
+    
+    test10 = Solution10()
+    node = TreeNode('*')
+    node.left = TreeNode('+')
+    node.left.left = TreeNode(3)
+    node.left.right = TreeNode(2)
+    node.right = TreeNode('+')
+    node.right.left = TreeNode(4)
+    node.right.right = TreeNode(5)
+    print(test10.evaluate(node))
