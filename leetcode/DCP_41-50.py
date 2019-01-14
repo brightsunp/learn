@@ -95,12 +95,29 @@ class Solution4(object):
         # merge sorted arrays and return inversion count
         if left == right:
             return 0
-        mid = (right+left) // 2
+        mid = (right+left) >> 1
         left_count = self.merge(nums, copy, left, mid)
         right_count = self.merge(nums, copy, mid+1, right)
-        i, j, count = mid, right, 0
+        count, i, j, idx = 0, mid, right, right
         while i >= left and j >= mid+1:
-            pass
+            if nums[i] > nums[j]:
+                count += j-mid
+                copy[idx] = nums[i]
+                i -= 1
+            else:
+                copy[idx] = nums[j]
+                j -= 1
+            idx -= 1
+        copy[left:idx+1] = nums[left:i+1] + nums[mid+1:j+1]
+        '''
+        while i >= left:
+            copy[idx] = nums[i]
+            idx, i = idx-1, i-1
+        while j >= mid+1:
+            copy[idx] = nums[j]
+            idx, j = idx-1, j-1
+        '''
+        nums[left:right+1] = copy[left:right+1]
         return count + left_count + right_count
 
 
