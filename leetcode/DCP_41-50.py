@@ -86,7 +86,22 @@ class Solution4(object):
         
     def countInversions2(self, nums):
         # O(nlogn): mergeSort
-        pass
+        if len(nums) < 2:
+            return 0
+        copy = nums[:]
+        return self.merge(nums, copy, 0, len(nums)-1)
+
+    def merge(self, nums, copy, left, right):
+        # merge sorted arrays and return inversion count
+        if left == right:
+            return 0
+        mid = (right+left) // 2
+        left_count = self.merge(nums, copy, left, mid)
+        right_count = self.merge(nums, copy, mid+1, right)
+        i, j, count = mid, right, 0
+        while i >= left and j >= mid+1:
+            pass
+        return count + left_count + right_count
 
 
 class Solution5(object):
@@ -153,9 +168,7 @@ class Solution7(object):
         return profit
 
     def buyAtMostK(self, prices, k):
-        '''Not so hard to understand.
-        https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/discuss/54113/A-Concise-DP-Solution-in-Java/55579
-        '''
+        # dp[i][j] = max(dp[i][j-1], max([dp[i-1][t-1]+prices[j]-prices[t] for t in range(j)]))
         n = len(prices)
         # avoid MemoryError
         if k >= (n>>1):
@@ -182,7 +195,6 @@ class Solution8_1(object):
     '''Google*
 
     Given pre-order and in-order traversals of a binary tree, write a function to reconstruct the tree. You may assume that duplicates do not exist in the tree.
-
     For example, given the following preorder traversal:
     [a, b, d, e, c, f, g]
     And the following inorder traversal:
@@ -291,14 +303,12 @@ class Solution10(object):
     Suppose an arithmetic expression is given as a binary tree. Each leaf is an integer and each internal node is one of '+', '−', '∗', or '/'.
     Given the root to such a tree, write a function to evaluate it.
     For example, given the following tree:
-
         *
        / \
       +    +
      / \  / \
     3  2  4  5
     You should return 45, as it is (3 + 2) * (4 + 5).
-    https://blog.csdn.net/mhxy199288/article/details/38025319
     '''
     def evaluate(self, root):
         # Reverse Polish: postorder traverse
