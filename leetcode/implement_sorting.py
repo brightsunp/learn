@@ -46,7 +46,7 @@ def merge_sort(nums):
     n = len(nums)
     if n < 2:
         return nums
-    mid = n // 2
+    mid = n >> 1
     return merge(merge_sort(nums[:mid]), merge_sort(nums[mid:]))
 
 
@@ -85,8 +85,25 @@ def partition(nums, left, right):
     return idx
 
 
-def heap_sort():
+def heap_sort(nums):
+    # heap
     pass
+
+
+def build_heap(nums):
+
+    pass
+
+
+def heapify(nums, i):
+    left, right, min_idx = i*2+1, i*2+2, i
+    if left < len(nums) and nums[left] < nums[min_idx]:
+        min_idx = left
+    if right < len(nums) and nums[right] < nums[min_idx]:
+        min_idx = right
+    while min_idx != i:
+        nums[i], nums[min_idx] = nums[min_idx], nums[i]
+        heapify(nums, min_idx)
 
 
 def counting_sort(nums, min_num, max_num):
