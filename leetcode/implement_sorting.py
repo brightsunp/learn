@@ -87,12 +87,17 @@ def partition(nums, left, right):
 
 def heap_sort(nums):
     # heap
-    pass
+    min_heap = build_heap(nums)
+    for i in range(len(nums)):
+        nums[i] = min_heap.pop(0)
+        heapify(min_heap, 0)
 
 
 def build_heap(nums):
-
-    pass
+    res = nums[:]
+    for i in range(len(res)>>1 + 1):
+        heapify(res, i)
+    return res
 
 
 def heapify(nums, i):
@@ -101,7 +106,7 @@ def heapify(nums, i):
         min_idx = left
     if right < len(nums) and nums[right] < nums[min_idx]:
         min_idx = right
-    while min_idx != i:
+    if min_idx != i:
         nums[i], nums[min_idx] = nums[min_idx], nums[i]
         heapify(nums, min_idx)
 
@@ -132,7 +137,6 @@ def bucket_sort(nums, min_num, max_num, capacity=3):
 
 
 def radix_sort(nums, capacity=10):
-    # compare keywords
     k = int(math.ceil(math.log(max(nums)+1, capacity)))
     for i in range(k):
         buckets = [[] for _ in range(capacity)]
@@ -155,4 +159,8 @@ if __name__ == '__main__':
     print('Quick sort of', test, ':\n', copy2)
 
     copy3 = test[:]
-    print('Counting sort of', test, ':\n', counting_sort(copy3, -8, 9))
+    heap_sort(copy3)
+    print('Heap sort of', test, ':\n', copy3)
+
+    copy4 = test[:]
+    print('Counting sort of', test, ':\n', counting_sort(copy4, -8, 9))
