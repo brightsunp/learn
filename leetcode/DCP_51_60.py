@@ -173,11 +173,21 @@ class Solution6(object):
     '''
     pass
 
+
 class Solution7(object):
     '''Amazon
 
     Given a string s and an integer k, break up the string into multiple texts such that each text has a length of k or less. You must break it up so that words don't break across lines. If there's no way to break the text up, then return null.
     You can assume that there are no spaces at the ends of the string and that there is exactly one space between each word.
     Given the string "the quick brown fox jumps over the lazy dog", k = 10 => ["the quick", "brown fox", "jumps over", "the lazy", "dog"]. No string in the list has a length of more than 10.
+    '''
+    pass
+
+
+class Solution8(object):
+    '''Amazon
+
+    An sorted array of integers was rotated an unknown number of times. Given such an array, find the index of the element in the array in faster than linear time. If the element doesn't exist in the array, return null.
+    For example, given the array [13, 18, 25, 2, 8, 10] and the element 8, return 4 (the index of 8 in the array). You can assume all the integers in the array are unique.
     '''
     pass
