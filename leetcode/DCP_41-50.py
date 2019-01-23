@@ -356,15 +356,15 @@ class Solution10(object):
 
 if __name__ == '__main__':
     test2 = Solution2()
-    print(test2.combinationSum([12, 1, 61, 5, 9, 2], 24))
+    assert(test2.combinationSum([12, 1, 61, 5, 9, 2], 24) == [12, 1, 9, 2])
     
     test4 = Solution4()
-    print(test4.countInversions1([2, 4, 1, 3, 5]))
-    print(test4.countInversions2([2, 4, 1, 3, 5]))
+    assert(test4.countInversions1([2, 4, 1, 3, 5]) == 3)
+    assert(test4.countInversions2([2, 4, 1, 3, 5]) == 3)
     
     test9 = Solution9()
-    print(test9.maxSumSubarray([34, -50, 42, 14, -5, 86]))
-    print(test9.maxSumSubarray([-5, -1, -8, -9]))
+    assert(test9.maxSumSubarray([34, -50, 42, 14, -5, 86]) == 137)
+    assert(test9.maxSumSubarray([-5, -1, -8, -9]) == 0)
     
     test10 = Solution10()
     node = TreeNode('*')
@@ -374,4 +374,4 @@ if __name__ == '__main__':
     node.right = TreeNode('+')
     node.right.left = TreeNode(4)
     node.right.right = TreeNode(5)
-    print(test10.evaluate(node))
+    assert(test10.evaluate(node) == 45)

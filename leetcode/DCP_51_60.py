@@ -14,11 +14,11 @@ class Solution1(object):
     Given a function that generates perfectly random numbers between 1 and k (inclusive), where k is an input, write a function that shuffles a deck of cards represented as an array using only swaps.
     It should run in O(N) time.
     Hint: Make sure each one of the 52! permutations of the deck is equally likely.
-    https://gaohaoyang.github.io/2016/10/16/shuffle-algorithm/
     '''
-    def shuffle(self, cards, k):
+    def shuffle(self):
+        cards = [i for i in range(1, 53)]
         for i in range(52):
-            r = i - 1 + self.randK(k) % (52 - i)
+            r = i - 1 + self.randK(52 - i)
             cards[i], cards[r] = cards[r], cards[i]
         return cards
 
@@ -47,7 +47,7 @@ class Solution2_1(object):
             return self.d[key][0]
         return -1
 
-    def put(self, key, value):
+    def set(self, key, value):
         if len(self.d) == self.cap and key not in self.d:
             least_used = min((v[1], k) for k, v in self.d.items())
             del self.d[least_used[1]]
@@ -59,7 +59,8 @@ class DllNode(object):
     def __init__(self, k, v):
         self.key = k
         self.val = v
-        self.prev, self.next = None, None
+        self.prev = None
+        self.next = None
 
 
 class Solution2_2(object):
@@ -77,7 +78,7 @@ class Solution2_2(object):
             return node.val
         return -1
 
-    def put(self, key, value):
+    def set(self, key, value):
         if key in self.d:
             self._remove(self.d[key])
         node = DllNode(key, value)
@@ -156,7 +157,7 @@ class Solution4(object):
 
 
 class Solution5(object):
-    '''Microsoft
+    '''Microsoft*
 
     Implement a URL shortener with the following methods:
     - shorten(url), which shortens the url into a six-character alphanumeric string, such as zLg6wl.
@@ -181,13 +182,61 @@ class Solution7(object):
     You can assume that there are no spaces at the ends of the string and that there is exactly one space between each word.
     Given the string "the quick brown fox jumps over the lazy dog", k = 10 => ["the quick", "brown fox", "jumps over", "the lazy", "dog"]. No string in the list has a length of more than 10.
     '''
-    pass
+    def doc_break(self, doc):
+        pass
 
 
 class Solution8(object):
-    '''Amazon
+    '''Amazon*
 
     An sorted array of integers was rotated an unknown number of times. Given such an array, find the index of the element in the array in faster than linear time. If the element doesn't exist in the array, return null.
-    For example, given the array [13, 18, 25, 2, 8, 10] and the element 8, return 4 (the index of 8 in the array). You can assume all the integers in the array are unique.
+    Given the array [13, 18, 25, 2, 8, 10] and the element 8, return 4 (the index of 8 in the array). You can assume all the integers in the array are unique.
+    '''
+    def find_num(self, nums):
+        pass
+
+
+class Solution9(object):
+    '''Google*
+
+    Implement a file syncing algorithm for two computers over a low-bandwidth network. What if we know the files in the two computers are mostly the same?
+    https://ianhowson.com/blog/file-synchronisation-algorithms/
+    https://unterwaditzer.net/2016/sync-algorithm.html
     '''
     pass
+
+
+class Solution10(object):
+    '''Facebook
+
+    Given a multiset of integers, return whether it can be partitioned into two subsets whose sums are the same.
+    {15, 5, 20, 10, 35, 15, 10} => true: since we can split it up into {15, 5, 10, 15, 10} and {20, 35}, which both add up to 55.
+    {15, 5, 20, 10, 35} => false: since we can't split it up into two subsets that add up to the same sum.
+    '''
+    def is_split(self, nums):
+        target = sum(nums)
+        if target & 1 == 1:
+            return False
+        target >>= 1
+        # convert to combination-sum (Problem #42)
+        return self.dfs(nums, target, 0)
+
+    def dfs(self, nums, target, pos):
+        if target < 0:
+            return False
+        if target == 0:
+            return True
+        for i in range(pos, len(nums)):
+            if self.dfs(nums, target-nums[i], i+1):
+                return True
+        return False
+
+
+if __name__ == '__main__':
+    test1 = Solution1()
+    for _ in range(10):
+        assert(all(x in test1.shuffle() for x in range(1, 53)))
+
+    test10 = Solution10()
+    assert(test10.is_split([15, 5, 20, 10, 35, 15, 10]))
+    assert(not test10.is_split([15, 5, 20, 10, 35]))

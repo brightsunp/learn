@@ -4,7 +4,7 @@
 - Email：[sunp@whu.edu.cn](mailto:sunp@whu.edu.cn)
 - Github：[https://github.com/brightsunp](https://github.com/brightsunp)
 - 技术博客：[https://brightsunp.github.io/](https://brightsunp.github.io/)
-- 期望职位：算法 / 机器学习 / 数据挖掘
+- 期望职位：算法 / 机器学习
 
 ---
 
@@ -52,7 +52,7 @@
 ---
 
 # 自我评价
-- 技能标签：Python / Golang / Flask / Keras / Linux / MongoDB 等；
+- 技能标签：Python / Golang / Flask / Keras / Linux / SQL 等；
 - Python 重度用户，熟悉数据结构和算法，以及常用的机器学习模型；
 - 复合专业背景，热爱开源社区，自我驱动式学习，优秀的英文读写能力；
 - 热爱工程师文化，渴望持续的技术积累，看重公司平台和团队氛围。
