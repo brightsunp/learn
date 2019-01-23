@@ -5,6 +5,7 @@ __author__ = 'sunp'
 __date__ = '2019/1/14'
 '''
 
+import hashlib
 import random
 
 
@@ -164,7 +165,18 @@ class Solution5(object):
     - restore(short), which expands the shortened string into the original url. If no such shortened string exists, return null.
     Hint: What if we enter the same URL twice?
     '''
-    pass
+    def __init__(self):
+        self.d = {}
+        self.m = hashlib.sha256
+
+    def shorten(self, url):
+        sha_sign = self.m(url.encode()).hexdigest()
+        short_hash = sha_sign[:6]
+        self.d[short_hash] = url
+        return short_hash
+
+    def restore(self, short):
+        return self.d.get(short, None)
 
 
 class Solution6(object):
@@ -182,7 +194,7 @@ class Solution7(object):
     You can assume that there are no spaces at the ends of the string and that there is exactly one space between each word.
     Given the string "the quick brown fox jumps over the lazy dog", k = 10 => ["the quick", "brown fox", "jumps over", "the lazy", "dog"]. No string in the list has a length of more than 10.
     '''
-    def doc_break(self, doc):
+    def text_break(self, text):
         pass
 
 
@@ -192,8 +204,23 @@ class Solution8(object):
     An sorted array of integers was rotated an unknown number of times. Given such an array, find the index of the element in the array in faster than linear time. If the element doesn't exist in the array, return null.
     Given the array [13, 18, 25, 2, 8, 10] and the element 8, return 4 (the index of 8 in the array). You can assume all the integers in the array are unique.
     '''
-    def find_num(self, nums):
-        pass
+    def find_num(self, nums, target):
+        left, right = 0, len(nums)-1
+        while left <= right:
+            mid = (left + right) >> 1
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] < nums[right]:
+                if nums[mid] < target <= nums[right]:
+                    left = mid + 1
+                else:
+                    right = mid - 1
+            else:
+                if nums[left] <= target < nums[mid]:
+                    right = mid - 1
+                else:
+                    left = mid + 1
+        return -1
 
 
 class Solution9(object):
@@ -235,8 +262,18 @@ class Solution10(object):
 if __name__ == '__main__':
     test1 = Solution1()
     for _ in range(10):
-        assert(all(x in test1.shuffle() for x in range(1, 53)))
+        assert all(x in test1.shuffle() for x in range(1, 53))
+
+    test5 = Solution5()
+    long_url = 'https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/0013868328251266d86585fc9514536a638f06b41908d44000'
+    assert len(test5.shorten(long_url)) == 6
+    assert test5.restore(test5.shorten(long_url)) == long_url
+
+    test8 = Solution8()
+    assert test8.find_num([13, 18, 25, 2, 8, 10], 8) == 4
+    assert test8.find_num([25, 2, 8, 10, 13, 18], 8) == 2
+    assert test8.find_num([8, 10, 13, 18, 25, 2], 7) == -1
 
     test10 = Solution10()
-    assert(test10.is_split([15, 5, 20, 10, 35, 15, 10]))
-    assert(not test10.is_split([15, 5, 20, 10, 35]))
+    assert test10.is_split([15, 5, 20, 10, 35, 15, 10])
+    assert not test10.is_split([15, 5, 20, 10, 35])
