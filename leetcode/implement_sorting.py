@@ -150,17 +150,18 @@ def radix_sort(nums, capacity=10):
 
 if __name__ == '__main__':
     test = [6, -2, -8, 9, 3, 3, 3]
+    result = [-8, -2, 3, 3, 3, 6, 9]
 
     copy1 = test[:]
-    print('Merge sort of', test, '\n___', merge_sort(copy1))
+    assert merge_sort(copy1) == result
 
     copy2 = test[:]
     quick_sort(copy2, 0, 6)
-    print('Quick sort of', test, '\n___', copy2)
+    assert copy2 == result
 
     copy3 = test[:]
     heap_sort(copy3)
-    print('Heap sort of', test, '\n___', copy3)
+    assert copy3 == result
 
     copy4 = test[:]
-    print('Counting sort of', test, '\n___', counting_sort(copy4, -8, 9))
+    assert counting_sort(copy4, -8, 9) == result
