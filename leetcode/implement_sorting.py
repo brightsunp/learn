@@ -47,32 +47,32 @@ def merge_sort(nums):
     if n < 2:
         return nums
     mid = n >> 1
-    return merge(merge_sort(nums[:mid]), merge_sort(nums[mid:]))
+    return _merge(merge_sort(nums[:mid]), merge_sort(nums[mid:]))
 
 
-def merge(left, right):
+def _merge(nums1, nums2):
     res = []
     i = j = 0
-    while i < len(left) and j < len(right):
-        if left[i] < right[j]:
-            res.append(left[i])
+    while i < len(nums1) and j < len(nums2):
+        if nums1[i] < nums2[j]:
+            res.append(nums1[i])
             i += 1
         else:
-            res.append(right[j])
+            res.append(nums2[j])
             j += 1
-    res.extend(left[i:] + right[j:])
+    res.extend(nums1[i:] + nums2[j:])
     return res
 
 
 def quick_sort(nums, left, right):
     # swap
     if left < right:
-        pivot_idx = partition(nums, left, right)
+        pivot_idx = _partition(nums, left, right)
         quick_sort(nums, left, pivot_idx-1)
         quick_sort(nums, pivot_idx+1, right)
 
 
-def partition(nums, left, right):
+def _partition(nums, left, right):
     # random selection
     pivot = random.randint(left, right)
     nums[pivot], nums[right] = nums[right], nums[pivot]
@@ -87,20 +87,20 @@ def partition(nums, left, right):
 
 def heap_sort(nums):
     # heap
-    min_heap = build_heap(nums)
+    min_heap = _build_heap(nums)
     for i in range(len(nums)):
         nums[i] = min_heap.pop(0)
-        heapify(min_heap, 0)
+        _heapify(min_heap, 0)
 
 
-def build_heap(nums):
+def _build_heap(nums):
     res = nums[:]
     for i in range(len(res)>>1 + 1):
-        heapify(res, i)
+        _heapify(res, i)
     return res
 
 
-def heapify(nums, i):
+def _heapify(nums, i):
     left, right, min_idx = i*2+1, i*2+2, i
     if left < len(nums) and nums[left] < nums[min_idx]:
         min_idx = left
@@ -108,7 +108,7 @@ def heapify(nums, i):
         min_idx = right
     if min_idx != i:
         nums[i], nums[min_idx] = nums[min_idx], nums[i]
-        heapify(nums, min_idx)
+        _heapify(nums, min_idx)
 
 
 def counting_sort(nums, min_num, max_num):
@@ -152,15 +152,15 @@ if __name__ == '__main__':
     test = [6, -2, -8, 9, 3, 3, 3]
 
     copy1 = test[:]
-    print('Merge sort of', test, ':\n', merge_sort(copy1))
+    print('Merge sort of', test, '\n___', merge_sort(copy1))
 
     copy2 = test[:]
     quick_sort(copy2, 0, 6)
-    print('Quick sort of', test, ':\n', copy2)
+    print('Quick sort of', test, '\n___', copy2)
 
     copy3 = test[:]
     heap_sort(copy3)
-    print('Heap sort of', test, ':\n', copy3)
+    print('Heap sort of', test, '\n___', copy3)
 
     copy4 = test[:]
-    print('Counting sort of', test, ':\n', counting_sort(copy4, -8, 9))
+    print('Counting sort of', test, '\n___', counting_sort(copy4, -8, 9))
