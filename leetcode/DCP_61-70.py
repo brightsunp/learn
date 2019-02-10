@@ -114,6 +114,16 @@ class Solution5(object):
         return row + self.spiral2(t)
 
 
+class Solution6(object):
+    '''Square
+
+    Assume you have access to a function toss_biased() which returns 0 or 1 with a probability that's not 50-50 (but also not 0-100 or 100-0). You do not know the bias of the coin.
+    Write a function to simulate an unbiased coin toss.
+    '''
+    def toss_biased(self):
+        pass
+
+
 class TestSolutions(unittest.TestCase):
     def test_solution3(self):
         sol = Solution3()
