@@ -4,7 +4,6 @@
 __author__ = 'sunp'
 __date__ = '2019/1/14'
 '''
-
 import hashlib
 import random
 

@@ -4,7 +4,6 @@
 __author__ = 'sunp'
 __date__ = '2018/12/27'
 '''
-
 from heapq import heappush, heappushpop
 from bisect import bisect_left, insort
 from functools import reduce
