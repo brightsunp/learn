@@ -136,7 +136,18 @@ class Solution6(object):
     Assume you have access to a function toss_biased() which returns 0 or 1 with a probability that's not 50-50 (but also not 0-100 or 100-0). You do not know the bias of the coin.
     Write a function to simulate an unbiased coin toss.
     '''
-    def toss_unbiased(self):
+    def toss_unbiased1(self):
+        # P(01) = P(10) = p*(1-p)
+        while True:
+            x = self._toss_biased()
+            y = self._toss_biased()
+            if x == 0 and y == 1:
+                return 0
+            if x == 1 and y == 0:
+                return 1
+
+    def toss_unbiased2(self):
+        # frequency => probability
         n_experiments = 100000
         res_biased = {1: 0, 0: 0}
         res_unbiased = {1: 0, 0: 0}
@@ -145,11 +156,10 @@ class Solution6(object):
             res_biased[coin] += 1
             coin = not coin if i & 1 else coin
             res_unbiased[coin] += 1
-        bias0 = round(res_biased[0] / n_experiments, 1)
-        bias1 = round(res_biased[1] / n_experiments, 1)
-        unbias0 = round(res_unbiased[0] / n_experiments, 1)
-        unbias1 = round(res_unbiased[1] / n_experiments, 1)
-        return bias0, bias1, unbias0, unbias1
+        assert round(res_biased[0] / n_experiments, 2) == 0.7
+        assert round(res_biased[1] / n_experiments, 2) == 0.3
+        assert round(res_unbiased[0] / n_experiments, 2) == 0.5
+        assert round(res_unbiased[1] / n_experiments, 2) == 0.5
 
     def _toss_biased(self):
         return 0 if random.random() < 0.7 else 1
@@ -329,12 +339,13 @@ class TestSolutions(unittest.TestCase):
         res = [1, 2, 3, 4, 5, 10, 15, 20, 19, 18, 17, 16, 11, 6, 7, 8, 9, 14, 13, 12]
 
         self.assertEqual(sol.spiral1(arg), res)
+        self.assertEqual(arg, [[1,  2,  3,  4,  5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20]])
         self.assertEqual(sol.spiral2(arg), res)
+        self.assertEqual(arg, [[6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20]])
 
     def test_solution6(self):
         sol = Solution6()
-
-        self.assertEqual(sol.toss_unbiased(), (0.7, 0.3, 0.5, 0.5))
+        sol.toss_unbiased2()
 
     def test_solution8(self):
         sol = Solution8()

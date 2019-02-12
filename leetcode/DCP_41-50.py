@@ -130,10 +130,10 @@ class Solution5(object):
         # 2-bits: (rand()-1)*N + rand()
         x = 22
         while x > 21:
-            x = (self.rand5()-1)*5 + self.rand5()
+            x = (self._rand5()-1)*5 + self._rand5()
         return 1 + x % 7
 
-    def rand5(self):
+    def _rand5(self):
         return random.randint(1, 5)
 
 

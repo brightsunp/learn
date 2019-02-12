@@ -4,6 +4,7 @@
 __author__ = 'sunp'
 __date__ = '2019/2/11'
 '''
+import unittest, random
 
 
 class Solution1(object):
@@ -11,7 +12,14 @@ class Solution1(object):
 
     Using a function rand7() that returns an integer from 1 to 7 (inclusive) with uniform probability, implement a function rand5() that returns an integer from 1 to 5 (inclusive).
     '''
-    pass
+    def rand5(self):
+        x = 6
+        while x > 5:
+            x = self._rand7()
+        return x
+
+    def _rand7(self):
+        return random.randint(1, 7)
 
 
 class Solution2(object):
@@ -125,3 +133,34 @@ class Solution9(object):
     Given the array [10, 5, 1], you should return false, since we can't modify any one element to get a non-decreasing array.
     '''
     pass
+
+
+class Solution10(object):
+    '''Google
+
+    Given the root of a binary tree, return a deepest node. For example, in the following tree, return d.
+        a
+       / \
+      b   c
+     /
+    d
+    '''
+    pass
+
+
+class TestSolutions(unittest.TestCase):
+    def test_solution1(self):
+        sol = Solution1()
+        n_experiments = 100000
+        res_probability = 1 / 5
+        res_arr = [0 for _ in range(5)]
+        for _ in range(n_experiments):
+            tmp = sol.rand5()
+            res_arr[tmp-1] += 1
+
+        for res in res_arr:
+            self.assertAlmostEqual(res_probability, res / n_experiments, places=2)
+
+
+if __name__ == '__main__':
+    unittest.main()
