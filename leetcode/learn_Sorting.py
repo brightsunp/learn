@@ -86,28 +86,46 @@ def _partition(nums, left, right):
 
 def heap_sort(nums):
     # heap
-    min_heap = _build_heap(nums)
+    min_heap = []
+    for num in nums:
+        # add last element, then shift up
+        min_heap.append(num)
+        _shiftup(min_heap, len(min_heap)-1)
     for i in range(len(nums)):
-        nums[i] = min_heap.pop(0)
-        _heapify(min_heap, 0)
+        # move last element to top, then shift down
+        last = min_heap.pop()
+        if min_heap:
+            nums[i] = min_heap[0]
+            min_heap[0] = last
+            _shiftdown(min_heap, 0)
+        else:
+            nums[i] = last
 
 
-def _build_heap(nums):
-    res = nums[:]
-    for i in range(len(res)>>1 + 1):
-        _heapify(res, i)
-    return res
+def _shiftdown(heap, pos):
+    item = heap[pos]
+    childpos = (pos << 1) + 1
+    while childpos < len(heap):
+        if childpos < len(heap)-1 and heap[childpos+1] < heap[childpos]:
+            childpos += 1
+        if item <= heap[childpos]:
+            break
+        heap[pos] = heap[childpos]
+        pos = childpos
+        childpos = (pos << 1) + 1
+    heap[pos] = item
 
 
-def _heapify(nums, i):
-    left, right, min_idx = i*2+1, i*2+2, i
-    if left < len(nums) and nums[left] < nums[min_idx]:
-        min_idx = left
-    if right < len(nums) and nums[right] < nums[min_idx]:
-        min_idx = right
-    if min_idx != i:
-        nums[i], nums[min_idx] = nums[min_idx], nums[i]
-        _heapify(nums, min_idx)
+def _shiftup(heap, pos):
+    item = heap[pos]
+    parentpos = (pos - 1) >> 1
+    while parentpos >= 0:
+        if item >= heap[parentpos]:
+            break
+        heap[pos] = heap[parentpos]
+        pos = parentpos
+        parentpos = (pos - 1) >> 1
+    heap[pos] = item
 
 
 def counting_sort(nums, min_num, max_num):
