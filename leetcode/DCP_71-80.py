@@ -44,12 +44,51 @@ class Solution2(object):
     pass
 
 
+class LinkNode(object):
+    def __init__(self, val, next=None):
+        self.val = val
+        self.next = next
+
+
 class Solution3(object):
-    '''Google
+    '''Google*
 
     Given the head of a singly linked list, reverse it in-place.
+    https://leetcode.com/problems/reverse-linked-list/
     '''
-    pass
+    def reverse1(self, root):
+        # auxiliary stack
+        stack = []
+        cur, head = root, root
+        while cur:
+            stack.append(cur.val)
+            cur = cur.next
+        while root:
+            root.val = stack.pop()
+            root = root.next
+        return head
+
+    def reverse2(self, root):
+        # recursive
+        if not root or not root.next:
+            return root
+        new_head = self.reverse2(root.next)
+        # root.next just reversed, so it refers to last of new_head
+        root.next.next = root
+        root.next = None
+        return new_head
+
+    def reverse3(self, root):
+        # iterative
+        new_head = None
+        while root:
+            tmp = root.next
+            # point to new_head
+            root.next = new_head
+            # update new_head
+            new_head = root
+            root = tmp
+        return new_head
 
 
 class Solution4(object):
@@ -151,15 +190,42 @@ class Solution10(object):
 class TestSolutions(unittest.TestCase):
     def test_solution1(self):
         sol = Solution1()
+
         n_experiments = 100000
         res_probability = 1 / 5
         res_arr = [0 for _ in range(5)]
         for _ in range(n_experiments):
             tmp = sol.rand5()
             res_arr[tmp-1] += 1
-
         for res in res_arr:
             self.assertAlmostEqual(res_probability, res / n_experiments, places=2)
+
+    def test_solution3(self):
+        sol = Solution3()
+        arg = LinkNode(1)
+        arg.next = LinkNode(2)
+        arg.next.next = LinkNode(3)
+
+        arg = sol.reverse1(arg)
+        res1, cur1 = [], arg
+        while cur1:
+            res1.append(cur1.val)
+            cur1 = cur1.next
+        self.assertEqual(res1, [3, 2, 1])
+
+        arg = sol.reverse2(arg)
+        res2, cur2 = [], arg
+        while cur2:
+            res2.append(cur2.val)
+            cur2 = cur2.next
+        self.assertEqual(res2, [1, 2, 3])
+
+        arg = sol.reverse3(arg)
+        res3, cur3 = [], arg
+        while cur3:
+            res3.append(cur3.val)
+            cur3 = cur3.next
+        self.assertEqual(res3, [3, 2, 1])
 
 
 if __name__ == '__main__':
