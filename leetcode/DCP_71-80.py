@@ -5,6 +5,7 @@ __author__ = 'sunp'
 __date__ = '2019/2/11'
 '''
 import unittest, random
+from functools import reduce
 
 
 class Solution1(object):
@@ -54,7 +55,6 @@ class Solution3(object):
     '''Google*
 
     Given the head of a singly linked list, reverse it in-place.
-    https://leetcode.com/problems/reverse-linked-list/
     '''
     def reverse1(self, root):
         # auxiliary stack
@@ -110,13 +110,47 @@ class Solution4(object):
 
 
 class Solution5(object):
-    '''Microsoft
+    '''Microsoft*
 
     Given an array of numbers, find the length of the longest increasing subsequence in the array. The subsequence does not necessarily have to be contiguous.
     For example, given the array [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15], the longest increasing subsequence has length 6: it is 0, 2, 6, 9, 11, 15.
     '''
-    def length_lis(self, arr):
-        pass
+    def lis1(self, arr):
+        # dp: LIS ending with arr[i]
+        n = len(arr)
+        dp = [1 for _ in range(n)]
+        for i in range(1, n):
+            for j in range(i):
+                if arr[i] > arr[j]:
+                    dp[i] = max(dp[i], dp[j]+1)
+        return max(dp) if dp else 0
+
+    def lis2(self, arr):
+        # O(nlogk)
+        if not arr:
+            return 0
+        n, res = len(arr), 1
+        tails = [0 for _ in range(n)]
+        tails[0] = arr[0]
+        for i in range(1, n):
+            if arr[i] < tails[0]:
+                tails[0] = arr[i]
+            elif arr[i] > tails[res-1]:
+                tails[res] = arr[i]
+                res += 1
+            else:
+                tails[self._find(tails, 0, res-1, arr[i])] = arr[i]
+        return res
+
+    def _find(self, A, lo, hi, num):
+        # first target >= num
+        while lo <= hi:
+            mid = (lo+hi) >> 1
+            if A[mid] >= num:
+                hi = mid - 1
+            else:
+                lo = mid + 1
+        return lo
 
 
 class Solution6(object):
@@ -154,7 +188,20 @@ class Solution7(object):
     The input list is not necessarily ordered in any way.
     For example, given [(1, 3), (5, 8), (4, 10), (20, 25)], you should return [(1, 3), (4, 10), (20, 25)].
     '''
-    pass
+    def merge(self, intervals):
+        res = []
+        for interval in sorted(intervals, key=lambda item: item[0]):
+            if not res:
+                res.append(interval)
+            else:
+                start, end = interval
+                head, tail = res[-1]
+                if start > tail:
+                    res.append(interval)
+                else:
+                    del res[-1]
+                    res.append((head, max(tail, end)))
+        return res
 
 
 class Solution8(object):
@@ -162,17 +209,54 @@ class Solution8(object):
 
     Given k sorted singly linked lists, write a function to merge all the lists into one sorted singly linked list.
     '''
-    pass
+    def merge1(self, lists):
+        # iterative: O(nk)
+        return reduce(self._merge, lists, None)
+
+    def _merge(self, head1, head2):
+        if not head1 or not head2:
+            return head1 or head2
+        head, pre, cur = None, None, None
+        while head1 and head2:
+            if head1.val < head2.val:
+                cur = head1
+                head1 = head1.next
+            else:
+                cur = head2
+                head2 = head2.next
+            if pre:
+                pre.next = cur
+            pre = cur
+            if not head:
+                head = cur
+        pre.next = head1 or head2
+        return head
+
+    def merge2(self, lists):
+        # PriorityQueue: O(nlogk)
+        pass
 
 
 class Solution9(object):
-    '''Facebook
+    '''Facebook*
 
     Given an array of integers, write a function to determine whether the array could become non-decreasing by modifying at most 1 element.
     For example, given the array [10, 5, 7], you should return true, since we can modify the 10 into a 1 to make the array non-decreasing.
     Given the array [10, 5, 1], you should return false, since we can't modify any one element to get a non-decreasing array.
     '''
-    pass
+    def check(self, arr):
+        # greedy: fix monotonic
+        count = 0
+        for i in range(1, len(arr)):
+            if arr[i-1] > arr[i]:
+                count += 1
+                if i < 2 or arr[i-2] <= arr[i]:
+                    # now arr[i-1] is remain_min
+                    arr[i-1] = arr[i]
+                else:
+                    # now arr[i] is front_max
+                    arr[i] = arr[i-1]
+        return count <= 1
 
 
 class Solution10(object):
@@ -185,7 +269,27 @@ class Solution10(object):
      /
     d
     '''
-    pass
+    def deepest(self, root):
+        # level order
+        height = self._height(root)
+        res, queue = None, root and [root]
+        while queue:
+            if height == 1:
+                res = queue.pop(0)
+                break
+            for _ in range(len(queue)):
+                node = queue.pop(0)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+            height -= 1
+        return res
+
+    def _height(self, root):
+        if not root:
+            return 0
+        return 1 + max(self._height(root.left), self._height(root.right))
 
 
 class TestSolutions(unittest.TestCase):
@@ -227,6 +331,26 @@ class TestSolutions(unittest.TestCase):
             res3.append(cur3.val)
             cur3 = cur3.next
         self.assertEqual(res3, [3, 2, 1])
+
+    def test_solution5(self):
+        sol = Solution5()
+
+        self.assertEqual(sol.lis1([]), 0)
+        self.assertEqual(sol.lis1([0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]), 6)
+        self.assertEqual(sol.lis2([0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]), 6)
+
+    def test_solution7(self):
+        sol = Solution7()
+
+        self.assertEqual(sol.merge([(1, 3), (5, 8), (4, 10), (20, 25)]), [(1, 3), (4, 10), (20, 25)])
+        self.assertEqual(sol.merge([(1, 3), (5, 8), (4, 10), (20, 25), (6, 12)]), [(1, 3), (4, 12), (20, 25)])
+
+    def test_solution9(self):
+        sol = Solution9()
+
+        self.assertTrue(sol.check([4, 2, 3]))
+        self.assertFalse(sol.check([4, 2, 1]))
+        self.assertFalse(sol.check([3, 4, 2, 3]))
 
 
 if __name__ == '__main__':

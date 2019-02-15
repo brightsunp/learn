@@ -55,6 +55,43 @@ class Solution2(object):
         return self.content[start:end]
 
 
+class Solution3(object):
+    '''Google
+
+    Invert a binary tree.
+    For example, given the following tree:
+        a
+       / \
+      b   c
+     / \  /
+    d   e f
+    should become:
+      a
+     / \
+     c  b
+     \  / \
+      f e  d
+    '''
+    def invert1(self, root):
+        # recursive
+        if not root:
+            return None
+        root.left, root.right = self.invert1(root.right), self.invert1(root.left)
+        return root
+
+    def invert2(self, root):
+        # stack
+        stack = root and [root]
+        while stack:
+            node = stack.pop()
+            node.left, node.right = node.right, node.left
+            if node.left:
+                stack.append(node.left)
+            if node.right:
+                stack.append(node.right)
+        return root
+
+
 class TestSolutions(unittest.TestCase):
     def test_solution1(self):
         sol = Solution1()
