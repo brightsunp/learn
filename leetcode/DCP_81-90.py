@@ -105,7 +105,33 @@ class Solution4(object):
     1 1 0 0 1
     '''
     def islands(self, matrix):
-        pass
+        # backtracking
+        res = 0
+        for i in range(len(matrix)):
+            for j in range(len(matrix[0])):
+                if self._dfs(matrix, i, j):
+                    res += 1
+        return res
+
+    def _dfs(self, matrix, i, j):
+        if i < 0 or i >= len(matrix) or j < 0 or j >= len(matrix[0]) or matrix[i][j] == 0:
+            return False
+        if matrix[i][j] == 1:
+            matrix[i][j] = 0
+            self._dfs(matrix, i, j-1)
+            self._dfs(matrix, i, j+1)
+            self._dfs(matrix, i-1, j)
+            self._dfs(matrix, i+1, j)
+            return True
+
+
+class Solution5(object):
+    '''Facebook*
+
+    Given three 32-bit integers x, y, and b, return x if b is 1 and y if b is 0, using only mathematical or bit operations. You can assume b can only be 1 or 0.
+    '''
+    def choice(self, x, y, b):
+        return x*b + y*(1-b)
 
 
 class TestSolutions(unittest.TestCase):
@@ -127,6 +153,23 @@ class TestSolutions(unittest.TestCase):
         self.assertEqual(test2.readN(4), 'o wo')
         self.assertEqual(test2.readN(4), 'rld')
         self.assertEqual(test2.readN(4), '')
+
+    def test_solution4(self):
+        sol = Solution4()
+        arg = [[1, 0, 0, 0, 0],
+               [0, 0, 1, 1, 0],
+               [0, 1, 1, 0, 0],
+               [0, 0, 0, 0, 0],
+               [1, 1, 0, 0, 1],
+               [1, 1, 0, 0, 1]]
+
+        self.assertEqual(sol.islands(arg), 4)
+
+    def test_solution5(self):
+        sol = Solution5()
+
+        self.assertEqual(sol.choice(3, 4, 1), 3)
+        self.assertEqual(sol.choice(3, 4, 0), 4)
 
 
 if __name__ == '__main__':
