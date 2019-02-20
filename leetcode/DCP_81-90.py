@@ -126,12 +126,112 @@ class Solution4(object):
 
 
 class Solution5(object):
-    '''Facebook*
+    '''Facebook
 
     Given three 32-bit integers x, y, and b, return x if b is 1 and y if b is 0, using only mathematical or bit operations. You can assume b can only be 1 or 0.
     '''
     def choice(self, x, y, b):
         return x*b + y*(1-b)
+
+
+class Solution6(object):
+    '''Google
+
+    Given a string of parentheses, write a function to compute the minimum number of parentheses to be removed to make the string valid (i.e. each open parenthesis is eventually closed).
+    For example, given the string "()())()", you should return 1. Given the string ")(", you should return 2, since we must remove all of them.
+    '''
+    def remove(self, s):
+        # auxiliary stack
+        stack, count = [], 0
+        for char in s:
+            if char == '(':
+                stack.append(char)
+            else:
+                if stack:
+                    stack.pop()
+                else:
+                    count += 1
+        return count + len(stack)
+
+
+class NeighbourNode(object):
+    def __init__(self, val):
+        self.val = val
+        # dict.fromkeys(): pointer to SAME object
+        self.neighbours = {'N': set(), 'S': set(), 'W': set(), 'E': set()}
+
+    def __hash__(self):
+        return hash(self.val)
+
+
+class Solution7(object):
+    '''Uber*
+
+    A rule looks like this:
+    A NE B
+    This means this means point A is located northeast of point B.
+    A SW C
+    means that point A is southwest of C.
+
+    Given a list of rules, check if the sum of the rules validate. For example:
+    A N B
+    B NE C
+    C N A
+    does not validate, since A cannot be both north and south of C.
+    A NW B
+    A N B
+    is considered valid.
+    '''
+    def __init__(self):
+        self.opposites = {'N': 'S', 'S': 'N', 'W': 'E', 'E': 'W'}
+
+    def is_valid(self, rules):
+        nodes = {}
+        for rule in rules:
+            val1, directions, val2 = tuple(rule.split())
+            node1 = nodes.setdefault(val1, NeighbourNode(val1))
+            node2 = nodes.setdefault(val2, NeighbourNode(val2))
+            if not self._add_rule(node1, directions, node2):
+                return False
+        return True
+
+    def _add_rule(self, node1, directions, node2):
+        # recursive
+        for direction in directions:
+            if node1 in node2.neighbours[self.opposites[direction]] or node2 in node1.neighbours[direction]:
+                return False
+            # check node1's transfer dependency
+            for node in node1.neighbours[direction]:
+                self._add_rule(node, direction, node2)
+        for direction in directions:
+            node2.neighbours[direction].add(node1)
+            node1.neighbours[self.opposites[direction]].add(node2)
+        return True
+
+
+class Solution8(object):
+    '''ContextLogic*
+
+    Implement division of two positive integers without using the division, multiplication, or modulus operators. Return the quotient as an integer, ignoring the remainder.
+    '''
+    def divide(self, dividend, divisor):
+        # bit manipulation
+        if divisor == 0 or (dividend == -2 ** 31 and divisor == -1):
+            return 2 ** 31 - 1
+
+        dvd, dvs = abs(dividend), abs(divisor)
+        res = 0
+        while dvd >= dvs:
+            tmp, mul = dvs, 1
+            # divisor doubled to get close to dividend
+            while dvd >= (tmp << 1):
+                tmp <<= 1
+                mul <<= 1
+            dvd -= tmp
+            res += mul
+
+        sign = (dividend < 0) ^ (divisor < 0)
+        return -res if sign else res
 
 
 class TestSolutions(unittest.TestCase):
@@ -170,6 +270,28 @@ class TestSolutions(unittest.TestCase):
 
         self.assertEqual(sol.choice(3, 4, 1), 3)
         self.assertEqual(sol.choice(3, 4, 0), 4)
+
+    def test_solution6(self):
+        sol = Solution6()
+
+        self.assertEqual(sol.remove('()())()'), 1)
+        self.assertEqual(sol.remove(')('), 2)
+
+    def test_solution7(self):
+        sol = Solution7()
+        arg1 = ['A N B', 'B NE C', 'C N A']
+        arg2 = ['A NW B', 'A N B']
+
+        self.assertFalse(sol.is_valid(arg1))
+        self.assertTrue(sol.is_valid(arg2))
+
+    def test_solution8(self):
+        sol = Solution8()
+
+        self.assertEqual(sol.divide(10, 0), 2**31-1)
+        self.assertEqual(sol.divide(-2**31, -1), 2**31-1)
+        self.assertEqual(sol.divide(15, 3), 5)
+        self.assertEqual(sol.divide(16, 3), 5)
 
 
 if __name__ == '__main__':
