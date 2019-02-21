@@ -8,12 +8,25 @@ import random
 
 
 class Solution1(object):
-    '''Facebook
+    '''Facebook*
 
     Given an unordered list of flights taken by someone, each represented as (origin, destination) pairs, and a starting airport, compute the person's itinerary. If no such itinerary exists, return null. If there are multiple possible itineraries, return the lexicographically smallest one. All flights must be used in the itinerary.
     Given the list of flights [('A', 'B'), ('A', 'C'), ('B', 'C'), ('C', 'A')] and starting airport 'A', you should return the list ['A', 'B', 'C', 'A', 'C'] even though ['A', 'C', 'A', 'B', 'C'] is also a valid itinerary. However, the first one is lexicographically smaller.
     '''
-    pass
+    def itinerary(self, flights, start):
+        self.res = None
+        self._helper(flights, start, [])
+        return self.res
+
+    def _helper(self, flights, start, tmp):
+        if not flights:
+            return tmp + [start]
+        for i, (air_1, air_2) in enumerate(flights):
+            if start == air_1:
+                remaining = self._helper(flights[:i]+flights[i+1:], air_2, tmp+[air_1])
+                if remaining:
+                    if not self.res or ''.join(remaining) < ''.join(self.res):
+                        self.res = remaining
 
 
 class Solution2(object):
@@ -354,6 +367,12 @@ class Solution10(object):
 
 
 if __name__ == '__main__':
+    test1 = Solution1()
+    assert test1.itinerary([('A', 'B'), ('A', 'C'), ('B', 'C'), ('C', 'A')], 'A') == ['A', 'B', 'C', 'A', 'C']
+    assert test1.itinerary([('SFO', 'HKO'), ('YYZ', 'SFO'), ('YUL', 'YYZ'), ('HKO', 'ORD')],
+                           'YUL') == ['YUL', 'YYZ', 'SFO', 'HKO', 'ORD']
+    assert not test1.itinerary([('SFO', 'COM'), ('COM', 'YYZ')], 'YUL')
+
     test2 = Solution2()
     assert test2.combinationSum([12, 1, 61, 5, 9, 2], 24) == [12, 1, 9, 2]
     
