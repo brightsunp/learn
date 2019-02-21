@@ -5,7 +5,8 @@ __author__ = 'sunp'
 __date__ = '2019/2/20'
 
 - topological sort: https://www.geeksforgeeks.org/topological-sorting-indegree-based-solution/
-- strong connected: https://www.geeksforgeeks.org/connectivity-in-a-directed-graph/
+- strong connectivity: https://www.geeksforgeeks.org/connectivity-in-a-directed-graph/
+- cyclic: https://www.geeksforgeeks.org/detect-cycle-direct-graph-using-colors/
 '''
 from collections import defaultdict
 
@@ -90,6 +91,14 @@ class Graph(object):
             return False
         return True
 
+    def is_cyclic(self):
+        color = ['WHITE'] * self.V
+        for i in range(self.V):
+            if color[i] == 'WHITE':
+                if self._cyclic_util(i, color):
+                    return True
+        return False
+
     def _dfs_util(self, u, visited, tmp):
         visited[u] = True
         tmp.append(u)
@@ -104,6 +113,16 @@ class Graph(object):
                 g.add_edge(j, i)
         return g
 
+    def _cyclic_util(self, u, color):
+        color[u] = 'GRAY'
+        for i in self.graph[u]:
+            if color[i] == 'GRAY':
+                return True
+            if color[i] == 'WHITE' and self._cyclic_util(i, color):
+                return True
+        color[u] = 'Black'
+        return False
+
 
 if __name__ == '__main__':
     test = Graph(6)
@@ -117,3 +136,6 @@ if __name__ == '__main__':
     assert test.count_edges(is_directed=True) == 6
     assert test.topological_sort() == [4, 5, 2, 0, 3, 1]
     assert not test.is_SC()
+    assert not test.is_cyclic()
+    test.add_edge(0, 5)
+    assert test.is_cyclic()
