@@ -4,7 +4,7 @@
 __author__ = 'sunp'
 __date__ = '2019/2/13'
 '''
-import unittest
+import unittest, sys
 from functools import reduce
 
 
@@ -232,6 +232,23 @@ class Solution8(object):
 
         sign = (dividend < 0) ^ (divisor < 0)
         return -res if sign else res
+
+
+class Solution9(object):
+    '''LinkedIn
+
+    Determine whether a tree is a valid binary search tree.
+    A binary search tree is a tree with two children, left and right, and satisfies the constraint that the key in the left child must be less than or equal to the root and the key in the right child must be greater than or equal to the root.
+    '''
+    def is_bst(self, root):
+        return self._helper(root, -sys.maxsize-1, sys.maxsize)
+
+    def _helper(self, node, a, b):
+        if not node:
+            return True
+        if node.val < a or node.val > b:
+            return False
+        return self._helper(node.left, a, node.val) and self._helper(node.right, node.val, b)
 
 
 class TestSolutions(unittest.TestCase):
