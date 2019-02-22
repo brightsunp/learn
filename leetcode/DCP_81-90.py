@@ -4,7 +4,7 @@
 __author__ = 'sunp'
 __date__ = '2019/2/13'
 '''
-import unittest, sys
+import unittest, sys, random
 from functools import reduce
 
 
@@ -33,9 +33,9 @@ class Solution2(object):
     '''
     def __init__(self, content):
         self.content = content
-        # cache _read7()
+        # save file pointer
         self.offset = 0
-        # cache readN(n)
+        # cache remaining
         self.buffer = ''
 
     def readN(self, n):
@@ -249,6 +249,19 @@ class Solution9(object):
         if node.val < a or node.val > b:
             return False
         return self._helper(node.left, a, node.val) and self._helper(node.right, node.val, b)
+
+
+class Solution10(object):
+    '''Google
+
+    Given an integer n and a list of integers l, write a function that randomly generates a number from 0 to n-1 that isn't in l (uniform).
+    '''
+    def gen_num(self, n, l):
+        res = random.randint(0, n-1)
+        # 'in' can be optimized by Binary Search
+        if res in l:
+            return self.gen_num(n, l)
+        return res
 
 
 class TestSolutions(unittest.TestCase):
