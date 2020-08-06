@@ -115,38 +115,53 @@ class Solution5(object):
     Given an array of numbers, find the length of the longest increasing subsequence in the array. The subsequence does not necessarily have to be contiguous.
     For example, given the array [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15], the longest increasing subsequence has length 6: it is 0, 2, 6, 9, 11, 15.
     '''
-    def lis1(self, arr):
-        # dp: LIS ending with arr[i]
+    def lengthLis1(self, arr):
+        # dp[i]: length of lis for arr[0:i+1]
+        if not arr:
+            return 0, []
         n = len(arr)
         dp = [1 for _ in range(n)]
         for i in range(1, n):
             for j in range(i):
                 if arr[i] > arr[j]:
                     dp[i] = max(dp[i], dp[j]+1)
-        return max(dp) if dp else 0
-
-    def lis2(self, arr):
-        # O(nlogk)
+        return self.genLis(arr, dp)
+    
+    def genLis(self, arr, dp):
+        maxIndex, maxCount = 0, 1
+        for index, count in enumerate(dp):
+            if count > maxCount:
+                maxIndex, maxCount = index, count
+        lis = [arr[maxIndex]]
+        for pos in range(maxIndex - 1, -1, -1):
+            if dp[pos] == dp[maxIndex] - 1 and arr[maxIndex] > arr[pos]:
+                lis.insert(0, arr[pos])
+                maxIndex = pos
+        return maxCount, lis
+    
+    def lengthLis2(self, arr):
+        # O(nlogk) to generate dp
         if not arr:
-            return 0
-        n, res = len(arr), 1
-        tails = [0 for _ in range(n)]
-        tails[0] = arr[0]
+            return 0, []
+        n = len(arr)
+        dp = [1 for _ in range(n)]
+        tails = [arr[0]]
         for i in range(1, n):
             if arr[i] < tails[0]:
                 tails[0] = arr[i]
-            elif arr[i] > tails[res-1]:
-                tails[res] = arr[i]
-                res += 1
+            elif arr[i] > tails[-1]:
+                tails.append(arr[i])
             else:
-                tails[self._find(tails, 0, res-1, arr[i])] = arr[i]
-        return res
+                tails[self._find(tails, arr[i])] = arr[i]
+            dp[i] = tails.index(arr[i]) + 1
+        return self.genLis(arr, dp)
 
-    def _find(self, A, lo, hi, num):
-        # first target >= num
+    def _find(self, nums, num):
+        # find the index where first target >= num
+        lo, hi = 0, len(nums) - 1
         while lo <= hi:
-            mid = (lo+hi) >> 1
-            if A[mid] >= num:
+            mid = (lo + hi) >> 1
+            if nums[mid] >= num:
                 hi = mid - 1
             else:
                 lo = mid + 1
@@ -335,9 +350,10 @@ class TestSolutions(unittest.TestCase):
     def test_solution5(self):
         sol = Solution5()
 
-        self.assertEqual(sol.lis1([]), 0)
-        self.assertEqual(sol.lis1([0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]), 6)
-        self.assertEqual(sol.lis2([0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]), 6)
+        self.assertEqual(sol.lengthLis1([]), (0, []))
+        self.assertEqual(sol.lengthLis1([0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]), (6, [0, 2, 6, 9, 11, 15]))
+        self.assertEqual(sol.lengthLis2([]), (0, []))
+        self.assertEqual(sol.lengthLis2([0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15]), (6, [0, 2, 6, 9, 11, 15]))
 
     def test_solution7(self):
         sol = Solution7()

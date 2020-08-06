@@ -1,9 +1,8 @@
 ## Self-driven learning
 Starting from this **specific point**:
-- 1.5 years after Master's degree(Computer-Vision-related)
+- 1.5 years after Master's degree
 - 4 months since leaving Huawei
-- Tools: PyCharm, OneNote, MarkdownPad
-- Skilled in Python, DSA
+- Skilled in Python, Data structure and Algorithms
 - Unskilled in ML, DL, Data Mining 
 
 **Quotes**
