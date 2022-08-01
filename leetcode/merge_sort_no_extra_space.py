@@ -20,8 +20,7 @@ def merge1(nums1, nums2):
 
 def merge2(nums1, nums2):
     # insert sort: O(m*n)
-    i = 0
-    while (nums1[-1] > nums2[0]):
+    for i in range(len(nums1)):
         if (nums1[i] > nums2[0]):
             nums1[i], nums2[0] = nums2[0], nums1[i]
             j, target = 1, nums2[0]
@@ -29,7 +28,6 @@ def merge2(nums1, nums2):
                 nums2[j-1] = nums2[j]
                 j += 1
             nums2[j-1] = target
-        i += 1
 
 
 def merge3(nums1, nums2):
