@@ -91,3 +91,5 @@ if __name__ == '__main__':
     copy1, copy2 = arr1[:], arr2[:]
     merge3(copy1, copy2)
     assert (copy1, copy2) == (arr1_result, arr2_result)
+
+    print("All test cases passed!")
