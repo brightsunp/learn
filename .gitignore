@@ -11,3 +11,10 @@ __pycache__
 datasets/
 seefood/
 dogs/
+
+# IDE
+.vs/
+bin/
+obj/
+Properties/
+*.config
