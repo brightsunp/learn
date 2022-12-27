@@ -1,31 +1,31 @@
 ## 第一周，链表、栈、队列
 
-- [ ] 0、时间复杂度与空间复杂度（补充内容）
+- [ ] 0、时间复杂度与空间复杂度(补充内容)
 - [ ] 1、链表的基础知识：单链表
 - [x] 2、[反转链表](https://leetcode.com/problems/reverse-linked-list/)
-- [ ] 3、相交链表（ LeetCode 160 ）
-- [ ] 4、合并两个有序链表 （ LeetCode 21 ）
-- [ ] 5、分隔链表 （ LeetCode 86 ）
-- [ ] 6、环形链表 II （ LeetCode 142 ）
-- [ ] 7、反转链表 II （ LeetCode 92 ）
-- [ ] 8、复制带随机指针的链表（ LeetCode 138 ）
+- [x] 3、[相交链表](https://leetcode.com/problems/intersection-of-two-linked-lists/)
+- [x] 4、合并两个有序链表 (https://leetcode.com/problems/merge-two-sorted-lists/)
+- [ ] 5、分隔链表 (LeetCode 86)
+- [ ] 6、环形链表 II (LeetCode 142)
+- [ ] 7、反转链表 II (LeetCode 92)
+- [ ] 8、复制带随机指针的链表(LeetCode 138)
 - [ ] 9、栈的基础知识
-- [ ] 10、有效的括号（ LeetCode 20 ）
-- [ ] 11、基本计算器（ LeetCode 224 ）
-- [ ] 12、最小栈（ LeetCode 155 ）
-- [ ] 13、验证栈序列（ LeetCode 946 ）
-- [ ] 14、每日温度（ LeetCode 739 ）
-- [ ] 15、接雨水（ LeetCode 42 ）
+- [ ] 10、有效的括号(LeetCode 20)
+- [ ] 11、基本计算器(LeetCode 224)
+- [ ] 12、最小栈(LeetCode 155)
+- [ ] 13、验证栈序列(LeetCode 946)
+- [ ] 14、每日温度(LeetCode 739)
+- [ ] 15、接雨水(LeetCode 42)
 - [ ] 16、队列的基础知识
-- [ ] 17、用栈实现队列 （ LeetCode 232 ）
-- [ ] 18、滑动窗口最大值（ LeetCode 239 ）
-- [ ] 19、设计循环双端队列（ LeetCode 641 ）
-- [ ] 20、移除链表元素（ LeetCode 203 ）
-- [ ] 21、K 个一组翻转链表（ LeetCode 25 ）
-- [ ] 22、回文链表（ LeetCode 234 ）
-- [ ] 23、奇偶链表（ LeetCode 328 ）
-- [ ] 24、从尾到头打印链表（ 剑指Offer 06 ）
-- [ ] 25、链表中倒数第 k 个节点（ 剑指Offer 22 ）
+- [ ] 17、用栈实现队列 (LeetCode 232)
+- [ ] 18、滑动窗口最大值(LeetCode 239)
+- [ ] 19、设计循环双端队列(LeetCode 641)
+- [ ] 20、移除链表元素(LeetCode 203)
+- [ ] 21、K 个一组翻转链表(LeetCode 25)
+- [ ] 22、回文链表(LeetCode 234)
+- [ ] 23、奇偶链表(LeetCode 328)
+- [ ] 24、从尾到头打印链表(剑指Offer 06)
+- [ ] 25、链表中倒数第 k 个节点(剑指Offer 22)
 
 ## 第二周，递归、排序、贪心
 
@@ -36,134 +36,134 @@
 - [ ] 5、快速排序基础知识
 - [ ] 6、计数排序基础知识
 - [ ] 7、归并排序
-- [ ] 8、桶排序（了解即可）
+- [ ] 8、桶排序(了解即可)
 - [ ] 9、堆排序
-- [ ] 10、基数排序（了解即可）
-- [ ] 11、希尔排序（了解即可）
-- [ ] 12、合并两个有序数组( LeetCode 88 )
-- [ ] 13、颜色分类( LeetCode 75 )
-- [ ] 14、部分排序 （面试题 16）
-- [ ] 15、计算右侧小于当前元素的个数 ( LeetCode 315)
-- [ ] 16、合并 K 个升序链表（LeetCode 23）
-- [ ] 17、有序数组的平方( LeetCode 977 )
-- [ ] 18、盛最多水的容器 ( LeetCode 11)
-- [ ] 19、两数之和（LeetCode 1）
+- [ ] 10、基数排序(了解即可)
+- [ ] 11、希尔排序(了解即可)
+- [ ] 12、合并两个有序数组(LeetCode 88)
+- [ ] 13、颜色分类(LeetCode 75)
+- [ ] 14、部分排序 (面试题 16)
+- [ ] 15、计算右侧小于当前元素的个数 (LeetCode 315)
+- [ ] 16、合并 K 个升序链表(LeetCode 23)
+- [ ] 17、有序数组的平方(LeetCode 977)
+- [ ] 18、盛最多水的容器 (LeetCode 11)
+- [ ] 19、两数之和(LeetCode 1)
 - [ ] 20、二叉堆基础知识
-- [ ] 21、分发饼干（ LeetCode 455 ）
-- [ ] 22、柠檬水找零（ LeetCode 860 ）
-- [ ] 23、用最少数量的箭引爆气球（ LeetCode 452 ）
-- [ ] 24、移掉 K 位数字（ LeetCode 402 ）
-- [ ] 25、跳跃游戏（ LeetCode 55 ）
-- [ ] 26、摆动序列（ LeetCode 376 ）
-- [ ] 27、买卖股票的最佳时机 II（ LeetCode 122 ）
-- [ ] 28、三数之和（LeetCode 15）
-- [ ] 29、最接近三数之和（LeetCode 16）
-- [ ] 30、加油站（ LeetCode 134 ）
-- [ ] 31、合并区间（ LeetCode 56 ）
+- [ ] 21、分发饼干(LeetCode 455)
+- [ ] 22、柠檬水找零(LeetCode 860)
+- [ ] 23、用最少数量的箭引爆气球(LeetCode 452)
+- [ ] 24、移掉 K 位数字(LeetCode 402)
+- [ ] 25、跳跃游戏(LeetCode 55)
+- [ ] 26、摆动序列(LeetCode 376)
+- [ ] 27、买卖股票的最佳时机 II(LeetCode 122)
+- [ ] 28、三数之和(LeetCode 15)
+- [ ] 29、最接近三数之和(LeetCode 16)
+- [ ] 30、加油站(LeetCode 134)
+- [ ] 31、合并区间(LeetCode 56)
 
 ## 第三周，搜索算法、回溯算法、位运算、二分查找
 
 - [ ] 1、二分查找基础知识
-- [ ] 2、二分查找（ LeetCode 704 ）
-- [ ] 3、搜索插入位置（ LeetCode 35 ）
-- [ ] 4、在排序数组中查找元素的第一个和最后一个位置（ LeetCode 34 ）
-- [ ] 5、搜索旋转排序数组（ LeetCode 33 ）
-- [ ] 6、搜索二维矩阵（ LeetCode 74 ）
-- [ ] 7、寻找两个正序数组的中位数（ LeetCode 4 ）
-- [ ] 8、有效三角形的个数（ LeetCode 611 ）
+- [ ] 2、二分查找(LeetCode 704)
+- [ ] 3、搜索插入位置(LeetCode 35)
+- [ ] 4、在排序数组中查找元素的第一个和最后一个位置(LeetCode 34)
+- [ ] 5、搜索旋转排序数组(LeetCode 33)
+- [ ] 6、搜索二维矩阵(LeetCode 74)
+- [ ] 7、寻找两个正序数组的中位数(LeetCode 4)
+- [ ] 8、有效三角形的个数(LeetCode 611)
 - [ ] 9、剑指 Offer 53 – II. 0～n-1中缺失的数字
 - [ ] 10、剑指 Offer 53 – I. 在排序数组中查找数字 I
 - [ ] 11、剑指 Offer 51. 数组中的逆序对
-- [ ] 12、寻找峰值（ LeetCode 162 ）
-- [ ] 13、第一个错误的版本（ LeetCode 278 ）
-- [ ] 14、山脉数组的峰顶索引（ LeetCode 852 ）
-- [ ] 15、有效的完全平方数（ LeetCode 367 ）
+- [ ] 12、寻找峰值(LeetCode 162)
+- [ ] 13、第一个错误的版本(LeetCode 278)
+- [ ] 14、山脉数组的峰顶索引(LeetCode 852)
+- [ ] 15、有效的完全平方数(LeetCode 367)
 - [ ] 16、位运算基础知识
-- [ ] 17、丢失的数字（ LeetCode 268 ）
-- [ ] 18、2 的幂（ LeetCode 231 ）
-- [ ] 19、比特位计数（ LeetCode 338 ）
-- [ ] 20、位 1 的个数（ LeetCode 191 ）
-- [ ] 21、只出现一次的数字 II（ LeetCode 137 ）
-- [ ] 22、只出现一次的数字 III（ LeetCode 260 ）
-- [ ] 23、最大单词长度乘积（ LeetCode 318 ）
-- [ ] 24、汉明距离（ LeetCode 461 ）
+- [ ] 17、丢失的数字(LeetCode 268)
+- [ ] 18、2 的幂(LeetCode 231)
+- [ ] 19、比特位计数(LeetCode 338)
+- [ ] 20、位 1 的个数(LeetCode 191)
+- [ ] 21、只出现一次的数字 II(LeetCode 137)
+- [ ] 22、只出现一次的数字 III(LeetCode 260)
+- [ ] 23、最大单词长度乘积(LeetCode 318)
+- [ ] 24、汉明距离(LeetCode 461)
 - [ ] 25、回溯基础知识
-- [ ] 26、岛屿数量（ LeetCode 200 ）
-- [ ] 27、N 皇后（ LeetCode 51 ）
-- [ ] 28、子集（ LeetCode 78 ）
-- [ ] 29、组合总和 II（ LeetCode 40 ）
-- [ ] 30、括号生成（ LeetCode 22 ）
-- [ ] 31、火柴拼正方形（ LeetCode 437 ）
-- [ ] 32、接雨水 II（ LeetCode 407 ）
-- [ ] 33、组合（ LeetCode 77 ）
-- [ ] 34、组合总和 II（ LeetCode 216 ）
-- [ ] 35、分割回文串（ LeetCode 131 ）
-- [ ] 36、全排列（ LeetCode 46 ）
+- [ ] 26、岛屿数量(LeetCode 200)
+- [ ] 27、N 皇后(LeetCode 51)
+- [ ] 28、子集(LeetCode 78)
+- [ ] 29、组合总和 II(LeetCode 40)
+- [ ] 30、括号生成(LeetCode 22)
+- [ ] 31、火柴拼正方形(LeetCode 437)
+- [ ] 32、接雨水 II(LeetCode 407)
+- [ ] 33、组合(LeetCode 77)
+- [ ] 34、组合总和 II(LeetCode 216)
+- [ ] 35、分割回文串(LeetCode 131)
+- [ ] 36、全排列(LeetCode 46)
 
 ## 第四周，二叉树
 
 - [ ] 1、二叉树基础知识
-- [ ] 2、二叉树的前序遍历（ LeetCode 144 ）
-- [ ] 3、二叉树的中序遍历（ LeetCode 94 ）
-- [ ] 4、二叉树的后序遍历（ LeetCode 145 ）
-- [ ] 5、二叉树的层序遍历（ LeetCode 102 ）
-- [ ] 6、二叉树的锯齿形层序遍历（ LeetCode 103 ）
-- [ ] 7、从前序与中序遍历序列构造二叉树（ LeetCode 105 ）
-- [ ] 8、路径总和 II（ LeetCode 113 ）
-- [ ] 9、二叉树的最近公共祖先（ LeetCode 236 ）
-- [ ] 10、二叉树的右视图（ LeetCode 199 ）
-- [ ] 11、二叉树展开为链表（ LeetCode 114 ）
-- [ ] 12、将有序数组转换为二叉搜索树（ LeetCode 108 ）
-- [ ] 13、把二叉搜索树转换为累加树（ LeetCode 538 ）
-- [ ] 14、删除二叉搜索树中的节点（ LeetCode 450 ）
-- [ ] 15、二叉树的序列化与反序列化（ LeetCode 297 ）
-- [ ] 16、完全二叉树的节点个数（ LeetCode 222 ）
-- [ ] 17、二叉树的最大深度（ LeetCode 104 ）
-- [ ] 18、二叉树的最小深度（ LeetCode 111 ）
-- [ ] 19、二叉树的所有路径（ LeetCode 257 ）
-- [ ] 20、平衡二叉树（ LeetCode 110 ）
-- [ ] 21、左叶子之和（ LeetCode 404 ）
-- [ ] 22、找树左下角的值（ LeetCode 513 ）
-- [ ] 23、修剪二叉搜索树（ LeetCode 669 ）
-- [ ] 24、二叉搜索树的最近公共祖先（ LeetCode 235 ）
-- [ ] 25、二叉搜索树的最小绝对差（ LeetCode 530 ）
-- [ ] 26、最大二叉树（ LeetCode 654 ）
+- [ ] 2、二叉树的前序遍历(LeetCode 144)
+- [ ] 3、二叉树的中序遍历(LeetCode 94)
+- [ ] 4、二叉树的后序遍历(LeetCode 145)
+- [ ] 5、二叉树的层序遍历(LeetCode 102)
+- [ ] 6、二叉树的锯齿形层序遍历(LeetCode 103)
+- [ ] 7、从前序与中序遍历序列构造二叉树(LeetCode 105)
+- [ ] 8、路径总和 II(LeetCode 113)
+- [ ] 9、二叉树的最近公共祖先(LeetCode 236)
+- [ ] 10、二叉树的右视图(LeetCode 199)
+- [ ] 11、二叉树展开为链表(LeetCode 114)
+- [ ] 12、将有序数组转换为二叉搜索树(LeetCode 108)
+- [ ] 13、把二叉搜索树转换为累加树(LeetCode 538)
+- [ ] 14、删除二叉搜索树中的节点(LeetCode 450)
+- [ ] 15、二叉树的序列化与反序列化(LeetCode 297)
+- [ ] 16、完全二叉树的节点个数(LeetCode 222)
+- [ ] 17、二叉树的最大深度(LeetCode 104)
+- [ ] 18、二叉树的最小深度(LeetCode 111)
+- [ ] 19、二叉树的所有路径(LeetCode 257)
+- [ ] 20、平衡二叉树(LeetCode 110)
+- [ ] 21、左叶子之和(LeetCode 404)
+- [ ] 22、找树左下角的值(LeetCode 513)
+- [ ] 23、修剪二叉搜索树(LeetCode 669)
+- [ ] 24、二叉搜索树的最近公共祖先(LeetCode 235)
+- [ ] 25、二叉搜索树的最小绝对差(LeetCode 530)
+- [ ] 26、最大二叉树(LeetCode 654)
 
 ## 第五周，动态规划、背包问题
 
 - [ ] 1、动态规划基础知识和解题步骤
-- [ ] 2、爬楼梯（ LeetCode 70 ）
-- [ ] 3、斐波那契数（ LeetCode 509 ）
-- [ ] 4、最大子序和（ LeetCode 53 ）
-- [ ] 5、零钱兑换（ LeetCode 322 ）
-- [ ] 6、零钱兑换 II（ LeetCode 518 ）
-- [ ] 7、最小路径和（ LeetCode 64 ）
-- [ ] 8、编辑距离（ LeetCode 72 ）
-- [ ] 9、买卖股票的最佳时机（ LeetCode 121 ）
-- [ ] 10、买卖股票的最佳时机II（ LeetCode 122 ）
-- [ ] 11、买卖股票的最佳时机III（ LeetCode 123 ）
-- [ ] 12、买卖股票的最佳时机IV（ LeetCode 188 ）
+- [ ] 2、爬楼梯(LeetCode 70)
+- [ ] 3、斐波那契数(LeetCode 509)
+- [ ] 4、最大子序和(LeetCode 53)
+- [ ] 5、零钱兑换(LeetCode 322)
+- [ ] 6、零钱兑换 II(LeetCode 518)
+- [ ] 7、最小路径和(LeetCode 64)
+- [ ] 8、编辑距离(LeetCode 72)
+- [ ] 9、买卖股票的最佳时机(LeetCode 121)
+- [ ] 10、买卖股票的最佳时机II(LeetCode 122)
+- [ ] 11、买卖股票的最佳时机III(LeetCode 123)
+- [ ] 12、买卖股票的最佳时机IV(LeetCode 188)
 - [ ] 13、最佳买卖股票时机含冷冻期(LeetCode 309)
 - [ ] 14、买卖股票的最佳时机含手续费(LeetCode 714)
-- [ ] 15、完全平方数（ LeetCode 279 ）
-- [ ] 16、三角形最小路径和（ LeetCode 120 ）
-- [ ] 17、不同路径（ LeetCode 62 ）
-- [ ] 18、不同路径II（ LeetCode 63 ）
-- [ ] 19、整数拆分（ LeetCode 343 ）
-- [ ] 20、不同的二叉搜索树（ LeetCode 96 ）
-- [ ] 21、地下城游戏（ LeetCode 174 ）
-- [ ] 22、打家劫舍（ LeetCode 198 ）
-- [ ] 23、打家劫舍II（ LeetCode 213 ）
-- [ ] 24、打家劫舍III（ LeetCode 337 ）
-- [ ] 25、最长递增子序列（ LeetCode 300 ）
-- [ ] 26、最长连续递增序列（ LeetCode 674 ）
-- [ ] 27、分割等和子集（ LeetCode 416 ）
-- [ ] 28、最长重复子数组（ LeetCode 718 ）
-- [ ] 29、最长公共子序列（ LeetCode 1143 ）
-- [ ] 30、最长回文子序列（ LeetCode 516 ）
-- [ ] 31、最长回文子串（ LeetCode 5 ）
+- [ ] 15、完全平方数(LeetCode 279)
+- [ ] 16、三角形最小路径和(LeetCode 120)
+- [ ] 17、不同路径(LeetCode 62)
+- [ ] 18、不同路径II(LeetCode 63)
+- [ ] 19、整数拆分(LeetCode 343)
+- [ ] 20、不同的二叉搜索树(LeetCode 96)
+- [ ] 21、地下城游戏(LeetCode 174)
+- [ ] 22、打家劫舍(LeetCode 198)
+- [ ] 23、打家劫舍II(LeetCode 213)
+- [ ] 24、打家劫舍III(LeetCode 337)
+- [ ] 25、最长递增子序列(LeetCode 300)
+- [ ] 26、最长连续递增序列(LeetCode 674)
+- [ ] 27、分割等和子集(LeetCode 416)
+- [ ] 28、最长重复子数组(LeetCode 718)
+- [ ] 29、最长公共子序列(LeetCode 1143)
+- [ ] 30、最长回文子序列(LeetCode 516)
+- [ ] 31、最长回文子串(LeetCode 5)
 - [ ] 31、01 背包问题
-- [ ] 32、目标和（ LeetCode 494 ）
-- [ ] 33、最后一块石头的重量 II（ LeetCode 1049 ）
+- [ ] 32、目标和(LeetCode 494)
+- [ ] 33、最后一块石头的重量 II(LeetCode 1049)
 
 ## 第六周，剑指 Offer 系列

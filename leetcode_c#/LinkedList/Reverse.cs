@@ -10,10 +10,10 @@ namespace TestMain.LinkedList
         public override void Run()
         {
             var test1 = ListNode.Sample();
-            base.TestOutput(nameof(ReverseInternalRecursive), ReverseInternalRecursive(test1).ToString());
+            TestOutput(nameof(ReverseInternalRecursive), ReverseInternalRecursive(test1));
 
             var test2 = ListNode.Sample();
-            base.TestOutput(nameof(ReverseInternalIterative), ReverseInternalIterative(test2).ToString());
+            TestOutput(nameof(ReverseInternalIterative), ReverseInternalIterative(test2));
         }
 
         private ListNode ReverseInternalRecursive(ListNode head)
