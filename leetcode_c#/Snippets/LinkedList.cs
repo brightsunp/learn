@@ -4,10 +4,10 @@ namespace TestMain.Snippets
 {
     static class LinkedList
     {
-        public static ListNode Reverse(this ListNode head)
+        public static ListNode Reverse(this ListNode head, ListNode end = null)
         {
-            ListNode newHead = null;
-            while (head != null)
+            ListNode newHead = end;
+            while (head != end)
             {
                 var tmp = head.next;
                 head.next = newHead;

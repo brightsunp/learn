@@ -12,7 +12,7 @@ namespace TestMain.LinkedList
         public override void Run()
         {
             var test1 = ListNode.Sample();
-            TestOutput(nameof(GetCycleInternal), GetCycleInternal(test1));
+            AssertNull(GetCycleInternal(test1));
 
             var test2 = ListNode.SampleCycle();
             TestOutput(nameof(GetCycleInternal), GetCycleInternal(test2));

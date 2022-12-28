@@ -50,6 +50,7 @@
     <Compile Include="LinkedList\MergeTwoSorted.cs" />
     <Compile Include="LinkedList\Partition.cs" />
     <Compile Include="LinkedList\Reverse.cs" />
+    <Compile Include="LinkedList\ReverseBetween.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Snippets\LinkedList.cs" />

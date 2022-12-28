@@ -14,6 +14,9 @@ namespace TestMain
 
         private static void TestLinkedList()
         {
+            var reverse2 = new ReverseBetween();
+            reverse2.Run();
+
             var cycle = new GetCycleNode();
             cycle.Run();
 
