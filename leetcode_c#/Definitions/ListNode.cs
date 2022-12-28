@@ -20,10 +20,12 @@ namespace TestMain.Definitions
         {
             var res = new List<int>();
             var cur = this;
-            while (cur != null)
+            int count = 0;
+            while (cur != null && count < 16)
             {
                 res.Add(cur.val);
                 cur = cur.next;
+                count++;
             }
 
             return string.Join(" -> ", res);
@@ -61,6 +63,19 @@ namespace TestMain.Definitions
             var node5 = new ListNode(3, node4);
 
             // 1 -> 3 -> 5 -> 6 -> 7 -> 8
+            return new ListNode(1, node5);
+        }
+
+        public static ListNode SampleCycle()
+        {
+            var node1 = new ListNode(8);
+            var node2 = new ListNode(7, node1);
+            var node3 = new ListNode(6, node2);
+            var node4 = new ListNode(5, node3);
+            var node5 = new ListNode(3, node4);
+            node1.next = node4;
+
+            // 1 -> 3 -> 5 -> 6 -> 7 -> 8 (-> 5 -> ...)
             return new ListNode(1, node5);
         }
     }

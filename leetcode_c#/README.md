@@ -4,10 +4,10 @@
 - [ ] 1、链表的基础知识：单链表
 - [x] 2、[反转链表](https://leetcode.com/problems/reverse-linked-list/)
 - [x] 3、[相交链表](https://leetcode.com/problems/intersection-of-two-linked-lists/)
-- [x] 4、合并两个有序链表 (https://leetcode.com/problems/merge-two-sorted-lists/)
-- [x] 5、分隔链表 (https://leetcode.com/problems/partition-list/)
-- [ ] 6、环形链表 II (LeetCode 142)
-- [ ] 7、反转链表 II (LeetCode 92)
+- [x] 4、[合并两个有序链表](https://leetcode.com/problems/merge-two-sorted-lists/)
+- [x] 5、[分隔链表](https://leetcode.com/problems/partition-list/)
+- [x] 6、[*环形链表 II](https://leetcode.com/problems/linked-list-cycle-ii/)
+- [x] 7、[反转链表 II](https://leetcode.com/problems/reverse-linked-list-ii/)
 - [ ] 8、复制带随机指针的链表(LeetCode 138)
 - [ ] 9、栈的基础知识
 - [ ] 10、有效的括号(LeetCode 20)

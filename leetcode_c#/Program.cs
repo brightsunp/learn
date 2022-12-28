@@ -14,6 +14,9 @@ namespace TestMain
 
         private static void TestLinkedList()
         {
+            var cycle = new GetCycleNode();
+            cycle.Run();
+
             var partition = new Partition();
             partition.Run();
 
