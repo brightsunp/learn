@@ -5,7 +5,7 @@
 - [x] 2、[反转链表](https://leetcode.com/problems/reverse-linked-list/)
 - [x] 3、[相交链表](https://leetcode.com/problems/intersection-of-two-linked-lists/)
 - [x] 4、合并两个有序链表 (https://leetcode.com/problems/merge-two-sorted-lists/)
-- [ ] 5、分隔链表 (LeetCode 86)
+- [x] 5、分隔链表 (https://leetcode.com/problems/partition-list/)
 - [ ] 6、环形链表 II (LeetCode 142)
 - [ ] 7、反转链表 II (LeetCode 92)
 - [ ] 8、复制带随机指针的链表(LeetCode 138)

@@ -14,6 +14,9 @@ namespace TestMain
 
         private static void TestLinkedList()
         {
+            var partition = new Partition();
+            partition.Run();
+
             var mergeTwoSorted = new MergeTwoSorted();
             mergeTwoSorted.Run();
 
