@@ -10,8 +10,8 @@
 - [x] 7、[反转链表 II](https://leetcode.com/problems/reverse-linked-list-ii/)
 - [x] 8、[*复制带随机指针的链表](https://leetcode.com/problems/copy-list-with-random-pointer/)
 - [ ] 9、栈的基础知识
-- [ ] 10、有效的括号(LeetCode 20)
-- [ ] 11、基本计算器(LeetCode 224)
+- [x] 10、[有效的括号](https://leetcode.com/problems/valid-parentheses/)
+- [x] 11、[*基本计算器](https://leetcode.com/problems/basic-calculator/)
 - [ ] 12、最小栈(LeetCode 155)
 - [ ] 13、验证栈序列(LeetCode 946)
 - [ ] 14、每日温度(LeetCode 739)

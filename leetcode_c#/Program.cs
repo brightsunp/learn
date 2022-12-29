@@ -2,6 +2,7 @@
 * TestMain entry.
 */
 using TestMain.LinkedList;
+using TestMain.StackAndQueue;
 
 namespace TestMain
 {
@@ -9,7 +10,17 @@ namespace TestMain
     {
         static void Main(string[] args)
         {
+            TestStackAndQueue();
             TestLinkedList();
+        }
+
+        private static void TestStackAndQueue()
+        {
+            var calculator = new BasicCalculator();
+            calculator.Run();
+
+            var parentheses = new ValidParentheses();
+            parentheses.Run();
         }
 
         private static void TestLinkedList()

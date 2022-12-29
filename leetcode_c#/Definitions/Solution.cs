@@ -22,6 +22,14 @@ namespace TestMain.Definitions
             }
         }
 
+        public virtual void AssertTrue(bool output)
+        {
+            if (!output)
+            {
+                WriteError("Test failed! Output is false");
+            }
+        }
+
         public virtual void AssertEqual(string expected, string actual)
         {
             if (expected != actual)
