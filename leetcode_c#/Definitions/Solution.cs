@@ -5,7 +5,7 @@ using System;
 
 namespace TestMain.Definitions
 {
-    abstract class Solution
+    public abstract class Solution
     {
         public abstract void Run();
 

@@ -1,14 +1,14 @@
 ## 第一周，链表、栈、队列
 
 - [ ] 0、时间复杂度与空间复杂度(补充内容)
-- [ ] 1、链表的基础知识：单链表
+- [ ] 1、链表的基础知识
 - [x] 2、[反转链表](https://leetcode.com/problems/reverse-linked-list/)
 - [x] 3、[相交链表](https://leetcode.com/problems/intersection-of-two-linked-lists/)
 - [x] 4、[合并两个有序链表](https://leetcode.com/problems/merge-two-sorted-lists/)
 - [x] 5、[分隔链表](https://leetcode.com/problems/partition-list/)
 - [x] 6、[*环形链表 II](https://leetcode.com/problems/linked-list-cycle-ii/)
 - [x] 7、[反转链表 II](https://leetcode.com/problems/reverse-linked-list-ii/)
-- [ ] 8、复制带随机指针的链表(LeetCode 138)
+- [x] 8、[*复制带随机指针的链表](https://leetcode.com/problems/copy-list-with-random-pointer/)
 - [ ] 9、栈的基础知识
 - [ ] 10、有效的括号(LeetCode 20)
 - [ ] 11、基本计算器(LeetCode 224)

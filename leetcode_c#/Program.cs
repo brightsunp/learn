@@ -14,6 +14,9 @@ namespace TestMain
 
         private static void TestLinkedList()
         {
+            var copy = new CopyWithRandomPointer();
+            copy.Run();
+
             var reverse2 = new ReverseBetween();
             reverse2.Run();
 
