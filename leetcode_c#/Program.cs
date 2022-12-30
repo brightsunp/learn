@@ -16,6 +16,9 @@ namespace TestMain
 
         private static void TestStackAndQueue()
         {
+            var sequence = new StackSequences();
+            sequence.Run();
+
             var minStack = new MinStack();
             minStack.Run();
 

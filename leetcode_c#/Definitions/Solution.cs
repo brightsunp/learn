@@ -2,6 +2,7 @@
 * Definition for solution.
 */
 using System;
+using System.Runtime.CompilerServices;
 
 namespace TestMain.Definitions
 {
@@ -11,30 +12,30 @@ namespace TestMain.Definitions
 
         public virtual void TestOutput(string methodName, object output)
         {
-            WriteInformation($"Test Output of {GetType().Name} solution - {methodName} method: \n{output}\n");
+            WriteInformation($"Test Output from {GetType().Name} solution - {methodName} method: \n{output}\n");
         }
 
-        public virtual void AssertNull(object output)
+        public virtual void AssertNull(object output, [CallerLineNumber]int line = 0)
         {
             if (output != null)
             {
-                WriteError($"Test failed! Output is not null: {output}");
+                WriteError($"Test failed from {GetType().Name} solution at line {line}: \nOutput is not null: {output}");
             }
         }
 
-        public virtual void AssertTrue(bool output)
+        public virtual void AssertTrue(bool output, [CallerLineNumber] int line = 0)
         {
             if (!output)
             {
-                WriteError("Test failed! Output is false");
+                WriteError($"Test failed from {GetType().Name} solution at line {line}: \nOutput is false");
             }
         }
 
-        public virtual void AssertEqual(object expected, object actual)
+        public virtual void AssertEqual(object expected, object actual, [CallerLineNumber] int line = 0)
         {
             if (expected.ToString() != actual.ToString())
             {
-                WriteError($"Test failed! Expected is {expected}, but actual is {actual}");
+                WriteError($"Test failed from {GetType().Name} solution at line {line}: \nExpected is {expected}, but actual is {actual}");
             }
         }
 

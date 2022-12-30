@@ -58,6 +58,7 @@
     <Compile Include="Snippets\LinkedList.cs" />
     <Compile Include="StackAndQueue\BasicCalculator.cs" />
     <Compile Include="StackAndQueue\MinStack.cs" />
+    <Compile Include="StackAndQueue\StackSequences.cs" />
     <Compile Include="StackAndQueue\ValidParentheses.cs" />
   </ItemGroup>
   <ItemGroup />
