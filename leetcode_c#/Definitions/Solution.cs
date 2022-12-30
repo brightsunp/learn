@@ -30,9 +30,9 @@ namespace TestMain.Definitions
             }
         }
 
-        public virtual void AssertEqual(string expected, string actual)
+        public virtual void AssertEqual(object expected, object actual)
         {
-            if (expected != actual)
+            if (expected.ToString() != actual.ToString())
             {
                 WriteError($"Test failed! Expected is {expected}, but actual is {actual}");
             }

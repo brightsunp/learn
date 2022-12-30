@@ -12,8 +12,8 @@
 - [ ] 9、栈的基础知识
 - [x] 10、[有效的括号](https://leetcode.com/problems/valid-parentheses/)
 - [x] 11、[*基本计算器](https://leetcode.com/problems/basic-calculator/)
-- [ ] 12、最小栈(LeetCode 155)
-- [ ] 13、验证栈序列(LeetCode 946)
+- [x] 12、[最小栈](https://leetcode.com/problems/min-stack/)
+- [x] 13、[验证栈序列](https://leetcode.com/problems/validate-stack-sequences/)
 - [ ] 14、每日温度(LeetCode 739)
 - [ ] 15、接雨水(LeetCode 42)
 - [ ] 16、队列的基础知识

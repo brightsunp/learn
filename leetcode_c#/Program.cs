@@ -16,6 +16,9 @@ namespace TestMain
 
         private static void TestStackAndQueue()
         {
+            var minStack = new MinStack();
+            minStack.Run();
+
             var calculator = new BasicCalculator();
             calculator.Run();
 

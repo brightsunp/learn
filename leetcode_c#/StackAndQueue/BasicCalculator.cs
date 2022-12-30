@@ -15,9 +15,9 @@ namespace TestMain.StackAndQueue
     {
         public override void Run()
         {
-            AssertEqual("2", Calculate("1 + 1").ToString());
-            AssertEqual("3", Calculate(" 2-1 + 2 ").ToString());
-            AssertEqual("23", Calculate("(1+(4+5+2)-3)+(6+8)").ToString());
+            AssertEqual(2, Calculate("1 + 1"));
+            AssertEqual(3, Calculate(" 2-1 + 2 "));
+            AssertEqual(23, Calculate("(1+(4+5+2)-3)+(6+8)"));
         }
 
         // '(': Push the previous res and isAdd into stack, reset them, then calculate new res within the parenthesis.
