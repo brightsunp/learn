@@ -1,7 +1,7 @@
 ## 第一周，链表、栈、队列
 
-- [ ] 0、时间复杂度与空间复杂度(补充内容)
-- [ ] 1、链表的基础知识
+- [ ] 0、[时间复杂度与空间复杂度](https://www.geeksforgeeks.org/time-complexity-and-space-complexity/)
+- [ ] 1、[链表的基础知识](https://www.geeksforgeeks.org/what-is-linked-list/)
 - [x] 2、[反转链表](https://leetcode.com/problems/reverse-linked-list/)
 - [x] 3、[相交链表](https://leetcode.com/problems/intersection-of-two-linked-lists/)
 - [x] 4、[合并两个有序链表](https://leetcode.com/problems/merge-two-sorted-lists/)
@@ -9,14 +9,14 @@
 - [x] 6、[*环形链表 II](https://leetcode.com/problems/linked-list-cycle-ii/)
 - [x] 7、[反转链表 II](https://leetcode.com/problems/reverse-linked-list-ii/)
 - [x] 8、[*复制带随机指针的链表](https://leetcode.com/problems/copy-list-with-random-pointer/)
-- [ ] 9、栈的基础知识
+- [ ] 9、[栈的基础知识](https://www.geeksforgeeks.org/introduction-to-stack-data-structure-and-algorithm-tutorials/)
 - [x] 10、[有效的括号](https://leetcode.com/problems/valid-parentheses/)
-- [x] 11、[*基本计算器](https://leetcode.com/problems/basic-calculator/)
-- [x] 12、[最小栈](https://leetcode.com/problems/min-stack/)
+- [x] 11、[基本计算器](https://leetcode.com/problems/basic-calculator/)
+- [x] 12、[*最小栈](https://leetcode.com/problems/min-stack/)
 - [x] 13、[验证栈序列](https://leetcode.com/problems/validate-stack-sequences/)
-- [x] 14、[每日温度](https://leetcode.com/problems/daily-temperatures/)
-- [ ] 15、接雨水(LeetCode 42)
-- [ ] 16、队列的基础知识
+- [x] 14、[*每日温度](https://leetcode.com/problems/daily-temperatures/)
+- [x] 15、[接雨水](https://leetcode.com/problems/trapping-rain-water/)
+- [ ] 16、[队列的基础知识](https://www.geeksforgeeks.org/introduction-to-queue-data-structure-and-algorithm-tutorials/)
 - [ ] 17、用栈实现队列 (LeetCode 232)
 - [ ] 18、滑动窗口最大值(LeetCode 239)
 - [ ] 19、设计循环双端队列(LeetCode 641)

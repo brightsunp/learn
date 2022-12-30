@@ -60,6 +60,7 @@
     <Compile Include="StackAndQueue\DailyTemperatures.cs" />
     <Compile Include="StackAndQueue\MinStack.cs" />
     <Compile Include="StackAndQueue\StackSequences.cs" />
+    <Compile Include="StackAndQueue\TrapRainWater.cs" />
     <Compile Include="StackAndQueue\ValidParentheses.cs" />
   </ItemGroup>
   <ItemGroup />

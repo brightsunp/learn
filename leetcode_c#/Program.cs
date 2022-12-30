@@ -16,6 +16,9 @@ namespace TestMain
 
         private static void TestStackAndQueue()
         {
+            var trap = new TrapRainWater();
+            trap.Run();
+
             var daily = new DailyTemperatures();
             daily.Run();
 
