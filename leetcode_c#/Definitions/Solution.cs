@@ -2,6 +2,7 @@
 * Definition for solution.
 */
 using System;
+using System.Collections;
 using System.Runtime.CompilerServices;
 
 namespace TestMain.Definitions
@@ -33,7 +34,30 @@ namespace TestMain.Definitions
 
         public virtual void AssertEqual(object expected, object actual, [CallerLineNumber] int line = 0)
         {
-            if (expected.ToString() != actual.ToString())
+            if (expected is IEnumerable && actual is IEnumerable)
+            {
+                bool isEqual = true;
+                var expIter = (expected as IEnumerable).GetEnumerator();
+                var actIter = (actual as IEnumerable).GetEnumerator();
+                while (expIter.MoveNext() && actIter.MoveNext())
+                {
+                    if (expIter.Current.ToString() != actIter.Current.ToString())
+                    {
+                        isEqual = false;
+                        break;
+                    }
+                }
+                if (expIter.MoveNext() || actIter.MoveNext())
+                {
+                    isEqual = false;
+                }
+
+                if (!isEqual)
+                {
+                    WriteError($"Test failed from {GetType().Name} solution at line {line}: \nExpected and actual arrays are not the same");
+                }
+            }
+            else if (expected.ToString() != actual.ToString())
             {
                 WriteError($"Test failed from {GetType().Name} solution at line {line}: \nExpected is {expected}, but actual is {actual}");
             }

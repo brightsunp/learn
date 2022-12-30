@@ -14,7 +14,7 @@
 - [x] 11、[*基本计算器](https://leetcode.com/problems/basic-calculator/)
 - [x] 12、[最小栈](https://leetcode.com/problems/min-stack/)
 - [x] 13、[验证栈序列](https://leetcode.com/problems/validate-stack-sequences/)
-- [ ] 14、每日温度(LeetCode 739)
+- [x] 14、[每日温度](https://leetcode.com/problems/daily-temperatures/)
 - [ ] 15、接雨水(LeetCode 42)
 - [ ] 16、队列的基础知识
 - [ ] 17、用栈实现队列 (LeetCode 232)

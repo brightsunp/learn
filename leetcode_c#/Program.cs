@@ -16,6 +16,9 @@ namespace TestMain
 
         private static void TestStackAndQueue()
         {
+            var daily = new DailyTemperatures();
+            daily.Run();
+
             var sequence = new StackSequences();
             sequence.Run();
 
