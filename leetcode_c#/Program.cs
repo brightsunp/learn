@@ -18,6 +18,9 @@ namespace TestMain
 
         private static void TestSort()
         {
+            var merge = new MergeSortedArray();
+            merge.Run();
+
             var sortMain = new SortMain();
             sortMain.Run();
         }

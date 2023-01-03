@@ -1,4 +1,7 @@
-﻿using TestMain.Definitions;
+﻿/**
+* Entry to test all the sorting snippets.
+*/
+using TestMain.Definitions;
 using TestMain.Snippets;
 
 namespace TestMain.Sort

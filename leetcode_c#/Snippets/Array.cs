@@ -86,8 +86,7 @@ namespace TestMain.Snippets
             {
                 while (count[i] > 0)
                 {
-                    nums[j] = i + minValue;
-                    j++;
+                    nums[j++] = i + minValue;
                     count[i]--;
                 }
             }
@@ -130,27 +129,20 @@ namespace TestMain.Snippets
             {
                 if (nums[i] < nums[j])
                 {
-                    tmp[k] = nums[i];
-                    i++;
+                    tmp[k++] = nums[i++];
                 }
                 else
                 {
-                    tmp[k] = nums[j];
-                    j++;
+                    tmp[k++] = nums[j++];
                 }
-                k++;
             }
             while (i <= mid)
             {
-                tmp[k] = nums[i];
-                k++;
-                i++;
+                tmp[k++] = nums[i++];
             }
             while (j <= right)
             {
-                tmp[k] = nums[right];
-                k++;
-                j++;
+                tmp[k++] = nums[j++];
             }
             for (int m = 0; m < tmp.Length; m++)
             {
