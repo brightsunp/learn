@@ -49,7 +49,7 @@ namespace TestMain.StackAndQueue
 
         public void Push(int val)
         {
-            // maintain the order that minimum value is always followed by second minimum value
+            // Maintain the order that minimum value is always followed by second minimum value
             if (val <= minValue)
             {
                 allValues.Push(minValue);

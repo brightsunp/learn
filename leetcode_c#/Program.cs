@@ -2,6 +2,7 @@
 * TestMain entry.
 */
 using TestMain.LinkedList;
+using TestMain.Sort;
 using TestMain.StackAndQueue;
 
 namespace TestMain
@@ -10,12 +11,22 @@ namespace TestMain
     {
         static void Main(string[] args)
         {
+            TestSort();
             TestStackAndQueue();
             TestLinkedList();
         }
 
+        private static void TestSort()
+        {
+            var sortMain = new SortMain();
+            sortMain.Run();
+        }
+
         private static void TestStackAndQueue()
         {
+            var queue = new MyQueue();
+            queue.Run();
+
             var trap = new TrapRainWater();
             trap.Run();
 

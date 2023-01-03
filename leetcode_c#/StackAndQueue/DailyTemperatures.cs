@@ -43,6 +43,7 @@ namespace TestMain.StackAndQueue
         }
 
         // Stack to store all the unsolved indexes; later if there's a larger value, resolve them.
+        // The stack is monotonically decreasing per the temperatures[index]. Each index will be visited at most twice.
         private int[] DailyTemperaturesInternalStack(int[] temperatures)
         {
             var stack = new Stack<int>();

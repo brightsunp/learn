@@ -1,6 +1,6 @@
 ## 第一周，链表、栈、队列
 
-- [ ] 0、[时间复杂度与空间复杂度](https://www.geeksforgeeks.org/time-complexity-and-space-complexity/)
+- [x] 0、[时间复杂度与空间复杂度](https://www.geeksforgeeks.org/time-complexity-and-space-complexity/)
 - [ ] 1、[链表的基础知识](https://www.geeksforgeeks.org/what-is-linked-list/)
 - [x] 2、[反转链表](https://leetcode.com/problems/reverse-linked-list/)
 - [x] 3、[相交链表](https://leetcode.com/problems/intersection-of-two-linked-lists/)
@@ -17,7 +17,7 @@
 - [x] 14、[*每日温度](https://leetcode.com/problems/daily-temperatures/)
 - [x] 15、[接雨水](https://leetcode.com/problems/trapping-rain-water/)
 - [ ] 16、[队列的基础知识](https://www.geeksforgeeks.org/introduction-to-queue-data-structure-and-algorithm-tutorials/)
-- [ ] 17、用栈实现队列 (LeetCode 232)
+- [x] 17、[用栈实现队列](https://leetcode.com/problems/implement-queue-using-stacks/)
 - [ ] 18、滑动窗口最大值(LeetCode 239)
 - [ ] 19、设计循环双端队列(LeetCode 641)
 - [ ] 20、移除链表元素(LeetCode 203)
@@ -29,15 +29,15 @@
 
 ## 第二周，递归、排序、贪心
 
-- [ ] 1、递归基础知识
-- [ ] 2、冒泡排序基础知识
-- [ ] 3、选择排序基础知识
-- [ ] 4、插入排序基础知识
-- [ ] 5、快速排序基础知识
-- [ ] 6、计数排序基础知识
-- [ ] 7、归并排序
+- [x] 1、[递归基础知识](https://www.geeksforgeeks.org/introduction-to-recursion-data-structure-and-algorithm-tutorials/)
+- [x] 2、[冒泡排序](https://www.geeksforgeeks.org/bubble-sort/)
+- [x] 3、[选择排序](https://www.geeksforgeeks.org/selection-sort/)
+- [x] 4、[插入排序](https://www.geeksforgeeks.org/insertion-sort/)
+- [x] 5、[*归并排序](https://www.geeksforgeeks.org/merge-sort/)
+- [x] 6、[*快速排序](https://www.geeksforgeeks.org/quick-sort/)
+- [x] 7、[计数排序](https://www.geeksforgeeks.org/counting-sort/)
 - [ ] 8、桶排序(了解即可)
-- [ ] 9、堆排序
+- [ ] 9、堆排序(了解即可)
 - [ ] 10、基数排序(了解即可)
 - [ ] 11、希尔排序(了解即可)
 - [ ] 12、合并两个有序数组(LeetCode 88)
