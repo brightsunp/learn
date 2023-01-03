@@ -18,11 +18,14 @@ namespace TestMain
 
         private static void TestSort()
         {
+            var sortColors = new SortColors();
+            sortColors.Run();
+
             var merge = new MergeSortedArray();
             merge.Run();
 
-            var sortMain = new SortMain();
-            sortMain.Run();
+            //var sortMain = new SortMain();
+            //sortMain.Run();
         }
 
         private static void TestStackAndQueue()
