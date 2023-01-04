@@ -18,6 +18,9 @@ namespace TestMain
 
         private static void TestSort()
         {
+            var count = new CountSmaller();
+            count.Run();
+
             var sortColors = new SortColors();
             sortColors.Run();
 

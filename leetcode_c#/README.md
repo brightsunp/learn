@@ -47,7 +47,7 @@
 - [ ] 希尔排序(了解即可)
 - [x] [合并两个有序数组](https://leetcode.com/problems/merge-sorted-array/)
 - [x] [颜色分类](https://leetcode.com/problems/sort-colors/)
-- [ ] [计算右侧小于当前元素的个数](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
+- [x] [*计算右侧小于当前元素的个数](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
 - [ ] 合并k个升序链表(LeetCode 23)
 - [ ] 有序数组的平方(LeetCode 977)
 - [ ] 盛最多水的容器 (LeetCode 11)
