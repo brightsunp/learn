@@ -18,6 +18,9 @@ namespace TestMain
 
         private static void TestSort()
         {
+            var mergeK = new MergeKLists();
+            mergeK.Run();
+
             var count = new CountSmaller();
             count.Run();
 

@@ -32,7 +32,6 @@ namespace TestMain.LinkedList
                     pre.next = list2;
                     list2 = list2.next;
                 }
-
                 pre = pre.next;
             }
 
