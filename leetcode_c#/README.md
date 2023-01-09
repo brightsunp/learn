@@ -51,7 +51,7 @@
 - [x] [合并k个有序链表](https://leetcode.com/problems/merge-k-sorted-lists/)
 - [ ] [有序数组的平方](https://leetcode.com/problems/squares-of-a-sorted-array/)
 - [ ] [盛最多水的容器](https://leetcode.com/problems/container-with-most-water/)
-- [ ] [两数之和](https://leetcode.com/problems/two-sum/)
+- [x] [两数之和](https://leetcode.com/problems/two-sum/)
 
 6. [二叉堆基础知识]()
 - [ ] 分发饼干(LeetCode 455)

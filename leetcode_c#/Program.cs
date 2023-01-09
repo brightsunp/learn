@@ -18,6 +18,9 @@ namespace TestMain
 
         private static void TestSort()
         {
+            var twoSum = new TwoSum();
+            twoSum.Run();
+
             var mergeK = new MergeKLists();
             mergeK.Run();
 

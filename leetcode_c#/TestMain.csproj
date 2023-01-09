@@ -62,6 +62,7 @@
     <Compile Include="Sort\MergeSortedArray.cs" />
     <Compile Include="Sort\SortColors.cs" />
     <Compile Include="Sort\SortMain.cs" />
+    <Compile Include="Sort\TwoSum.cs" />
     <Compile Include="StackAndQueue\BasicCalculator.cs" />
     <Compile Include="StackAndQueue\DailyTemperatures.cs" />
     <Compile Include="StackAndQueue\MinStack.cs" />
