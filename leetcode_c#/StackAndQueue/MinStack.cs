@@ -16,8 +16,8 @@ namespace TestMain.StackAndQueue
 {
     class MinStack : Solution
     {
-        private Stack<int> allValues;
-        private int minValue;
+        private Stack<int> allValues = new Stack<int>();
+        private int minValue = int.MaxValue;
         private Node head = null;
 
         public override void Run()
@@ -39,12 +39,6 @@ namespace TestMain.StackAndQueue
             minStack.PopNode();
             AssertEqual(0, minStack.TopNode());
             AssertEqual(-2, minStack.GetMinNode());
-        }
-
-        public MinStack()
-        {
-            allValues = new Stack<int>();
-            minValue = int.MaxValue;
         }
 
         public void Push(int val)

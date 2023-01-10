@@ -65,6 +65,7 @@
     <Compile Include="Sort\TwoSum.cs" />
     <Compile Include="StackAndQueue\BasicCalculator.cs" />
     <Compile Include="StackAndQueue\DailyTemperatures.cs" />
+    <Compile Include="StackAndQueue\MaxSlidingWindow.cs" />
     <Compile Include="StackAndQueue\MinStack.cs" />
     <Compile Include="StackAndQueue\MyQueue.cs" />
     <Compile Include="StackAndQueue\StackSequences.cs" />

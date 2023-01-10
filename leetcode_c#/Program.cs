@@ -11,7 +11,7 @@ namespace TestMain
     {
         static void Main(string[] args)
         {
-            TestSort();
+            // TestSort();
             TestStackAndQueue();
             TestLinkedList();
         }
@@ -39,6 +39,9 @@ namespace TestMain
 
         private static void TestStackAndQueue()
         {
+            var maxWindow = new MaxSlidingWindow();
+            maxWindow.Run();
+
             var queue = new MyQueue();
             queue.Run();
 

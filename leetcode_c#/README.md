@@ -21,7 +21,7 @@
 
 3. [队列基础知识](https://www.geeksforgeeks.org/introduction-to-queue-data-structure-and-algorithm-tutorials/)
 - [x] [用栈实现队列](https://leetcode.com/problems/implement-queue-using-stacks/)
-- [ ] 滑动窗口最大值(LeetCode 239)
+- [x] [*滑动窗口最大值](https://leetcode.com/problems/sliding-window-maximum/)
 - [ ] 设计循环双端队列(LeetCode 641)
 - [ ] 移除链表元素(LeetCode 203)
 - [ ] k个一组翻转链表(LeetCode 25)
