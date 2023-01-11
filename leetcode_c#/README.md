@@ -68,8 +68,8 @@
 
 ## 第三周，搜索算法、回溯算法、位运算、二分查找
 
-7. [二分查找基础知识]()
-- [ ] 二分查找(LeetCode 704)
+7. [二分查找基础知识](https://www.geeksforgeeks.org/binary-search/)
+- [*] [二分查找](https://leetcode.com/problems/binary-search/)
 - [ ] 搜索插入位置(LeetCode 35)
 - [ ] 在排序数组中查找元素的第一个和最后一个位置(LeetCode 34)
 - [ ] 搜索旋转排序数组(LeetCode 33)

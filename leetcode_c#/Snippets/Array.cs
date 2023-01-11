@@ -92,6 +92,30 @@ namespace TestMain.Snippets
             }
         }
 
+        public static int BinarySearch(this int[] sortedNums, int target)
+        {
+            int lo = 0, hi = sortedNums.Length - 1;
+            while (lo <= hi)
+            {
+                int mid = (lo + hi) >> 1;
+                if (target == sortedNums[mid])
+                {
+                    return mid;
+                }
+                
+                if (target < sortedNums[mid])
+                {
+                    hi = mid - 1;
+                }
+                else
+                {
+                    lo = mid + 1;
+                }
+            }
+
+            return -1;
+        }
+
         public static int[] SampleActual()
         {
             return new int[] { 5, 1, 4, 2, 8 };
@@ -109,23 +133,24 @@ namespace TestMain.Snippets
             nums[j] = tmp;
         }
 
-        private static void MergeSortInternal(int[] nums, int left, int right)
+        private static void MergeSortInternal(int[] nums, int lo, int hi)
         {
-            if (left == right)
+            if (lo >= hi)
             {
                 return;
             }
-            int mid = (left + right) >> 1;
-            MergeSortInternal(nums, left, mid);
-            MergeSortInternal(nums, mid + 1, right);
-            Merge(nums, left, mid, right);
+
+            int mid = (lo + hi) >> 1;
+            MergeSortInternal(nums, lo, mid);
+            MergeSortInternal(nums, mid + 1, hi);
+            Merge(nums, lo, mid, hi);
         }
 
-        private static void Merge(int[] nums, int left, int mid, int right)
+        private static void Merge(int[] nums, int lo, int mid, int hi)
         {
-            var tmp = new int[right - left + 1];
-            int k = 0, i = left, j = mid + 1;
-            while (i <= mid && j <= right)
+            var tmp = new int[hi - lo + 1];
+            int k = 0, i = lo, j = mid + 1;
+            while (i <= mid && j <= hi)
             {
                 if (nums[i] < nums[j])
                 {
@@ -140,13 +165,14 @@ namespace TestMain.Snippets
             {
                 tmp[k++] = nums[i++];
             }
-            while (j <= right)
+            while (j <= hi)
             {
                 tmp[k++] = nums[j++];
             }
+
             for (int m = 0; m < tmp.Length; m++)
             {
-                nums[m + left] = tmp[m];
+                nums[m + lo] = tmp[m];
             }
         }
 
@@ -156,6 +182,7 @@ namespace TestMain.Snippets
             {
                 return;
             }
+
             int pi = Partition(nums, lo, hi);
             QuickSortInternal(nums, lo, pi - 1);
             QuickSortInternal(nums, pi + 1, hi);

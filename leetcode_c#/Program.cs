@@ -2,6 +2,7 @@
 * TestMain entry.
 */
 using TestMain.LinkedList;
+using TestMain.Search;
 using TestMain.Sort;
 using TestMain.StackAndQueue;
 
@@ -11,9 +12,16 @@ namespace TestMain
     {
         static void Main(string[] args)
         {
-            // TestSort();
+            TestSearch();
+            TestSort();
             TestStackAndQueue();
             TestLinkedList();
+        }
+
+        private static void TestSearch()
+        {
+            var binary = new BinarySearch();
+            binary.Run();
         }
 
         private static void TestSort()
