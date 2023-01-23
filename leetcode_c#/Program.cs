@@ -22,6 +22,9 @@ namespace TestMain
         {
             var binary = new BinarySearch();
             binary.Run();
+
+            var rotated = new SearchRotated();
+            rotated.Run();
         }
 
         private static void TestSort()

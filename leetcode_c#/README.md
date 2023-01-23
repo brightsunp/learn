@@ -69,10 +69,10 @@
 ## 第三周，搜索算法、回溯算法、位运算、二分查找
 
 7. [二分查找基础知识](https://www.geeksforgeeks.org/binary-search/)
-- [*] [二分查找](https://leetcode.com/problems/binary-search/)
-- [ ] 搜索插入位置(LeetCode 35)
-- [ ] 在排序数组中查找元素的第一个和最后一个位置(LeetCode 34)
-- [ ] 搜索旋转排序数组(LeetCode 33)
+- [x] [二分查找](https://leetcode.com/problems/binary-search/)
+- [ ] [搜索插入位置](https://leetcode.com/problems/search-insert-position/)
+- [ ] [在排序数组中查找元素的第一个和最后一个位置](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+- [x] [搜索旋转排序数组](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 - [ ] 搜索二维矩阵(LeetCode 74)
 - [ ] 寻找两个正序数组的中位数(LeetCode 4)
 - [ ] 有效三角形的个数(LeetCode 611)
