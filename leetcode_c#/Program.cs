@@ -20,6 +20,9 @@ namespace TestMain
 
         private static void TestSearch()
         {
+            var median = new MedianOfTwoSorted();
+            median.Run();
+
             var binary = new BinarySearch();
             binary.Run();
 

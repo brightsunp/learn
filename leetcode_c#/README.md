@@ -70,14 +70,14 @@
 
 7. [二分查找基础知识](https://www.geeksforgeeks.org/binary-search/)
 - [x] [二分查找](https://leetcode.com/problems/binary-search/)
-- [ ] [搜索插入位置](https://leetcode.com/problems/search-insert-position/)
-- [ ] [在排序数组中查找元素的第一个和最后一个位置](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+- [x] [搜索插入位置](https://leetcode.com/problems/search-insert-position/)
+- [x] [在排序数组中查找元素的第一个和最后一个位置](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 - [x] [搜索旋转排序数组](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 - [ ] 搜索二维矩阵(LeetCode 74)
-- [ ] 寻找两个正序数组的中位数(LeetCode 4)
+- [x] [*寻找两个正序数组的中位数](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 - [ ] 有效三角形的个数(LeetCode 611)
-- [ ] 剑指 Offer 53 – II. 0～n-1中缺失的数字
-- [ ] 剑指 Offer 53 – I. 在排序数组中查找数字 I
+- [ ] 剑指 Offer 53 - II. 0～n-1中缺失的数字
+- [ ] 剑指 Offer 53 - I. 在排序数组中查找数字 I
 - [ ] 剑指 Offer 51. 数组中的逆序对
 - [ ] 寻找峰值(LeetCode 162)
 - [ ] 第一个错误的版本(LeetCode 278)
