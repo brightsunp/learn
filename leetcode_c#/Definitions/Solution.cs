@@ -41,6 +41,11 @@ namespace TestMain.Definitions
                 var actIter = (actual as IEnumerable).GetEnumerator();
                 while (expIter.MoveNext() && actIter.MoveNext())
                 {
+                    if (expIter.Current is IEnumerable && actIter.Current is IEnumerable)
+                    {
+                        AssertEqual(expIter.Current, actIter.Current);
+                    }
+
                     if (expIter.Current.ToString() != actIter.Current.ToString())
                     {
                         isEqual = false;

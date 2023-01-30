@@ -27,8 +27,6 @@
 - [ ] k个一组翻转链表(LeetCode 25)
 - [ ] 回文链表(LeetCode 234)
 - [ ] 奇偶链表(LeetCode 328)
-- [ ] 从尾到头打印链表(剑指Offer 06)
-- [ ] 链表中倒数第k个节点(剑指Offer 22)
 
 ## 第二周，递归、排序、贪心
 
@@ -76,9 +74,6 @@
 - [ ] 搜索二维矩阵(LeetCode 74)
 - [x] [*寻找两个正序数组的中位数](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 - [ ] 有效三角形的个数(LeetCode 611)
-- [ ] 剑指 Offer 53 - II. 0～n-1中缺失的数字
-- [ ] 剑指 Offer 53 - I. 在排序数组中查找数字 I
-- [ ] 剑指 Offer 51. 数组中的逆序对
 - [ ] 寻找峰值(LeetCode 162)
 - [ ] 第一个错误的版本(LeetCode 278)
 - [ ] 山脉数组的峰顶索引(LeetCode 852)
@@ -109,11 +104,11 @@
 
 ## 第四周，二叉树
 
-10. [二叉树基础知识]
-- [ ] 二叉树的前序遍历(LeetCode 144)
-- [ ] 二叉树的中序遍历(LeetCode 94)
-- [ ] 二叉树的后序遍历(LeetCode 145)
-- [ ] 二叉树的层序遍历(LeetCode 102)
+10. [二叉树基础知识](https://www.geeksforgeeks.org/binary-tree-data-structure/)
+- [x] [二叉树的前序遍历](https://leetcode.com/problems/binary-tree-preorder-traversal/)
+- [x] [*二叉树的中序遍历](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+- [x] [二叉树的后序遍历](https://leetcode.com/problems/binary-tree-postorder-traversal/)
+- [x] [二叉树的层序遍历](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 - [ ] 二叉树的锯齿形层序遍历(LeetCode 103)
 - [ ] 从前序与中序遍历序列构造二叉树(LeetCode 105)
 - [ ] 路径总和 II(LeetCode 113)
@@ -174,3 +169,9 @@
 - [ ] 最后一块石头的重量 II(LeetCode 1049)
 
 ## 第六周，剑指 Offer 系列
+
+- [ ] 从尾到头打印链表(剑指 Offer 06)
+- [ ] 链表中倒数第k个节点(剑指 Offer 22)
+- [ ] 剑指 Offer 53 - II. 0～n-1中缺失的数字
+- [ ] 剑指 Offer 53 - I. 在排序数组中查找数字 I
+- [ ] 剑指 Offer 51. 数组中的逆序对

@@ -5,6 +5,7 @@ using TestMain.LinkedList;
 using TestMain.Search;
 using TestMain.Sort;
 using TestMain.StackAndQueue;
+using TestMain.Tree;
 
 namespace TestMain
 {
@@ -12,10 +13,17 @@ namespace TestMain
     {
         static void Main(string[] args)
         {
+            TestTree();
             TestSearch();
             TestSort();
             TestStackAndQueue();
             TestLinkedList();
+        }
+
+        private static void TestTree()
+        {
+            var treeMain = new TreeMain();
+            treeMain.Run();
         }
 
         private static void TestSearch()

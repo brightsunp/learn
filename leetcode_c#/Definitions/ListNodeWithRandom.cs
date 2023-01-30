@@ -1,5 +1,5 @@
 ﻿/**
-* Definition for singly-linked list with random pointer.
+* Definition for a linked list node with random pointer.
 */
 using System.Collections.Generic;
 

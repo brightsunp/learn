@@ -46,6 +46,7 @@
     <Compile Include="Definitions\ListNode.cs" />
     <Compile Include="Definitions\ListNodeWithRandom.cs" />
     <Compile Include="Definitions\Solution.cs" />
+    <Compile Include="Definitions\TreeNode.cs" />
     <Compile Include="LinkedList\CopyWithRandomPointer.cs" />
     <Compile Include="LinkedList\GetCycleNode.cs" />
     <Compile Include="LinkedList\GetIntersection.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Search\MedianOfTwoSorted.cs" />
     <Compile Include="Search\SearchRotated.cs" />
     <Compile Include="Snippets\Array.cs" />
+    <Compile Include="Snippets\BinaryTree.cs" />
     <Compile Include="Snippets\LinkedList.cs" />
     <Compile Include="Sort\CountSmaller.cs" />
     <Compile Include="Sort\MergeKLists.cs" />
@@ -74,6 +76,7 @@
     <Compile Include="StackAndQueue\StackSequences.cs" />
     <Compile Include="StackAndQueue\TrapRainWater.cs" />
     <Compile Include="StackAndQueue\ValidParentheses.cs" />
+    <Compile Include="Tree\TreeMain.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,5 +1,5 @@
 ﻿/**
- * Definition for singly-linked list.
+ * Definition for a linked list node.
  */
 using System.Collections.Generic;
 
