@@ -1,5 +1,5 @@
 ﻿/**
-* Recursive implementation are corresponding to how the tree is traversed.
+* Recursive traversal implementation are corresponding to how the tree is traversed.
 *   pre-order: print(val) / pre-recursive(left) / pre-recursive(right)
 *       Duplicate tree / Prefix expression tree
 *   in-oder: in-recursive(left) / print(val) / in-recursive(right)
@@ -7,12 +7,12 @@
 *   post-order: post-recursive(left) / post-recursive(right) / print(val)
 *       Delete tree / Postfix expression tree
 */
+using System;
 using System.Collections.Generic;
 using TestMain.Definitions;
 
 namespace TestMain.Snippets
 {
-    // All traversals are iterative implementation.
     static class BinaryTree
     {
         // Leverage FIFO queue.
@@ -132,6 +132,35 @@ namespace TestMain.Snippets
             }
 
             return res;
+        }
+
+        // Recursive using Depth First Search, or iterative using Breadth First Search (level order traversal).
+        public static int MaxDepth(this TreeNode root)
+        {
+            if (root == null)
+            {
+                return 0;
+            }
+
+            int lMaxDepth = MaxDepth(root.left);
+            int rMaxDepth = MaxDepth(root.right);
+            return Math.Max(lMaxDepth, rMaxDepth) + 1;
+        }
+
+        public static int MinDepth(this TreeNode root)
+        {
+            if (root == null)
+            {
+                return 0;
+            }
+
+            int lMinDepth = MinDepth(root.left);
+            int rMinDepth = MinDepth(root.right);
+            if (lMinDepth == 0 || rMinDepth == 0)
+            {
+                return lMinDepth + rMinDepth + 1;
+            }
+            return Math.Min(lMinDepth, rMinDepth) + 1;
         }
     }
 }

@@ -23,6 +23,9 @@ namespace TestMain.Tree
 
             expected = new List<int> { 4, 5, 2, 6, 7, 3, 1 };
             AssertEqual(expected, actual.PostOrder());
+
+            AssertEqual(3, actual.MaxDepth());
+            AssertEqual(3, actual.MinDepth());
         }
     }
 }
