@@ -50,7 +50,7 @@ namespace TestMain.Snippets
             return res;
         }
 
-        // Leverage FILO stack: root -> left subtree -> right subtree.
+        // Leverage LIFO stack: root -> left subtree -> right subtree.
         public static IList<int> PreOrder(this TreeNode root)
         {
             var res = new List<int>();
@@ -78,7 +78,7 @@ namespace TestMain.Snippets
             return res;
         }
 
-        // Leverage FILO stack: left subtree -> root -> right subtree.
+        // Leverage LIFO stack: left subtree -> root -> right subtree.
         public static IList<int> InOrder(this TreeNode root)
         {
             var res = new List<int>();
@@ -104,7 +104,7 @@ namespace TestMain.Snippets
             return res;
         }
 
-        // Leverage FILO stack: left subtree -> right subtree -> root. (*Reverse the print step of pre-order)
+        // Leverage LIFO stack: left subtree -> right subtree -> root. (*Reverse the print step of pre-order)
         public static IList<int> PostOrder(this TreeNode root)
         {
             var res = new List<int>();
@@ -161,6 +161,20 @@ namespace TestMain.Snippets
                 return lMinDepth + rMinDepth + 1;
             }
             return Math.Min(lMinDepth, rMinDepth) + 1;
+        }
+
+        // Elegant recursive implementation.
+        public static int SumOfLeftLeaves(this TreeNode root, bool isLeftChild = false)
+        {
+            if (root == null)
+            {
+                return 0;
+            }
+            if (root.left == null && root.right == null)
+            {
+                return isLeftChild ? root.val : 0;
+            }
+            return SumOfLeftLeaves(root.left, true) + SumOfLeftLeaves(root.right, false);
         }
     }
 }

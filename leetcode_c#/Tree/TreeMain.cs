@@ -26,6 +26,7 @@ namespace TestMain.Tree
 
             AssertEqual(3, actual.MaxDepth());
             AssertEqual(3, actual.MinDepth());
+            AssertEqual(10, actual.SumOfLeftLeaves());
         }
     }
 }
