@@ -68,7 +68,7 @@ namespace TestMain.Definitions
             }
         }
 
-        protected void WriteInformation(string message)
+        private void WriteInformation(string message)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(message);
@@ -76,7 +76,7 @@ namespace TestMain.Definitions
             Console.ReadKey();
         }
 
-        protected void WriteError(string errorMessage)
+        private void WriteError(string errorMessage)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(errorMessage);

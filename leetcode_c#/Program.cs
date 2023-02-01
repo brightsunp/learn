@@ -1,6 +1,7 @@
 ﻿/**
 * TestMain entry.
 */
+using TestMain.Backtracking;
 using TestMain.LinkedList;
 using TestMain.Search;
 using TestMain.Sort;
@@ -13,11 +14,18 @@ namespace TestMain
     {
         static void Main(string[] args)
         {
+            TestBacktracking();
             TestTree();
             TestSearch();
             TestSort();
             TestStackAndQueue();
             TestLinkedList();
+        }
+
+        private static void TestBacktracking()
+        {
+            var backtracking = new RecursiveBacktracking();
+            backtracking.Run();
         }
 
         private static void TestTree()

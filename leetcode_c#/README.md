@@ -89,18 +89,18 @@
 - [ ] 最大单词长度乘积(LeetCode 318)
 - [ ] 汉明距离(LeetCode 461)
 
-9. [回溯基础知识](https://www.geeksforgeeks.org/backtracking-algorithms/)
+9. [回溯基础知识](https://www.geeksforgeeks.org/introduction-to-backtracking-data-structure-and-algorithm-tutorials/)
+- [ ] [子集](https://leetcode.com/problems/subsets/)
+- [ ] 全排列(LeetCode 46)
+- [ ] 组合(LeetCode 77)
+- [ ] 组合总和 II(LeetCode 40)
+- [ ] 组合总和 II(LeetCode 216)
+- [ ] 分割回文串(LeetCode 131)
 - [ ] 岛屿数量(LeetCode 200)
 - [ ] N皇后(LeetCode 51)
-- [ ] 子集(LeetCode 78)
-- [ ] 组合总和 II(LeetCode 40)
 - [ ] 括号生成(LeetCode 22)
 - [ ] 火柴拼正方形(LeetCode 437)
 - [ ] 接雨水 II(LeetCode 407)
-- [ ] 组合(LeetCode 77)
-- [ ] 组合总和 II(LeetCode 216)
-- [ ] 分割回文串(LeetCode 131)
-- [ ] 全排列(LeetCode 46)
 
 ## 第四周，二叉树
 
