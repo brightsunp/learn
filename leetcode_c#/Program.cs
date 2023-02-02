@@ -24,6 +24,9 @@ namespace TestMain
 
         private static void TestBacktracking()
         {
+            var parenthesis = new GenerateParenthesis();
+            parenthesis.Run();
+
             var backtracking = new RecursiveBacktracking();
             backtracking.Run();
         }
