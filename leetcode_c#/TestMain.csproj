@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Backtracking\GenerateParenthesis.cs" />
     <Compile Include="Backtracking\RecursiveBacktracking.cs" />
+    <Compile Include="Bitwise\BitwiseMain.cs" />
     <Compile Include="Definitions\ListNode.cs" />
     <Compile Include="Definitions\ListNodeWithRandom.cs" />
     <Compile Include="Definitions\Solution.cs" />

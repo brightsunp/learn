@@ -2,6 +2,7 @@
 * TestMain entry.
 */
 using TestMain.Backtracking;
+using TestMain.Bitwise;
 using TestMain.LinkedList;
 using TestMain.Search;
 using TestMain.Sort;
@@ -14,12 +15,19 @@ namespace TestMain
     {
         static void Main(string[] args)
         {
+            TestBitwise();
             // TestBacktracking();
             TestTree();
             TestSearch();
             TestSort();
             TestStackAndQueue();
             TestLinkedList();
+        }
+
+        private static void TestBitwise()
+        {
+            var bitMain = new BitwiseMain();
+            bitMain.Run();
         }
 
         private static void TestBacktracking()
