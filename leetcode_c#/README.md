@@ -2,7 +2,7 @@
 
 0. [时间复杂度与空间复杂度](https://www.geeksforgeeks.org/time-complexity-and-space-complexity/)
 
-1. [链表基础知识](https://www.geeksforgeeks.org/what-is-linked-list/)
+1. [链表基础知识](https://www.geeksforgeeks.org/introduction-to-linked-list-data-structure-and-algorithm-tutorial/)
 - [x] [反转链表](https://leetcode.com/problems/reverse-linked-list/)
 - [x] [相交链表](https://leetcode.com/problems/intersection-of-two-linked-lists/)
 - [x] [合并两个有序链表](https://leetcode.com/problems/merge-two-sorted-lists/)
@@ -28,7 +28,7 @@
 - [ ] 回文链表(LeetCode 234)
 - [ ] 奇偶链表(LeetCode 328)
 
-## 第二周，递归、排序、贪心
+## 第二周，递归、排序、堆
 
 4. [递归基础知识](https://www.geeksforgeeks.org/introduction-to-recursion-data-structure-and-algorithm-tutorials/)
 
@@ -51,7 +51,7 @@
 - [ ] [盛最多水的容器](https://leetcode.com/problems/container-with-most-water/)
 - [x] [两数之和](https://leetcode.com/problems/two-sum/)
 
-6. [二叉堆基础知识]()
+6. [堆基础知识](https://www.geeksforgeeks.org/introduction-to-heap-data-structure-and-algorithm-tutorials/)
 - [ ] 分发饼干(LeetCode 455)
 - [ ] 柠檬水找零(LeetCode 860)
 - [ ] 用最少数量的箭引爆气球(LeetCode 452)
@@ -64,7 +64,7 @@
 - [ ] 加油站(LeetCode 134)
 - [ ] 合并区间(LeetCode 56)
 
-## 第三周，搜索算法、回溯算法、位运算、二分查找
+## 第三周，二分查找、位运算、回溯
 
 7. [二分查找基础知识](https://www.geeksforgeeks.org/binary-search/)
 - [x] [二分查找](https://leetcode.com/problems/binary-search/)
@@ -79,7 +79,7 @@
 - [ ] 山脉数组的峰顶索引(LeetCode 852)
 - [ ] 有效的完全平方数(LeetCode 367)
 
-8. [位运算基础知识]()
+8. [位运算基础知识](https://www.geeksforgeeks.org/introduction-to-bitwise-algorithms-data-structures-and-algorithms-tutorial/)
 - [ ] 丢失的数字(LeetCode 268)
 - [ ] 2的幂(LeetCode 231)
 - [ ] 比特位计数(LeetCode 338)
@@ -104,7 +104,7 @@
 
 ## 第四周，二叉树
 
-10. [二叉树基础知识](https://www.geeksforgeeks.org/binary-tree-data-structure/)
+10. [二叉树基础知识](https://www.geeksforgeeks.org/introduction-to-binary-tree-data-structure-and-algorithm-tutorials/)
 - [x] [二叉树的前序遍历](https://leetcode.com/problems/binary-tree-preorder-traversal/)
 - [x] [*二叉树的中序遍历](https://leetcode.com/problems/binary-tree-inorder-traversal/)
 - [x] [二叉树的后序遍历](https://leetcode.com/problems/binary-tree-postorder-traversal/)
@@ -131,9 +131,9 @@
 - [ ] 二叉搜索树的最小绝对差(LeetCode 530)
 - [ ] 最大二叉树(LeetCode 654)
 
-## 第五周，动态规划、背包问题
+## 第五周，动态规划、贪心
 
-11. [动态规划基础知识和解题步骤]
+11. [动态规划基础知识](https://www.geeksforgeeks.org/dynamic-programming/)
 - [ ] 爬楼梯(LeetCode 70)
 - [ ] 斐波那契数(LeetCode 509)
 - [ ] 最大子序和(LeetCode 53)
@@ -167,6 +167,8 @@
 - [ ] 01 背包问题
 - [ ] 目标和(LeetCode 494)
 - [ ] 最后一块石头的重量 II(LeetCode 1049)
+
+12. [贪心基础知识](https://www.geeksforgeeks.org/greedy-algorithms/)
 
 ## 第六周，剑指 Offer 系列
 

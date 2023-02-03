@@ -14,7 +14,7 @@ namespace TestMain
     {
         static void Main(string[] args)
         {
-            TestBacktracking();
+            // TestBacktracking();
             TestTree();
             TestSearch();
             TestSort();
@@ -33,6 +33,9 @@ namespace TestMain
 
         private static void TestTree()
         {
+            var heap = new HeapMain();
+            heap.Run();
+
             var treeMain = new TreeMain();
             treeMain.Run();
         }

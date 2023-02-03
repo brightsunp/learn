@@ -63,6 +63,7 @@
     <Compile Include="Search\SearchRotated.cs" />
     <Compile Include="Snippets\Array.cs" />
     <Compile Include="Snippets\BinaryTree.cs" />
+    <Compile Include="Snippets\Heap.cs" />
     <Compile Include="Snippets\LinkedList.cs" />
     <Compile Include="Sort\CountSmaller.cs" />
     <Compile Include="Sort\MergeKLists.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="StackAndQueue\StackSequences.cs" />
     <Compile Include="StackAndQueue\TrapRainWater.cs" />
     <Compile Include="StackAndQueue\ValidParentheses.cs" />
+    <Compile Include="Tree\HeapMain.cs" />
     <Compile Include="Tree\TreeMain.cs" />
   </ItemGroup>
   <ItemGroup />
