@@ -3,6 +3,8 @@
 * 
 * 1) 1^1=0, 0^1=1; 0^0=0, 1^0=1
 * 2) if n is a power of 2, then: n&(n-1)=0
+* 3) n^n=0, n^0=n, n&(~0)=n, n&(~n)=0
+* 4) n&~(n-1) returns binary number containing the rightmost set bit: 1100 => 100, 1101 => 1
 */
 using TestMain.Definitions;
 

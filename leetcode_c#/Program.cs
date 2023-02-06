@@ -26,6 +26,9 @@ namespace TestMain
 
         private static void TestBitwise()
         {
+            var singleNumber = new SingleNumbers();
+            singleNumber.Run();
+
             var bitMain = new BitwiseMain();
             bitMain.Run();
         }
