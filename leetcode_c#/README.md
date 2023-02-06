@@ -80,7 +80,7 @@
 - [ ] 有效的完全平方数(LeetCode 367)
 
 8. [位运算基础知识](https://www.geeksforgeeks.org/introduction-to-bitwise-algorithms-data-structures-and-algorithms-tutorial/)
-- [ ] 丢失的数字(LeetCode 268)
+- [x] [丢失的数字](https://leetcode.com/problems/missing-number/)
 - [x] [2的幂](https://leetcode.com/problems/power-of-two/)
 - [ ] 比特位计数(LeetCode 338)
 - [x] [位1的个数(Hamming Weight)](https://leetcode.com/problems/number-of-1-bits/)
