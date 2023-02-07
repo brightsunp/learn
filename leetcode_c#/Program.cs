@@ -26,6 +26,9 @@ namespace TestMain
 
         private static void TestBitwise()
         {
+            var maxProduct = new MaxProduct();
+            maxProduct.Run();
+
             var singleNumber = new SingleNumbers();
             singleNumber.Run();
 

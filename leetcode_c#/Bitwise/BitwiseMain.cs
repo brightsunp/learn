@@ -23,6 +23,10 @@ namespace TestMain.Bitwise
 
             AssertEqual(1, CountBits(4));
             AssertEqual(2, CountBits(6));
+
+            AssertEqual(new int[] { 0, 1, 1, 2, 1, 2 }, CountingBits(5));
+            AssertEqual(2, HammingDistance(1, 4));
+            AssertEqual(1, HammingDistance(1, 3));
         }
 
         private int SetBit(int num, int pos)
@@ -51,10 +55,25 @@ namespace TestMain.Bitwise
             int count = 0;
             while (num > 0)
             {
-                count += (num & 1);
+                count += num & 1;
                 num >>= 1;
             }
             return count;
+        }
+
+        private int[] CountingBits(int n)
+        {
+            var res = new int[n + 1];
+            for (int i = 0; i <= n; i++)
+            {
+                res[i] = res[i >> 1] + (i & 1);
+            }
+            return res;
+        }
+
+        private int HammingDistance(int x, int y)
+        {
+            return CountBits(x ^ y);
         }
     }
 }
