@@ -28,6 +28,9 @@ namespace TestMain
 
         private static void TestDp()
         {
+            var lps = new LongestPalindromeSubsequence();
+            lps.Run();
+
             var lis = new LongestIncreasingSubsequence();
             lis.Run();
 

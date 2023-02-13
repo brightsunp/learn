@@ -54,6 +54,7 @@
     <Compile Include="Definitions\TreeNode.cs" />
     <Compile Include="DynamicProgramming\FibonacciSeries.cs" />
     <Compile Include="DynamicProgramming\LongestIncreasingSubsequence.cs" />
+    <Compile Include="DynamicProgramming\LongestPalindromeSubsequence.cs" />
     <Compile Include="DynamicProgramming\MaxSubarray.cs" />
     <Compile Include="DynamicProgramming\UniquePaths.cs" />
     <Compile Include="LinkedList\CopyWithRandomPointer.cs" />
