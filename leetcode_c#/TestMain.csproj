@@ -52,6 +52,8 @@
     <Compile Include="Definitions\ListNodeWithRandom.cs" />
     <Compile Include="Definitions\Solution.cs" />
     <Compile Include="Definitions\TreeNode.cs" />
+    <Compile Include="DynamicProgramming\FibonacciSeries.cs" />
+    <Compile Include="DynamicProgramming\UniquePaths.cs" />
     <Compile Include="LinkedList\CopyWithRandomPointer.cs" />
     <Compile Include="LinkedList\GetCycleNode.cs" />
     <Compile Include="LinkedList\GetIntersection.cs" />

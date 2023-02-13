@@ -134,8 +134,10 @@
 ## 第五周，动态规划、贪心
 
 11. [动态规划基础知识](https://www.geeksforgeeks.org/dynamic-programming/)
-- [ ] 爬楼梯(LeetCode 70)
-- [ ] 斐波那契数(LeetCode 509)
+- [x] [斐波那契数](https://leetcode.com/problems/fibonacci-number/)
+- [x] [爬楼梯](https://leetcode.com/problems/climbing-stairs/)
+- [x] [不同路径](https://leetcode.com/problems/unique-paths/)
+- [x] [*解码的方法](https://leetcode.com/problems/decode-ways/)
 - [ ] 最大子序和(LeetCode 53)
 - [ ] 零钱兑换(LeetCode 322)
 - [ ] 零钱兑换 II(LeetCode 518)
@@ -149,8 +151,6 @@
 - [ ] 买卖股票的最佳时机含手续费(LeetCode 714)
 - [ ] 完全平方数(LeetCode 279)
 - [ ] 三角形最小路径和(LeetCode 120)
-- [ ] 不同路径(LeetCode 62)
-- [ ] 不同路径II(LeetCode 63)
 - [ ] 整数拆分(LeetCode 343)
 - [ ] 不同的二叉搜索树(LeetCode 96)
 - [ ] 地下城游戏(LeetCode 174)

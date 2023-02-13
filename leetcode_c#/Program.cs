@@ -3,6 +3,7 @@
 */
 using TestMain.Backtracking;
 using TestMain.Bitwise;
+using TestMain.DynamicProgramming;
 using TestMain.LinkedList;
 using TestMain.Search;
 using TestMain.Sort;
@@ -15,13 +16,23 @@ namespace TestMain
     {
         static void Main(string[] args)
         {
+            TestDp();
             TestBitwise();
-            // TestBacktracking();
+            TestBacktracking();
             TestTree();
             TestSearch();
             TestSort();
             TestStackAndQueue();
             TestLinkedList();
+        }
+
+        private static void TestDp()
+        {
+            var uniquePaths = new UniquePaths();
+            uniquePaths.Run();
+
+            var series = new FibonacciSeries();
+            series.Run();
         }
 
         private static void TestBitwise()

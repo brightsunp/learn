@@ -116,6 +116,14 @@ namespace TestMain.Snippets
             return -1;
         }
 
+        public static void Populate(this int[] array, int value)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = value;
+            }
+        }
+
         public static int[] SampleActual()
         {
             return new int[] { 5, 1, 4, 2, 8 };
