@@ -53,7 +53,8 @@
     <Compile Include="Definitions\Solution.cs" />
     <Compile Include="Definitions\TreeNode.cs" />
     <Compile Include="DynamicProgramming\FibonacciSeries.cs" />
-    <Compile Include="DynamicProgramming\MaxSubArray.cs" />
+    <Compile Include="DynamicProgramming\LongestIncreasingSubsequence.cs" />
+    <Compile Include="DynamicProgramming\MaxSubarray.cs" />
     <Compile Include="DynamicProgramming\UniquePaths.cs" />
     <Compile Include="LinkedList\CopyWithRandomPointer.cs" />
     <Compile Include="LinkedList\GetCycleNode.cs" />

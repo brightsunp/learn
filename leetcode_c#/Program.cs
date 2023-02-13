@@ -28,7 +28,10 @@ namespace TestMain
 
         private static void TestDp()
         {
-            var maxSubarray = new MaxSubArray();
+            var lis = new LongestIncreasingSubsequence();
+            lis.Run();
+
+            var maxSubarray = new MaxSubarray();
             maxSubarray.Run();
 
             var uniquePaths = new UniquePaths();

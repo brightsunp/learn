@@ -5,21 +5,21 @@ using TestMain.Definitions;
 
 namespace TestMain.DynamicProgramming
 {
-    class MaxSubArray : Solution
+    class MaxSubarray : Solution
     {
         public override void Run()
         {
-            AssertEqual(6, MaxSubArrayNative(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }));
-            AssertEqual(1, MaxSubArrayNative(new int[] { 1 }));
-            AssertEqual(23, MaxSubArrayNative(new int[] { 5, 4, -1, 7, 8 }));
+            AssertEqual(6, MaxSubarrayNative(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }));
+            AssertEqual(1, MaxSubarrayNative(new int[] { 1 }));
+            AssertEqual(23, MaxSubarrayNative(new int[] { 5, 4, -1, 7, 8 }));
 
-            AssertEqual(6, MaxSubArrayConstant(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }));
-            AssertEqual(1, MaxSubArrayConstant(new int[] { 1 }));
-            AssertEqual(23, MaxSubArrayConstant(new int[] { 5, 4, -1, 7, 8 }));
+            AssertEqual(6, MaxSubarrayConstant(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }));
+            AssertEqual(1, MaxSubarrayConstant(new int[] { 1 }));
+            AssertEqual(23, MaxSubarrayConstant(new int[] { 5, 4, -1, 7, 8 }));
         }
 
         // Define sub problem: dp[i] is the max sub array which must have nums[i] as ending.
-        private int MaxSubArrayNative(int[] nums)
+        private int MaxSubarrayNative(int[] nums)
         {
             var dp = new int[nums.Length];
             dp[0] = nums[0];
@@ -35,7 +35,7 @@ namespace TestMain.DynamicProgramming
             return res;
         }
 
-        private int MaxSubArrayConstant(int[] nums)
+        private int MaxSubarrayConstant(int[] nums)
         {
             int cur = nums[0], res = nums[0];
             for (int i = 1; i < nums.Length; i++)
