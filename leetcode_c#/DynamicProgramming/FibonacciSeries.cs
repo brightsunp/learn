@@ -1,6 +1,8 @@
 ﻿/**
 * Dynamic Programming is mainly an optimization over plain recursion. The idea is to simply store the results of sub-problems. 
 * Using extra space, it reduces time complexity from exponential to polynomial.
+* 
+* Figure out the format of each sub problem, and connection between sub problems and the original one.
 */
 using TestMain.Definitions;
 

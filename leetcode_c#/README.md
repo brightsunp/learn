@@ -21,10 +21,10 @@
 
 3. [队列基础知识](https://www.geeksforgeeks.org/introduction-to-queue-data-structure-and-algorithm-tutorials/)
 - [x] [用栈实现队列](https://leetcode.com/problems/implement-queue-using-stacks/)
-- [x] [*滑动窗口最大值](https://leetcode.com/problems/sliding-window-maximum/)
+- [x] [*滑动窗口的所有最大值](https://leetcode.com/problems/sliding-window-maximum/)
 - [ ] 设计循环双端队列(LeetCode 641)
 - [ ] 移除链表元素(LeetCode 203)
-- [ ] k个一组翻转链表(LeetCode 25)
+- [ ] k个一组反转链表(LeetCode 25)
 - [ ] 回文链表(LeetCode 234)
 - [ ] 奇偶链表(LeetCode 328)
 
@@ -39,10 +39,6 @@
 - [x] [*归并排序](https://www.geeksforgeeks.org/merge-sort/)
 - [x] [*快速排序](https://www.geeksforgeeks.org/quick-sort/)
 - [x] [计数排序](https://www.geeksforgeeks.org/counting-sort/)
-- [ ] 桶排序(了解即可)
-- [ ] 堆排序(了解即可)
-- [ ] 基数排序(了解即可)
-- [ ] 希尔排序(了解即可)
 - [x] [合并两个有序数组](https://leetcode.com/problems/merge-sorted-array/)
 - [x] [颜色分类](https://leetcode.com/problems/sort-colors/)
 - [x] [*计算右侧小于当前元素的个数](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
@@ -138,7 +134,7 @@
 - [x] [爬楼梯](https://leetcode.com/problems/climbing-stairs/)
 - [x] [不同路径](https://leetcode.com/problems/unique-paths/)
 - [x] [*解码的方法](https://leetcode.com/problems/decode-ways/)
-- [ ] 最大子序和(LeetCode 53)
+- [x] [最大连续子数组的和](https://leetcode.com/problems/maximum-subarray/)
 - [ ] 零钱兑换(LeetCode 322)
 - [ ] 零钱兑换 II(LeetCode 518)
 - [ ] 最小路径和(LeetCode 64)
@@ -164,7 +160,6 @@
 - [ ] 最长公共子序列(LeetCode 1143)
 - [ ] 最长回文子序列(LeetCode 516)
 - [ ] 最长回文子串(LeetCode 5)
-- [ ] 01 背包问题
 - [ ] 目标和(LeetCode 494)
 - [ ] 最后一块石头的重量 II(LeetCode 1049)
 
