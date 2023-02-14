@@ -135,6 +135,7 @@
 - [x] [*解码的方法](https://leetcode.com/problems/decode-ways/)
 - [x] [不同路径](https://leetcode.com/problems/unique-paths/)
 - [x] [最小路径和](https://leetcode.com/problems/minimum-path-sum/)
+
 - [x] [最大连续子序列的和](https://leetcode.com/problems/maximum-subarray/)
 - [x] [最长连续递增子序列](https://leetcode.com/problems/longest-continuous-increasing-subsequence/)
 - [x] [*最长递增子序列](https://leetcode.com/problems/longest-increasing-subsequence/)
@@ -142,10 +143,11 @@
 - [x] [*最长回文子序列](https://leetcode.com/problems/longest-palindromic-subsequence/)
 - [ ] [最长连续公共子序列](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 - [ ] [最长公共子序列](https://leetcode.com/problems/longest-common-subsequence/)
-- [ ] 分割等和子集(LeetCode 416)
-- [ ] 目标和(LeetCode 494)
-- [ ] 零钱兑换(LeetCode 322)
-- [ ] 零钱兑换 II(LeetCode 518)
+
+- [ ] [*分割等和子集](https://leetcode.com/problems/partition-equal-subset-sum/)
+- [ ] [目标和](https://leetcode.com/problems/target-sum/)
+- [ ] [零钱兑换](https://leetcode.com/problems/coin-change/)
+- [ ] [零钱兑换 II](https://leetcode.com/problems/coin-change-ii/)
 - [ ] [买卖股票的最佳时机](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 - [ ] [买卖股票的最佳时机II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
 - [ ] [买卖股票的最佳时机III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)

@@ -56,6 +56,7 @@
     <Compile Include="DynamicProgramming\LongestIncreasingSubsequence.cs" />
     <Compile Include="DynamicProgramming\LongestPalindromeSubsequence.cs" />
     <Compile Include="DynamicProgramming\MaxSubarray.cs" />
+    <Compile Include="DynamicProgramming\PartitionEqualSum.cs" />
     <Compile Include="DynamicProgramming\UniquePaths.cs" />
     <Compile Include="LinkedList\CopyWithRandomPointer.cs" />
     <Compile Include="LinkedList\GetCycleNode.cs" />

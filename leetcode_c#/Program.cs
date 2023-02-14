@@ -28,6 +28,9 @@ namespace TestMain
 
         private static void TestDp()
         {
+            var partition = new PartitionEqualSum();
+            partition.Run();
+
             var lps = new LongestPalindromeSubsequence();
             lps.Run();
 
