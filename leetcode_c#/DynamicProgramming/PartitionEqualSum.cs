@@ -16,6 +16,8 @@ namespace TestMain.DynamicProgramming
             AssertTrue(!CanPartitionBacktrack(new int[] { 1, 2, 3, 5 }));
 
             AssertTrue(CanPartitionDp(new int[] { 1, 5, 11, 5 }));
+            AssertTrue(CanPartitionDp(new int[] { 3, 3, 3, 4, 5 }));
+            AssertTrue(!CanPartitionDp(new int[] { 1, 2, 5 }));
             AssertTrue(!CanPartitionDp(new int[] { 1, 2, 3, 5 }));
         }
 
@@ -67,16 +69,17 @@ namespace TestMain.DynamicProgramming
         // O(m*n) time and O(n) space
         private bool CanPartitionDpRow(int[] nums, int target)
         {
+            // dp[i] is whether sum i can be gotten from a subset of nums.
             var dp = new bool[target + 1];
             dp[0] = true;
-            for (int i = 0; i < nums.Length; i++)
+
+            foreach (int num in nums)
             {
-                for (int j = target; j >= 1; j--)
+                // Must be the inside loop, since appending new num will not affect previous results.
+                // Must be top-down traverse, such that dp[i-num] has not considered num yet.
+                for (int i = target; i >= num; i--)
                 {
-                    if (j >= nums[i])
-                    {
-                        dp[j] |= dp[j - nums[i]];
-                    }
+                    dp[i] |= dp[i - num];
                 }
             }
 

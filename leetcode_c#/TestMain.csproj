@@ -52,6 +52,7 @@
     <Compile Include="Definitions\ListNodeWithRandom.cs" />
     <Compile Include="Definitions\Solution.cs" />
     <Compile Include="Definitions\TreeNode.cs" />
+    <Compile Include="DynamicProgramming\CoinChangeSeries.cs" />
     <Compile Include="DynamicProgramming\FibonacciSeries.cs" />
     <Compile Include="DynamicProgramming\LongestIncreasingSubsequence.cs" />
     <Compile Include="DynamicProgramming\LongestPalindromeSubsequence.cs" />

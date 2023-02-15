@@ -144,10 +144,10 @@
 - [ ] [最长连续公共子序列](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
 - [ ] [最长公共子序列](https://leetcode.com/problems/longest-common-subsequence/)
 
-- [ ] [*分割等和子集](https://leetcode.com/problems/partition-equal-subset-sum/)
 - [ ] [目标和](https://leetcode.com/problems/target-sum/)
-- [ ] [零钱兑换](https://leetcode.com/problems/coin-change/)
-- [ ] [零钱兑换 II](https://leetcode.com/problems/coin-change-ii/)
+- [x] [*分割等和子集](https://leetcode.com/problems/partition-equal-subset-sum/)
+- [x] [零钱兑换](https://leetcode.com/problems/coin-change/)
+- [x] [*零钱兑换 II](https://leetcode.com/problems/coin-change-ii/)
 - [ ] [买卖股票的最佳时机](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 - [ ] [买卖股票的最佳时机II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
 - [ ] [买卖股票的最佳时机III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)

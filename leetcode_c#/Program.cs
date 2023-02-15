@@ -28,6 +28,9 @@ namespace TestMain
 
         private static void TestDp()
         {
+            var coinSeries = new CoinChangeSeries();
+            coinSeries.Run();
+
             var partition = new PartitionEqualSum();
             partition.Run();
 
@@ -43,8 +46,8 @@ namespace TestMain
             var uniquePaths = new UniquePaths();
             uniquePaths.Run();
 
-            var series = new FibonacciSeries();
-            series.Run();
+            var fibSeries = new FibonacciSeries();
+            fibSeries.Run();
         }
 
         private static void TestBitwise()
