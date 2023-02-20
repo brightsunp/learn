@@ -28,6 +28,9 @@ namespace TestMain
 
         private static void TestDp()
         {
+            var stockSeries = new StockSeries();
+            stockSeries.Run();
+
             var coinSeries = new CoinChangeSeries();
             coinSeries.Run();
 

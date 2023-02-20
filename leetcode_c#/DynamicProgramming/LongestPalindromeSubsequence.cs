@@ -45,7 +45,7 @@ namespace TestMain.DynamicProgramming
         // O(n*n) time and O(1) space
         private string ContinuousLps(string s)
         {
-            int res_start = 0, res_len = 1;
+            int resStart = 0, resLength = 1;
             for (int i = 0; i < s.Length; i++)
             {
                 int right = i + 1;
@@ -63,14 +63,14 @@ namespace TestMain.DynamicProgramming
                 }
                 // s[left + 1, right - 1] inclusive is palindrome.
 
-                int cur_len = right - left - 1;
-                if (cur_len > res_len)
+                int curLength = right - left - 1;
+                if (curLength > resLength)
                 {
-                    res_len = cur_len;
-                    res_start = left + 1;
+                    resLength = curLength;
+                    resStart = left + 1;
                 }
             }
-            return s.Substring(res_start, res_len);
+            return s.Substring(resStart, resLength);
         }
     }
 }

@@ -3,6 +3,7 @@
 * Using extra space, it reduces time complexity from exponential to polynomial.
 * 
 * Figure out the format of each sub problem, and connection between sub problems and the original one.
+* Of course one may come up with O(1) space solution directly. But it's better to be generous when you think and be greedy when you implement.
 */
 using TestMain.Definitions;
 
