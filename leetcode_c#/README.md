@@ -1,17 +1,8 @@
-## 第一周，链表、栈、队列
+## 第一周，栈、队列、链表
 
 0. [时间复杂度与空间复杂度](https://www.geeksforgeeks.org/time-complexity-and-space-complexity/)
 
-1. [链表基础知识](https://www.geeksforgeeks.org/introduction-to-linked-list-data-structure-and-algorithm-tutorial/)
-- [x] [反转链表](https://leetcode.com/problems/reverse-linked-list/)
-- [x] [相交链表](https://leetcode.com/problems/intersection-of-two-linked-lists/)
-- [x] [合并两个有序链表](https://leetcode.com/problems/merge-two-sorted-lists/)
-- [x] [分隔链表](https://leetcode.com/problems/partition-list/)
-- [x] [*环形链表II](https://leetcode.com/problems/linked-list-cycle-ii/)
-- [x] [反转链表II](https://leetcode.com/problems/reverse-linked-list-ii/)
-- [x] [*复制带随机指针的链表](https://leetcode.com/problems/copy-list-with-random-pointer/)
-
-2. [栈基础知识](https://www.geeksforgeeks.org/introduction-to-stack-data-structure-and-algorithm-tutorials/)
+1. [栈基础知识](https://www.geeksforgeeks.org/introduction-to-stack-data-structure-and-algorithm-tutorials/)
 - [x] [有效的括号](https://leetcode.com/problems/valid-parentheses/)
 - [x] [基本计算器](https://leetcode.com/problems/basic-calculator/)
 - [x] [*最小栈](https://leetcode.com/problems/min-stack/)
@@ -19,12 +10,21 @@
 - [x] [*每日温度](https://leetcode.com/problems/daily-temperatures/)
 - [x] [接雨水](https://leetcode.com/problems/trapping-rain-water/)
 
-3. [队列基础知识](https://www.geeksforgeeks.org/introduction-to-queue-data-structure-and-algorithm-tutorials/)
+2. [队列基础知识](https://www.geeksforgeeks.org/introduction-to-queue-data-structure-and-algorithm-tutorials/)
 - [x] [用栈实现队列](https://leetcode.com/problems/implement-queue-using-stacks/)
 - [x] [*滑动窗口的所有最大值](https://leetcode.com/problems/sliding-window-maximum/)
 - [ ] 设计循环双端队列(LeetCode 641)
+
+3. [链表基础知识](https://www.geeksforgeeks.org/introduction-to-linked-list-data-structure-and-algorithm-tutorial/)
+- [x] [反转链表](https://leetcode.com/problems/reverse-linked-list/)
+- [x] [反转链表II](https://leetcode.com/problems/reverse-linked-list-ii/)
+- [ ] [k个一组反转链表](https://leetcode.com/problems/reverse-nodes-in-k-group/)
+- [x] [相交链表](https://leetcode.com/problems/intersection-of-two-linked-lists/)
+- [x] [合并两个有序链表](https://leetcode.com/problems/merge-two-sorted-lists/)
+- [x] [分隔链表](https://leetcode.com/problems/partition-list/)
+- [x] [*环形链表II](https://leetcode.com/problems/linked-list-cycle-ii/)
+- [x] [*复制带随机指针的链表](https://leetcode.com/problems/copy-list-with-random-pointer/)
 - [ ] 移除链表元素(LeetCode 203)
-- [ ] k个一组反转链表(LeetCode 25)
 - [ ] 回文链表(LeetCode 234)
 - [ ] 奇偶链表(LeetCode 328)
 
@@ -48,17 +48,6 @@
 - [x] [两数之和](https://leetcode.com/problems/two-sum/)
 
 6. [堆基础知识](https://www.geeksforgeeks.org/introduction-to-heap-data-structure-and-algorithm-tutorials/)
-- [ ] 分发饼干(LeetCode 455)
-- [ ] 柠檬水找零(LeetCode 860)
-- [ ] 用最少数量的箭引爆气球(LeetCode 452)
-- [ ] 移掉k位数字(LeetCode 402)
-- [ ] 跳跃游戏(LeetCode 55)
-- [ ] 摆动序列(LeetCode 376)
-- [ ] 买卖股票的最佳时机II(LeetCode 122)
-- [ ] 三数之和(LeetCode 15)
-- [ ] 最接近三数之和(LeetCode 16)
-- [ ] 加油站(LeetCode 134)
-- [ ] 合并区间(LeetCode 56)
 
 ## 第三周，二分查找、位运算、回溯
 
@@ -166,6 +155,17 @@
 - [ ] [编辑距离](https://leetcode.com/problems/edit-distance/)
 
 12. [贪心基础知识](https://www.geeksforgeeks.org/greedy-algorithms/)
+- [x] [分发饼干](https://leetcode.com/problems/assign-cookies/)
+- [ ] 柠檬水找零(LeetCode 860)
+- [ ] 用最少数量的箭引爆气球(LeetCode 452)
+- [ ] 移掉k位数字(LeetCode 402)
+- [ ] 跳跃游戏(LeetCode 55)
+- [ ] 摆动序列(LeetCode 376)
+- [ ] 买卖股票的最佳时机II(LeetCode 122)
+- [ ] 三数之和(LeetCode 15)
+- [ ] 最接近三数之和(LeetCode 16)
+- [ ] 加油站(LeetCode 134)
+- [ ] 合并区间(LeetCode 56)
 
 ## 第六周，剑指 Offer 系列
 

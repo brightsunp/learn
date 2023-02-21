@@ -4,6 +4,7 @@
 using TestMain.Backtracking;
 using TestMain.Bitwise;
 using TestMain.DynamicProgramming;
+using TestMain.Greedy;
 using TestMain.LinkedList;
 using TestMain.Search;
 using TestMain.Sort;
@@ -16,6 +17,7 @@ namespace TestMain
     {
         static void Main(string[] args)
         {
+            TestGreedy();
             TestDp();
             TestBitwise();
             TestBacktracking();
@@ -24,6 +26,12 @@ namespace TestMain
             TestSort();
             TestStackAndQueue();
             TestLinkedList();
+        }
+
+        private static void TestGreedy()
+        {
+            var cookies = new AssignCookies();
+            cookies.Run();
         }
 
         private static void TestDp()

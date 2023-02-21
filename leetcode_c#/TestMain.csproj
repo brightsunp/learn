@@ -60,6 +60,7 @@
     <Compile Include="DynamicProgramming\PartitionEqualSum.cs" />
     <Compile Include="DynamicProgramming\StockSeries.cs" />
     <Compile Include="DynamicProgramming\UniquePaths.cs" />
+    <Compile Include="Greedy\AssignCookies.cs" />
     <Compile Include="LinkedList\CopyWithRandomPointer.cs" />
     <Compile Include="LinkedList\GetCycleNode.cs" />
     <Compile Include="LinkedList\GetIntersection.cs" />
