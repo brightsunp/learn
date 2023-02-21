@@ -156,16 +156,15 @@
 
 12. [贪心基础知识](https://www.geeksforgeeks.org/greedy-algorithms/)
 - [x] [分发饼干](https://leetcode.com/problems/assign-cookies/)
-- [ ] 柠檬水找零(LeetCode 860)
-- [ ] 用最少数量的箭引爆气球(LeetCode 452)
-- [ ] 移掉k位数字(LeetCode 402)
-- [ ] 跳跃游戏(LeetCode 55)
-- [ ] 摆动序列(LeetCode 376)
-- [ ] 买卖股票的最佳时机II(LeetCode 122)
-- [ ] 三数之和(LeetCode 15)
-- [ ] 最接近三数之和(LeetCode 16)
-- [ ] 加油站(LeetCode 134)
-- [ ] 合并区间(LeetCode 56)
+- [x] [柠檬水找零](https://leetcode.com/problems/lemonade-change/)
+- [x] [*移掉k位数字](https://leetcode.com/problems/remove-k-digits/)
+- [ ] [跳跃游戏](https://leetcode.com/problems/jump-game/)
+- [ ] [三数之和](https://leetcode.com/problems/3sum/)
+- [ ] [最接近三数之和](https://leetcode.com/problems/3sum-closest/)
+- [ ] [合并区间](https://leetcode.com/problems/merge-intervals/)
+- [ ] [加油站](https://leetcode.com/problems/gas-station/)
+- [ ] [摆动序列](https://leetcode.com/problems/wiggle-subsequence/)
+- [ ] [用最少数量的箭引爆气球](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
 
 ## 第六周，剑指 Offer 系列
 

@@ -61,6 +61,8 @@
     <Compile Include="DynamicProgramming\StockSeries.cs" />
     <Compile Include="DynamicProgramming\UniquePaths.cs" />
     <Compile Include="Greedy\AssignCookies.cs" />
+    <Compile Include="Greedy\LemonadeChange.cs" />
+    <Compile Include="Greedy\RemoveKdigits.cs" />
     <Compile Include="LinkedList\CopyWithRandomPointer.cs" />
     <Compile Include="LinkedList\GetCycleNode.cs" />
     <Compile Include="LinkedList\GetIntersection.cs" />

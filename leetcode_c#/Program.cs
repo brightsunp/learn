@@ -30,6 +30,12 @@ namespace TestMain
 
         private static void TestGreedy()
         {
+            var removeKdigits = new RemoveKdigits();
+            removeKdigits.Run();
+
+            var lemonade = new LemonadeChange();
+            lemonade.Run();
+
             var cookies = new AssignCookies();
             cookies.Run();
         }
