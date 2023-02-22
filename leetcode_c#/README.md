@@ -158,7 +158,7 @@
 - [x] [分发饼干](https://leetcode.com/problems/assign-cookies/)
 - [x] [柠檬水找零](https://leetcode.com/problems/lemonade-change/)
 - [x] [*移掉k位数字](https://leetcode.com/problems/remove-k-digits/)
-- [ ] [跳跃游戏](https://leetcode.com/problems/jump-game/)
+- [x] [跳跃游戏](https://leetcode.com/problems/jump-game/)
 - [x] [三数之和](https://leetcode.com/problems/3sum/)
 - [x] [最接近三数之和](https://leetcode.com/problems/3sum-closest/)
 - [ ] [合并区间](https://leetcode.com/problems/merge-intervals/)

@@ -30,6 +30,9 @@ namespace TestMain
 
         private static void TestGreedy()
         {
+            var jumpGame = new JumpGame();
+            jumpGame.Run();
+
             var threeSum = new ThreeSum();
             threeSum.Run();
 

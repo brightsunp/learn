@@ -61,6 +61,7 @@
     <Compile Include="DynamicProgramming\StockSeries.cs" />
     <Compile Include="DynamicProgramming\UniquePaths.cs" />
     <Compile Include="Greedy\AssignCookies.cs" />
+    <Compile Include="Greedy\JumpGame.cs" />
     <Compile Include="Greedy\LemonadeChange.cs" />
     <Compile Include="Greedy\RemoveKdigits.cs" />
     <Compile Include="Greedy\ThreeSum.cs" />
