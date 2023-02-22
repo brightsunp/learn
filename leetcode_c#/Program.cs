@@ -30,6 +30,9 @@ namespace TestMain
 
         private static void TestGreedy()
         {
+            var threeSum = new ThreeSum();
+            threeSum.Run();
+
             var removeKdigits = new RemoveKdigits();
             removeKdigits.Run();
 

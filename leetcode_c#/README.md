@@ -159,17 +159,9 @@
 - [x] [柠檬水找零](https://leetcode.com/problems/lemonade-change/)
 - [x] [*移掉k位数字](https://leetcode.com/problems/remove-k-digits/)
 - [ ] [跳跃游戏](https://leetcode.com/problems/jump-game/)
-- [ ] [三数之和](https://leetcode.com/problems/3sum/)
-- [ ] [最接近三数之和](https://leetcode.com/problems/3sum-closest/)
+- [x] [三数之和](https://leetcode.com/problems/3sum/)
+- [x] [最接近三数之和](https://leetcode.com/problems/3sum-closest/)
 - [ ] [合并区间](https://leetcode.com/problems/merge-intervals/)
 - [ ] [加油站](https://leetcode.com/problems/gas-station/)
 - [ ] [摆动序列](https://leetcode.com/problems/wiggle-subsequence/)
 - [ ] [用最少数量的箭引爆气球](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
-
-## 第六周，剑指 Offer 系列
-
-- [ ] 从尾到头打印链表(剑指 Offer 06)
-- [ ] 链表中倒数第k个节点(剑指 Offer 22)
-- [ ] 剑指 Offer 53 - II. 0～n-1中缺失的数字
-- [ ] 剑指 Offer 53 - I. 在排序数组中查找数字 I
-- [ ] 剑指 Offer 51. 数组中的逆序对
