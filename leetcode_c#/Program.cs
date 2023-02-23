@@ -111,6 +111,9 @@ namespace TestMain
 
         private static void TestSearch()
         {
+            var findPeak = new FindPeakElement();
+            findPeak.Run();
+
             var matrix = new SearchMatrix();
             matrix.Run();
 
