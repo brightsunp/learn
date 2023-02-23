@@ -51,6 +51,9 @@ namespace TestMain
 
         private static void TestDp()
         {
+            var wiggle = new WiggleSubsequence();
+            wiggle.Run();
+
             var stockSeries = new StockSeries();
             stockSeries.Run();
 

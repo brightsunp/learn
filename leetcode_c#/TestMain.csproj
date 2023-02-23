@@ -60,6 +60,7 @@
     <Compile Include="DynamicProgramming\PartitionEqualSum.cs" />
     <Compile Include="DynamicProgramming\StockSeries.cs" />
     <Compile Include="DynamicProgramming\UniquePaths.cs" />
+    <Compile Include="DynamicProgramming\WiggleSubsequence.cs" />
     <Compile Include="Greedy\AssignCookies.cs" />
     <Compile Include="Greedy\JumpGame.cs" />
     <Compile Include="Greedy\LemonadeChange.cs" />

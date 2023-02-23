@@ -80,13 +80,13 @@ namespace TestMain.DynamicProgramming
 
         private int MaxProfitCooldown(int[] prices)
         {
-            // buy[i] is the max profit if the last non-rest action is buy.
-            //  if buy on i-th day, buy[i] = sell[i-2] - prices[i-1];
-            //  if rest on i-th day, buy[i] = buy[i-1]
+            // 1. buy[i] is the max profit where the last non-rest action is buy.
+            //  a) if buy on i-th day, buy[i] = sell[i-2] - prices[i-1];
+            //  b) if rest on i-th day, buy[i] = buy[i-1]
+            // 2. sell[i] is the max profit where the last non-rest action is sell.
+            //  a) if sell on i-th day, sell[i] = buy[i-1] + prices[i-1];
+            //  b) if rest on i-th day, sell[i] = sell[i-1]
             var buy = new int[prices.Length + 1];
-            // sell[i] is the max profit if the last non-rest action is sell.
-            //  if sell on i-th day, sell[i] = buy[i-1] + prices[i-1];
-            //  if rest on i-th day, sell[i] = sell[i-1]
             var sell = new int[prices.Length + 1];
             buy[1] = -prices[0];
             for (int i = 2; i <= prices.Length; i++)
