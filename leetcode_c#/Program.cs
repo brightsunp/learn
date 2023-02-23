@@ -30,6 +30,9 @@ namespace TestMain
 
         private static void TestGreedy()
         {
+            var mergeIntervals = new MergeIntervals();
+            mergeIntervals.Run();
+
             var jumpGame = new JumpGame();
             jumpGame.Run();
 
