@@ -78,6 +78,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\BinarySearch.cs" />
     <Compile Include="Search\MedianOfTwoSorted.cs" />
+    <Compile Include="Search\SearchMatrix.cs" />
     <Compile Include="Search\SearchRotated.cs" />
     <Compile Include="Snippets\Array.cs" />
     <Compile Include="Snippets\BinaryTree.cs" />

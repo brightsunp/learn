@@ -20,8 +20,8 @@ namespace TestMain
             TestGreedy();
             TestDp();
             TestBitwise();
-            TestBacktracking();
-            TestTree();
+            // TestBacktracking();
+            // TestTree();
             TestSearch();
             TestSort();
             TestStackAndQueue();
@@ -111,6 +111,9 @@ namespace TestMain
 
         private static void TestSearch()
         {
+            var matrix = new SearchMatrix();
+            matrix.Run();
+
             var median = new MedianOfTwoSorted();
             median.Run();
 

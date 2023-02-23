@@ -20,7 +20,7 @@ namespace TestMain.Greedy
 
         private int[][] Merge(int[][] intervals)
         {
-            Array.Sort(intervals, (int[] x, int[] y) => (x[0] >= y[0] ? 1 : -1));
+            Array.Sort(intervals, (x, y) => x[0] - y[0]);
             var res = new List<int[]>();
             foreach (int[] interval in intervals)
             {
