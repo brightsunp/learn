@@ -145,14 +145,15 @@
 - [x] [!买卖股票的最佳时机含冷冻期](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
 - [x] [买卖股票的最佳时机含手续费](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
 - [x] [摆动序列](https://leetcode.com/problems/wiggle-subsequence/)
+
+- [x] [打家劫舍](https://leetcode.com/problems/house-robber/)
+- [x] [打家劫舍II](https://leetcode.com/problems/house-robber-ii/)
+- [x] [**打家劫舍III](https://leetcode.com/problems/house-robber-iii/)
 - [ ] 完全平方数(LeetCode 279)
 - [ ] 三角形最小路径和(LeetCode 120)
 - [ ] 整数拆分(LeetCode 343)
 - [ ] 不同的二叉搜索树(LeetCode 96)
 - [ ] 地下城游戏(LeetCode 174)
-- [ ] 打家劫舍(LeetCode 198)
-- [ ] 打家劫舍II(LeetCode 213)
-- [ ] 打家劫舍III(LeetCode 337)
 - [ ] 最后一块石头的重量 II(LeetCode 1049)
 - [ ] [编辑距离](https://leetcode.com/problems/edit-distance/)
 

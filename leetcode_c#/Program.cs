@@ -20,8 +20,8 @@ namespace TestMain
             TestGreedy();
             TestDp();
             TestBitwise();
-            // TestBacktracking();
-            // TestTree();
+            TestBacktracking();
+            TestTree();
             TestSearch();
             TestSort();
             TestStackAndQueue();
@@ -51,6 +51,9 @@ namespace TestMain
 
         private static void TestDp()
         {
+            var robSeries = new HouseRobberSeries();
+            robSeries.Run();
+
             var wiggle = new WiggleSubsequence();
             wiggle.Run();
 
