@@ -51,6 +51,9 @@ namespace TestMain
 
         private static void TestDp()
         {
+            var squares = new PerfectSquares();
+            squares.Run();
+
             var robSeries = new HouseRobberSeries();
             robSeries.Run();
 

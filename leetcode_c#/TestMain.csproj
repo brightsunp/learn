@@ -59,6 +59,7 @@
     <Compile Include="DynamicProgramming\LongestPalindromeSubsequence.cs" />
     <Compile Include="DynamicProgramming\MaxSubarray.cs" />
     <Compile Include="DynamicProgramming\PartitionEqualSum.cs" />
+    <Compile Include="DynamicProgramming\PerfectSquares.cs" />
     <Compile Include="DynamicProgramming\StockSeries.cs" />
     <Compile Include="DynamicProgramming\UniquePaths.cs" />
     <Compile Include="DynamicProgramming\WiggleSubsequence.cs" />

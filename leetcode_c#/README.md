@@ -13,7 +13,7 @@
 2. [队列基础知识](https://www.geeksforgeeks.org/introduction-to-queue-data-structure-and-algorithm-tutorials/)
 - [x] [用栈实现队列](https://leetcode.com/problems/implement-queue-using-stacks/)
 - [x] [*滑动窗口的所有最大值](https://leetcode.com/problems/sliding-window-maximum/)
-- [ ] 设计循环双端队列(LeetCode 641)
+- [ ] [设计循环双端队列](https://leetcode.com/problems/design-circular-deque/)
 
 3. [链表基础知识](https://www.geeksforgeeks.org/introduction-to-linked-list-data-structure-and-algorithm-tutorial/)
 - [x] [反转链表](https://leetcode.com/problems/reverse-linked-list/)
@@ -24,9 +24,9 @@
 - [x] [分隔链表](https://leetcode.com/problems/partition-list/)
 - [x] [*环形链表II](https://leetcode.com/problems/linked-list-cycle-ii/)
 - [x] [*复制带随机指针的链表](https://leetcode.com/problems/copy-list-with-random-pointer/)
-- [ ] 移除链表元素(LeetCode 203)
-- [ ] 回文链表(LeetCode 234)
-- [ ] 奇偶链表(LeetCode 328)
+- [ ] [移除链表元素](https://leetcode.com/problems/remove-linked-list-elements/)
+- [ ] [回文链表](https://leetcode.com/problems/palindrome-linked-list/)
+- [ ] [奇偶链表](https://leetcode.com/problems/odd-even-linked-list/)
 
 ## 第二周，递归、排序、堆
 
@@ -149,12 +149,12 @@
 - [x] [打家劫舍](https://leetcode.com/problems/house-robber/)
 - [x] [打家劫舍II](https://leetcode.com/problems/house-robber-ii/)
 - [x] [**打家劫舍III](https://leetcode.com/problems/house-robber-iii/)
-- [ ] 完全平方数(LeetCode 279)
-- [ ] 三角形最小路径和(LeetCode 120)
-- [ ] 整数拆分(LeetCode 343)
-- [ ] 不同的二叉搜索树(LeetCode 96)
-- [ ] 地下城游戏(LeetCode 174)
-- [ ] 最后一块石头的重量 II(LeetCode 1049)
+- [x] [!完全平方数](https://leetcode.com/problems/perfect-squares/)
+- [ ] [三角形最小路径和](https://leetcode.com/problems/triangle/)
+- [ ] [整数拆分](https://leetcode.com/problems/integer-break/)
+- [ ] [不同的二叉搜索树](https://leetcode.com/problems/unique-binary-search-trees/)
+- [ ] [最后一块石头的重量II](https://leetcode.com/problems/last-stone-weight-ii/)
+- [ ] [地下城游戏](https://leetcode.com/problems/dungeon-game/)
 - [ ] [编辑距离](https://leetcode.com/problems/edit-distance/)
 
 12. [贪心基础知识](https://www.geeksforgeeks.org/greedy-algorithms/)
