@@ -12,9 +12,9 @@ namespace TestMain.DynamicProgramming
     {
         public override void Run()
         {
-            AssertEqual(1, UniquePathsNative(1, 1));
-            AssertEqual(3, UniquePathsNative(3, 2));
-            AssertEqual(28, UniquePathsNative(3, 7));
+            AssertEqual(1, UniquePathsNaive(1, 1));
+            AssertEqual(3, UniquePathsNaive(3, 2));
+            AssertEqual(28, UniquePathsNaive(3, 7));
 
             AssertEqual(28, UniquePathsRows(3, 7));
             AssertEqual(28, UniquePathsRow(3, 7));
@@ -24,7 +24,7 @@ namespace TestMain.DynamicProgramming
         }
 
         // O(m*n) time and O(m*n) space
-        private int UniquePathsNative(int m, int n)
+        private int UniquePathsNaive(int m, int n)
         {
             int[,] dp = new int[m, n];
             for (int i = 0; i < m; i++)

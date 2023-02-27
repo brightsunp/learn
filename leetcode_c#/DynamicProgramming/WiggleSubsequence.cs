@@ -17,16 +17,16 @@ namespace TestMain.DynamicProgramming
     {
         public override void Run()
         {
-            AssertEqual(6, WiggleMaxLengthNative(new int[] { 1, 7, 4, 9, 2, 5 }));
-            AssertEqual(7, WiggleMaxLengthNative(new int[] { 1, 17, 5, 10, 13, 15, 10, 5, 16, 8 }));
-            AssertEqual(2, WiggleMaxLengthNative(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }));
+            AssertEqual(6, WiggleMaxLengthNaive(new int[] { 1, 7, 4, 9, 2, 5 }));
+            AssertEqual(7, WiggleMaxLengthNaive(new int[] { 1, 17, 5, 10, 13, 15, 10, 5, 16, 8 }));
+            AssertEqual(2, WiggleMaxLengthNaive(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }));
 
             AssertEqual(6, WiggleMaxLengthConstant(new int[] { 1, 7, 4, 9, 2, 5 }));
             AssertEqual(7, WiggleMaxLengthConstant(new int[] { 1, 17, 5, 10, 13, 15, 10, 5, 16, 8 }));
             AssertEqual(2, WiggleMaxLengthConstant(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }));
         }
 
-        private int WiggleMaxLengthNative(int[] nums)
+        private int WiggleMaxLengthNaive(int[] nums)
         {
             // up[i] or down[i] is the max length of wiggle subsequences where last status is up or down.
             var up = new int[nums.Length];

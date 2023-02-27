@@ -37,7 +37,7 @@ namespace TestMain.DynamicProgramming
         }
 
         // O(m*n) time and O(m*n) space
-        private bool CanPartitionDpNative(int[] nums, int target)
+        private bool CanPartitionDpNaive(int[] nums, int target)
         {
             // dp[i, j] is whether sum j can be gotten from a subset of the first i numbers.
             bool[,] dp = new bool[nums.Length + 1, target + 1];

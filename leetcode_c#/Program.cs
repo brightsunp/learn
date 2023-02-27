@@ -51,6 +51,9 @@ namespace TestMain
 
         private static void TestDp()
         {
+            var intBreak = new IntegerBreak();
+            intBreak.Run();
+
             var triangle = new TrianglePathSum();
             triangle.Run();
 

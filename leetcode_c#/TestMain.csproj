@@ -55,6 +55,7 @@
     <Compile Include="DynamicProgramming\CoinChangeSeries.cs" />
     <Compile Include="DynamicProgramming\FibonacciSeries.cs" />
     <Compile Include="DynamicProgramming\HouseRobberSeries.cs" />
+    <Compile Include="DynamicProgramming\IntegerBreak.cs" />
     <Compile Include="DynamicProgramming\LongestIncreasingSubsequence.cs" />
     <Compile Include="DynamicProgramming\LongestPalindromeSubsequence.cs" />
     <Compile Include="DynamicProgramming\MaxSubarray.cs" />

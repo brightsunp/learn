@@ -9,9 +9,9 @@ namespace TestMain.DynamicProgramming
     {
         public override void Run()
         {
-            AssertEqual(6, MaxSubarrayNative(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }));
-            AssertEqual(1, MaxSubarrayNative(new int[] { 1 }));
-            AssertEqual(23, MaxSubarrayNative(new int[] { 5, 4, -1, 7, 8 }));
+            AssertEqual(6, MaxSubarrayNaive(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }));
+            AssertEqual(1, MaxSubarrayNaive(new int[] { 1 }));
+            AssertEqual(23, MaxSubarrayNaive(new int[] { 5, 4, -1, 7, 8 }));
 
             AssertEqual(6, MaxSubarrayConstant(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }));
             AssertEqual(1, MaxSubarrayConstant(new int[] { 1 }));
@@ -19,7 +19,7 @@ namespace TestMain.DynamicProgramming
         }
 
         // Define sub problem: dp[i] is the max sub array which must have nums[i] as ending.
-        private int MaxSubarrayNative(int[] nums)
+        private int MaxSubarrayNaive(int[] nums)
         {
             var dp = new int[nums.Length];
             dp[0] = nums[0];
