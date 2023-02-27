@@ -51,6 +51,9 @@ namespace TestMain
 
         private static void TestDp()
         {
+            var triangle = new TrianglePathSum();
+            triangle.Run();
+
             var squares = new PerfectSquares();
             squares.Run();
 

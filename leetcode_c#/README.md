@@ -150,7 +150,7 @@
 - [x] [打家劫舍II](https://leetcode.com/problems/house-robber-ii/)
 - [x] [**打家劫舍III](https://leetcode.com/problems/house-robber-iii/)
 - [x] [!完全平方数](https://leetcode.com/problems/perfect-squares/)
-- [ ] [三角形最小路径和](https://leetcode.com/problems/triangle/)
+- [x] [三角形最小路径和](https://leetcode.com/problems/triangle/)
 - [ ] [整数拆分](https://leetcode.com/problems/integer-break/)
 - [ ] [不同的二叉搜索树](https://leetcode.com/problems/unique-binary-search-trees/)
 - [ ] [最后一块石头的重量II](https://leetcode.com/problems/last-stone-weight-ii/)
