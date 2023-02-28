@@ -96,6 +96,7 @@
 - [x] [二叉树的后序遍历](https://leetcode.com/problems/binary-tree-postorder-traversal/)
 - [x] [二叉树的层序遍历](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 - [x] [二叉树展开为链表](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
+- [x] [!验证二叉搜索树](https://leetcode.com/problems/validate-binary-search-tree/)
 - [ ] 二叉树的锯齿形层序遍历(LeetCode 103)
 - [ ] 从前序与中序遍历序列构造二叉树(LeetCode 105)
 - [ ] 将有序数组转换为二叉搜索树(LeetCode 108)
@@ -153,7 +154,6 @@
 - [x] [三角形最小路径和](https://leetcode.com/problems/triangle/)
 - [x] [*整数拆分](https://leetcode.com/problems/integer-break/)
 - [ ] [不同的二叉搜索树](https://leetcode.com/problems/unique-binary-search-trees/)
-- [ ] [最后一块石头的重量II](https://leetcode.com/problems/last-stone-weight-ii/)
 - [ ] [地下城游戏](https://leetcode.com/problems/dungeon-game/)
 - [ ] [编辑距离](https://leetcode.com/problems/edit-distance/)
 

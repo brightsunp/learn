@@ -20,7 +20,7 @@ namespace TestMain
             TestGreedy();
             TestDp();
             TestBitwise();
-            TestBacktracking();
+            //TestBacktracking();
             TestTree();
             TestSearch();
             TestSort();
@@ -114,6 +114,9 @@ namespace TestMain
 
         private static void TestTree()
         {
+            var bst = new BinarySearchTree();
+            bst.Run();
+
             var heap = new HeapMain();
             heap.Run();
 
