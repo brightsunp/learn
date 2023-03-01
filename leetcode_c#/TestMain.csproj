@@ -104,6 +104,7 @@
     <Compile Include="StackAndQueue\TrapRainWater.cs" />
     <Compile Include="StackAndQueue\ValidParentheses.cs" />
     <Compile Include="Tree\BinarySearchTree.cs" />
+    <Compile Include="Tree\ConstructTree.cs" />
     <Compile Include="Tree\HeapMain.cs" />
     <Compile Include="Tree\TreeMain.cs" />
   </ItemGroup>

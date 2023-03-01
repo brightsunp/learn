@@ -6,6 +6,7 @@
 */
 using System.Collections.Generic;
 using TestMain.Definitions;
+using TestMain.Snippets;
 
 namespace TestMain.Tree
 {
@@ -18,6 +19,12 @@ namespace TestMain.Tree
 
             AssertTrue(IsValidBSTInorder(TreeNode.SampleBST()));
             AssertTrue(!IsValidBSTInorder(TreeNode.Sample()));
+
+            AssertTrue(IsValieBSTInorderIterative(TreeNode.SampleBST()));
+            AssertTrue(!IsValieBSTInorderIterative(TreeNode.Sample()));
+
+            var inorder = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+            AssertEqual(inorder, SortedArrayToBST(inorder).InOrder());
         }
 
         // Given the root of a binary tree, determine if it is a valid BST.
@@ -68,6 +75,52 @@ namespace TestMain.Tree
             IsValidBSTInorderHelper(node.left, values);
             values.Add(node.val);
             IsValidBSTInorderHelper(node.right, values);
+        }
+
+        private bool IsValieBSTInorderIterative(TreeNode root)
+        {
+            var stack = new Stack<TreeNode>();
+            TreeNode pre = null;
+            TreeNode cur = root;
+            while (cur != null || stack.Count > 0)
+            {
+                if (cur != null)
+                {
+                    stack.Push(cur);
+                    cur = cur.left;
+                }
+                else
+                {
+                    cur = stack.Pop();
+                    if (pre != null && pre.val >= cur.val)
+                    {
+                        return false;
+                    }
+                    pre = cur;
+                    cur = cur.right;
+                }
+            }
+            return true;
+        }
+
+        private TreeNode SortedArrayToBST(int[] nums)
+        {
+            return SortedArrayToBSTHelper(nums, 0, nums.Length - 1);
+        }
+
+        private TreeNode SortedArrayToBSTHelper(int[] nums, int start, int end)
+        {
+            if (start > end)
+            {
+                return null;
+            }
+            int mid = (start + end) >> 1;
+            var root = new TreeNode(nums[mid])
+            {
+                left = SortedArrayToBSTHelper(nums, start, mid - 1),
+                right = SortedArrayToBSTHelper(nums, mid + 1, end)
+            };
+            return root;
         }
     }
 }

@@ -114,6 +114,9 @@ namespace TestMain
 
         private static void TestTree()
         {
+            var buildTree = new ConstructTree();
+            buildTree.Run();
+
             var bst = new BinarySearchTree();
             bst.Run();
 
