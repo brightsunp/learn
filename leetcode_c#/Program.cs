@@ -114,6 +114,9 @@ namespace TestMain
 
         private static void TestTree()
         {
+            var balanced = new BalancedBinaryTree();
+            balanced.Run();
+
             var buildTree = new ConstructTree();
             buildTree.Run();
 
