@@ -26,14 +26,13 @@ namespace TestMain.Snippets
 
             var queue = new Queue<TreeNode>();
             queue.Enqueue(root);
-            while (queue.Count != 0)
+            while (queue.Count > 0)
             {
                 var levelRes = new List<int>();
                 int levelCount = queue.Count;
                 while (levelCount > 0)
                 {
                     TreeNode cur = queue.Dequeue();
-                    levelRes.Add(cur.val);
                     if (cur.left != null)
                     {
                         queue.Enqueue(cur.left);
@@ -42,11 +41,11 @@ namespace TestMain.Snippets
                     {
                         queue.Enqueue(cur.right);
                     }
+                    levelRes.Add(cur.val);
                     levelCount--;
                 }
                 res.Add(levelRes);
             }
-
             return res;
         }
 
@@ -61,7 +60,7 @@ namespace TestMain.Snippets
 
             var stack = new Stack<TreeNode>();
             stack.Push(root);
-            while (stack.Count != 0)
+            while (stack.Count > 0)
             {
                 TreeNode cur = stack.Pop();
                 res.Add(cur.val);
@@ -74,7 +73,6 @@ namespace TestMain.Snippets
                     stack.Push(cur.left);
                 }
             }
-
             return res;
         }
 
@@ -83,10 +81,9 @@ namespace TestMain.Snippets
         {
             var res = new List<int>();
             var stack = new Stack<TreeNode>();
-
-            // This way root is not modified.
+            // No need to check if root == null.
             TreeNode cur = root;
-            while (cur != null || stack.Count != 0)
+            while (cur != null || stack.Count > 0)
             {
                 if (cur != null)
                 {
@@ -100,11 +97,10 @@ namespace TestMain.Snippets
                     cur = cur.right;
                 }
             }
-
             return res;
         }
 
-        // Leverage LIFO stack: left subtree -> right subtree -> root. (*Reverse the print step of pre-order)
+        // Leverage LIFO stack: left subtree -> right subtree -> root.
         public static IList<int> PostOrder(this TreeNode root)
         {
             var res = new List<int>();
@@ -115,11 +111,10 @@ namespace TestMain.Snippets
 
             var stack = new Stack<TreeNode>();
             stack.Push(root);
-            while (stack.Count != 0)
+            while (stack.Count > 0)
             {
                 TreeNode cur = stack.Pop();
-                
-                // Since each element is added at the start, we also need to reverse the order popping children nodes.
+                // Left and right is sequentially unchanged, also need to reverse the order popping children nodes.
                 res.Insert(0, cur.val);
                 if (cur.left != null)
                 {
@@ -130,7 +125,6 @@ namespace TestMain.Snippets
                     stack.Push(cur.right);
                 }
             }
-
             return res;
         }
 
@@ -142,9 +136,7 @@ namespace TestMain.Snippets
                 return 0;
             }
 
-            int lMaxDepth = MaxDepth(root.left);
-            int rMaxDepth = MaxDepth(root.right);
-            return Math.Max(lMaxDepth, rMaxDepth) + 1;
+            return Math.Max(MaxDepth(root.left), MaxDepth(root.right)) + 1;
         }
 
         public static int MinDepth(this TreeNode root)
@@ -160,6 +152,7 @@ namespace TestMain.Snippets
             {
                 return lMinDepth + rMinDepth + 1;
             }
+
             return Math.Min(lMinDepth, rMinDepth) + 1;
         }
 
@@ -170,11 +163,48 @@ namespace TestMain.Snippets
             {
                 return 0;
             }
+
             if (root.left == null && root.right == null)
             {
                 return isLeftChild ? root.val : 0;
             }
+
             return SumOfLeftLeaves(root.left, true) + SumOfLeftLeaves(root.right, false);
+        }
+
+        public static IList<IList<int>> ZigzagLevelOrder(this TreeNode root)
+        {
+            var res = new List<IList<int>>();
+            if (root == null)
+            {
+                return res;
+            }
+
+            var queue = new Queue<TreeNode>();
+            queue.Enqueue(root);
+            bool isLeftToRight = true;
+            while (queue.Count > 0)
+            {
+                int levelCount = queue.Count;
+                var levelRes = new int[levelCount];
+                for (int i = 0; i < levelCount; i++)
+                {
+                    TreeNode cur = queue.Dequeue();
+                    if (cur.left != null)
+                    {
+                        queue.Enqueue(cur.left);
+                    }
+                    if (cur.right != null)
+                    {
+                        queue.Enqueue(cur.right);
+                    }
+                    int index = isLeftToRight ? i : levelCount - 1 - i;
+                    levelRes[index] = cur.val;
+                }
+                isLeftToRight = !isLeftToRight;
+                res.Add(levelRes);
+            }
+            return res;
         }
     }
 }

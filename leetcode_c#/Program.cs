@@ -120,11 +120,11 @@ namespace TestMain
             var bst = new BinarySearchTree();
             bst.Run();
 
-            var heap = new HeapMain();
-            heap.Run();
-
             var treeMain = new TreeMain();
             treeMain.Run();
+
+            var heap = new HeapMain();
+            heap.Run();
         }
 
         private static void TestSearch()
