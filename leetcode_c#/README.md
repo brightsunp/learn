@@ -60,7 +60,7 @@
 - [x] [搜索二维矩阵](https://leetcode.com/problems/search-a-2d-matrix/)
 - [x] [!搜索二维矩阵II](https://leetcode.com/problems/search-a-2d-matrix-ii/)
 - [x] [!寻找峰值](https://leetcode.com/problems/find-peak-element/)
-- [ ] [第一个错误的版本](https://leetcode.com/problems/first-bad-version/)
+- [x] [第一个错误的版本](https://leetcode.com/problems/first-bad-version/)
 - [ ] [有效的完全平方数](https://leetcode.com/problems/valid-perfect-square/)
 - [ ] [有效三角形的个数](https://leetcode.com/problems/valid-triangle-number/)
 - [ ] [山脉数组的峰顶](https://leetcode.com/problems/peak-index-in-a-mountain-array/)
