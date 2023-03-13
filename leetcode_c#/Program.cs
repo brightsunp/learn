@@ -30,6 +30,9 @@ namespace TestMain
 
         private static void TestGreedy()
         {
+            var triangle = new TriangleNumber();
+            triangle.Run();
+
             var mergeIntervals = new MergeIntervals();
             mergeIntervals.Run();
 

@@ -61,8 +61,7 @@
 - [x] [!搜索二维矩阵II](https://leetcode.com/problems/search-a-2d-matrix-ii/)
 - [x] [!寻找峰值](https://leetcode.com/problems/find-peak-element/)
 - [x] [第一个错误的版本](https://leetcode.com/problems/first-bad-version/)
-- [ ] [有效的完全平方数](https://leetcode.com/problems/valid-perfect-square/)
-- [ ] [有效三角形的个数](https://leetcode.com/problems/valid-triangle-number/)
+- [x] [有效的完全平方数](https://leetcode.com/problems/valid-perfect-square/)
 - [ ] [山脉数组的峰顶](https://leetcode.com/problems/peak-index-in-a-mountain-array/)
 
 8. [位运算基础知识](https://www.geeksforgeeks.org/introduction-to-bitwise-algorithms-data-structures-and-algorithms-tutorial/)
@@ -165,3 +164,4 @@
 - [x] [三数之和](https://leetcode.com/problems/3sum/)
 - [x] [最接近三数之和](https://leetcode.com/problems/3sum-closest/)
 - [x] [合并区间](https://leetcode.com/problems/merge-intervals/)
+- [x] [!有效三角形的个数](https://leetcode.com/problems/valid-triangle-number/)
