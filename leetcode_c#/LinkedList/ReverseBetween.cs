@@ -12,32 +12,29 @@ namespace TestMain.LinkedList
     {
         public override void Run()
         {
-            var test1 = ListNode.Sample();
-            TestOutput(nameof(ReverseBetweenInternal), ReverseBetweenInternal(test1, 1, 2));
+            TestOutput(nameof(ReverseBetweenInternal), ReverseBetweenInternal(ListNode.Sample(), 1, 2));
 
-            var test2 = ListNode.Sample();
-            TestOutput(nameof(ReverseBetweenInternal), ReverseBetweenInternal(test2, 2, 2));
+            TestOutput(nameof(ReverseBetweenInternal), ReverseBetweenInternal(ListNode.Sample(), 2, 2));
 
-            var test3 = ListNode.Sample();
-            TestOutput(nameof(ReverseBetweenInternal), ReverseBetweenInternal(test3, 2, 4));
+            TestOutput(nameof(ReverseBetweenInternal), ReverseBetweenInternal(ListNode.Sample(), 2, 4));
         }
 
         private ListNode ReverseBetweenInternal(ListNode head, int left, int right)
         {
             var dummy = new ListNode(0, head);
-            var pre = dummy;
+            ListNode pre = dummy;
             for (int i = 0; i < left - 1; i++)
             {
                 pre = pre.next;
             }
-            var start = pre.next;
-            var end = start.next;
+            ListNode start = pre.next;
+            ListNode end = start.next;
             for (int i = 0; i < right - left; i++)
             {
                 end = end.next;
             }
 
-            var newHead = ReverseInternal(start, end);
+            ListNode newHead = ReverseInternal(start, end);
             pre.next = newHead;
 
             return dummy.next;
@@ -45,10 +42,10 @@ namespace TestMain.LinkedList
 
         private ListNode ReverseInternal(ListNode head, ListNode end)
         {
-            var newHead = end;
+            ListNode newHead = end;
             while (head != end)
             {
-                var tmp = head.next;
+                ListNode tmp = head.next;
                 head.next = newHead;
                 newHead = head;
                 head = tmp;

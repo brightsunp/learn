@@ -10,19 +10,18 @@ namespace TestMain.LinkedList
     {
         public override void Run()
         {
-            var test = ListNodeWithRandom.Sample();
-            TestOutput(nameof(CopyRandomListInternal), CopyRandomListInternal(test));
+            TestOutput(nameof(CopyRandomListInternal), CopyRandomListInternal(ListNodeWithRandom.Sample()));
         }
 
         // Loop 1: replicate each node (like DNA)
         // Loop 2: assign random pointer for each duplicated node
-        // Loop 3: restore the original and extract the duplicated list
+        // Loop 3: extract the replicate and restore the original list
         private ListNodeWithRandom CopyRandomListInternal(ListNodeWithRandom head)
         {
-            var cur = head;
+            ListNodeWithRandom cur = head;
             while (cur != null)
             {
-                var tmp = cur.next;
+                ListNodeWithRandom tmp = cur.next;
                 var copy = new ListNodeWithRandom(cur.val);
                 cur.next = copy;
                 copy.next = tmp;
@@ -39,18 +38,18 @@ namespace TestMain.LinkedList
                 cur = cur.next.next;
             }
 
-            var dummy = new ListNodeWithRandom(0);
             cur = head;
-            var curNew = dummy;
+            var dummy = new ListNodeWithRandom(0);
+            ListNodeWithRandom curNew = dummy;
             while (cur != null)
             {
-                var tmp = cur.next.next;
-                var copy = cur.next;
+                ListNodeWithRandom tmp = cur.next.next;
+                ListNodeWithRandom copy = cur.next;
                 curNew.next = copy;
-                curNew = copy;
+                curNew = curNew.next;
 
                 cur.next = tmp;
-                cur = tmp;
+                cur = cur.next;
             }
 
             return dummy.next;

@@ -42,6 +42,17 @@ namespace TestMain.Definitions
             return new ListNode(1, node4);
         }
 
+        public static ListNode SampleDuplicates()
+        {
+            var node1 = new ListNode(2);
+            var node2 = new ListNode(4, node1);
+            var node3 = new ListNode(3, node2);
+            var node4 = new ListNode(2, node3);
+
+            // 1 -> 2 -> 3 -> 4 -> 2
+            return new ListNode(1, node4);
+        }
+
         public static ListNode SampleIntersect()
         {
             var node1 = new ListNode(5);

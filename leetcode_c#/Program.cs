@@ -22,10 +22,10 @@ namespace TestMain
             TestBitwise();
             //TestBacktracking();
             //TestTree();
-            TestSearch();
             TestSort();
             TestStackAndQueue();
             TestLinkedList();
+            TestSearch();
         }
 
         private static void TestGreedy()
@@ -201,6 +201,12 @@ namespace TestMain
 
         private static void TestLinkedList()
         {
+            var oddEvenList = new OddEvenList();
+            oddEvenList.Run();
+
+            var remove = new RemoveElements();
+            remove.Run();
+
             var copy = new CopyWithRandomPointer();
             copy.Run();
 

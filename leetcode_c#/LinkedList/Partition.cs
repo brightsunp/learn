@@ -21,9 +21,7 @@ namespace TestMain.LinkedList
         {
             var dummyA = new ListNode(0);
             var dummyB = new ListNode(0);
-            var preA = dummyA;
-            var preB = dummyB;
-
+            ListNode preA = dummyA, preB = dummyB;
             while (head != null)
             {
                 if (head.val < x)
@@ -38,10 +36,9 @@ namespace TestMain.LinkedList
                 }
                 head = head.next;
             }
-
             // This is something subtle but key. (e.g. 1 -> 3 -> 5 -> 2, 2)
-            preB.next = null;
             preA.next = dummyB.next;
+            preB.next = null;
 
             return dummyA.next;
         }

@@ -10,15 +10,13 @@ namespace TestMain.LinkedList
     {
         public override void Run()
         {
-            var test1 = ListNode.Sample();
-            var test2 = ListNode.SampleSorted();
-            TestOutput(nameof(MergeTwoSortedInternal), MergeTwoSortedInternal(test1, test2));
+            TestOutput(nameof(MergeTwoSortedInternal), MergeTwoSortedInternal(ListNode.Sample(), ListNode.SampleSorted()));
         }
 
         private ListNode MergeTwoSortedInternal(ListNode list1, ListNode list2)
         {
             var dummy = new ListNode(0);
-            var pre = dummy;
+            ListNode pre = dummy;
 
             while (list1 != null && list2 != null)
             {

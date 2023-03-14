@@ -9,11 +9,9 @@ namespace TestMain.LinkedList
     {
         public override void Run()
         {
-            var test1 = ListNode.Sample();
-            TestOutput(nameof(ReverseInternalRecursive), ReverseInternalRecursive(test1));
+            TestOutput(nameof(ReverseInternalRecursive), ReverseInternalRecursive(ListNode.Sample()));
 
-            var test2 = ListNode.Sample();
-            TestOutput(nameof(ReverseInternalIterative), ReverseInternalIterative(test2));
+            TestOutput(nameof(ReverseInternalIterative), ReverseInternalIterative(ListNode.Sample()));
         }
 
         private ListNode ReverseInternalRecursive(ListNode head)
@@ -23,7 +21,7 @@ namespace TestMain.LinkedList
                 return head;
             }
 
-            var newHead = ReverseInternalRecursive(head.next);
+            ListNode newHead = ReverseInternalRecursive(head.next);
             head.next.next = head;
             head.next = null;
 
@@ -35,7 +33,7 @@ namespace TestMain.LinkedList
             ListNode newHead = null;
             while (head != null)
             {
-                var tmp = head.next;
+                ListNode tmp = head.next;
                 head.next = newHead;
                 newHead = head;
                 head = tmp;

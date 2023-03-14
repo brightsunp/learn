@@ -10,12 +10,9 @@ namespace TestMain.LinkedList
     {
         public override void Run()
         {
-            var test1 = ListNode.Sample();
-            var test2 = ListNode.SampleIntersect();
-            TestOutput(nameof(GetIntersectionInternal), GetIntersectionInternal(test1, test2));
+            TestOutput(nameof(GetIntersectionInternal), GetIntersectionInternal(ListNode.Sample(), ListNode.SampleIntersect()));
         }
 
-        // Last node must be the same; let longer list move (m-n) first
         private ListNode GetIntersectionInternal(ListNode headA, ListNode headB)
         {
             if (headA == null || headB == null)
@@ -24,7 +21,7 @@ namespace TestMain.LinkedList
             }
 
             int lenA = 1;
-            var curA = headA;
+            ListNode curA = headA;
             while (curA != null && curA.next != null)
             {
                 curA = curA.next;
@@ -32,18 +29,20 @@ namespace TestMain.LinkedList
             }
 
             int lenB = 1;
-            var curB = headB;
+            ListNode curB = headB;
             while (curB != null && curB.next != null)
             {
                 curB = curB.next;
                 lenB++;
             }
 
+            // Last node must be the same
             if (curA.val != curB.val)
             {
                 return null;
             }
 
+            // Let longer list move (m-n) first
             curA = headA;
             curB = headB;
             while (lenA > lenB)

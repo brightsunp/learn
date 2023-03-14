@@ -24,9 +24,9 @@
 - [x] [分隔链表](https://leetcode.com/problems/partition-list/)
 - [x] [*环形链表II](https://leetcode.com/problems/linked-list-cycle-ii/)
 - [x] [*复制带随机指针的链表](https://leetcode.com/problems/copy-list-with-random-pointer/)
-- [ ] [移除链表元素](https://leetcode.com/problems/remove-linked-list-elements/)
-- [ ] [回文链表](https://leetcode.com/problems/palindrome-linked-list/)
-- [ ] [奇偶链表](https://leetcode.com/problems/odd-even-linked-list/)
+- [x] [移除链表元素](https://leetcode.com/problems/remove-linked-list-elements/)
+- [x] [回文链表](https://leetcode.com/problems/palindrome-linked-list/)
+- [x] [奇偶链表](https://leetcode.com/problems/odd-even-linked-list/)
 
 ## 第二周，递归、排序、堆
 

@@ -11,19 +11,15 @@ namespace TestMain.LinkedList
     {
         public override void Run()
         {
-            var test1 = ListNode.Sample();
-            AssertNull(GetCycleInternal(test1));
-
-            var test2 = ListNode.SampleCycle();
-            TestOutput(nameof(GetCycleInternal), GetCycleInternal(test2));
+            AssertNull(GetCycleInternal(ListNode.Sample()));
+            TestOutput(nameof(GetCycleInternal), GetCycleInternal(ListNode.SampleCycle()));
         }
 
         // 1. Judge if there is cycle, return the meeting node "tail"
         // 2. Get intersection node of [head -> ... -> tail] and [tail.next -> ... -> tail]
         private ListNode GetCycleInternal(ListNode head)
         {
-            var slow = head;
-            var fast = head;
+            ListNode slow = head, fast = head;
             bool isCycle = false;
             while (fast != null && fast.next != null)
             {
@@ -41,14 +37,14 @@ namespace TestMain.LinkedList
             }
 
             int lenA = 1;
-            var curA = head;
+            ListNode curA = head;
             while (curA != slow)
             {
                 curA = curA.next;
                 lenA++;
             }
             int lenB = 1;
-            var curB = slow.next;
+            ListNode curB = slow.next;
             while (curB != slow)
             {
                 curB = curB.next;
