@@ -97,7 +97,7 @@ namespace TestMain.Snippets
             int lo = 0, hi = sortedNums.Length - 1;
             while (lo <= hi)
             {
-                int mid = (lo + hi) >> 1;
+                int mid = lo + (hi - lo) / 2;
                 if (target == sortedNums[mid])
                 {
                     return mid;
@@ -106,6 +106,30 @@ namespace TestMain.Snippets
                 if (target < sortedNums[mid])
                 {
                     hi = mid - 1;
+                }
+                else
+                {
+                    lo = mid + 1;
+                }
+            }
+
+            return -1;
+        }
+
+        public static int BinarySearchExclusive(this int[] sortedNums, int target)
+        {
+            int lo = 0, hi = sortedNums.Length;
+            while (lo < hi)
+            {
+                int mid = lo + (hi - lo) / 2;
+                if (target == sortedNums[mid])
+                {
+                    return mid;
+                }
+
+                if (target < sortedNums[mid])
+                {
+                    hi = mid;
                 }
                 else
                 {
@@ -148,7 +172,7 @@ namespace TestMain.Snippets
                 return;
             }
 
-            int mid = (lo + hi) >> 1;
+            int mid = lo + (hi - lo) / 2;
             MergeSortInternal(nums, lo, mid);
             MergeSortInternal(nums, mid + 1, hi);
             Merge(nums, lo, mid, hi);

@@ -21,6 +21,14 @@ namespace TestMain.Search
             AssertEqual(6, Search(new int[] { 7, 0, 1, 2, 4, 5, 6 }, 6));
             AssertEqual(0, Search(new int[] { 6, 7, 0, 1, 2, 4, 5 }, 6));
             AssertEqual(1, Search(new int[] { 5, 6, 7, 0, 1, 2, 4 }, 6));
+
+            AssertEqual(2, SearchWithVirtualIndex(new int[] { 4, 5, 6, 7, 0, 1, 2 }, 6));
+            AssertEqual(3, SearchWithVirtualIndex(new int[] { 2, 4, 5, 6, 7, 0, 1 }, 6));
+            AssertEqual(4, SearchWithVirtualIndex(new int[] { 1, 2, 4, 5, 6, 7, 0 }, 6));
+            AssertEqual(5, SearchWithVirtualIndex(new int[] { 0, 1, 2, 4, 5, 6, 7 }, 6));
+            AssertEqual(6, SearchWithVirtualIndex(new int[] { 7, 0, 1, 2, 4, 5, 6 }, 6));
+            AssertEqual(0, SearchWithVirtualIndex(new int[] { 6, 7, 0, 1, 2, 4, 5 }, 6));
+            AssertEqual(1, SearchWithVirtualIndex(new int[] { 5, 6, 7, 0, 1, 2, 4 }, 6));
         }
 
         private int Search(int[] nums, int target)
@@ -55,6 +63,46 @@ namespace TestMain.Search
                     {
                         hi = mid - 1;
                     }
+                }
+            }
+
+            return -1;
+        }
+
+        private int SearchWithVirtualIndex(int[] nums, int target)
+        {
+            int lo = 0, hi = nums.Length - 1;
+            // find the rotated index
+            while (lo < hi)
+            {
+                int mid = (lo + hi) >> 1;
+                if (nums[mid] < nums[hi])
+                {
+                    hi = mid;
+                }
+                else
+                {
+                    lo = mid + 1;
+                }
+            }
+
+            int left = lo, right = nums.Length + lo;
+            while (left < right)
+            {
+                int mid = (left + right) >> 1;
+                int realMid = mid % nums.Length;
+                if (nums[realMid] == target)
+                {
+                    return realMid;
+                }
+
+                if (nums[realMid] > target)
+                {
+                    right = mid;
+                }
+                else
+                {
+                    left = mid + 1;
                 }
             }
 

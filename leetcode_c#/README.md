@@ -59,10 +59,10 @@
 - [x] [*寻找两个正序数组的中位数](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 - [x] [搜索二维矩阵](https://leetcode.com/problems/search-a-2d-matrix/)
 - [x] [!搜索二维矩阵II](https://leetcode.com/problems/search-a-2d-matrix-ii/)
+- [x] [山脉数组的峰顶](https://leetcode.com/problems/peak-index-in-a-mountain-array/)
 - [x] [!寻找峰值](https://leetcode.com/problems/find-peak-element/)
 - [x] [第一个错误的版本](https://leetcode.com/problems/first-bad-version/)
 - [x] [有效的完全平方数](https://leetcode.com/problems/valid-perfect-square/)
-- [ ] [山脉数组的峰顶](https://leetcode.com/problems/peak-index-in-a-mountain-array/)
 
 8. [位运算基础知识](https://www.geeksforgeeks.org/introduction-to-bitwise-algorithms-data-structures-and-algorithms-tutorial/)
 - [x] [丢失的数字](https://leetcode.com/problems/missing-number/)

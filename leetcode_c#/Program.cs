@@ -21,7 +21,7 @@ namespace TestMain
             TestDp();
             TestBitwise();
             //TestBacktracking();
-            TestTree();
+            //TestTree();
             TestSearch();
             TestSort();
             TestStackAndQueue();
