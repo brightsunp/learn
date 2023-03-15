@@ -97,6 +97,7 @@
     <Compile Include="Sort\MergeKLists.cs" />
     <Compile Include="Sort\MergeSortedArray.cs" />
     <Compile Include="Sort\SortColors.cs" />
+    <Compile Include="Sort\SortedSquares.cs" />
     <Compile Include="Sort\SortMain.cs" />
     <Compile Include="Sort\TwoSum.cs" />
     <Compile Include="StackAndQueue\BasicCalculator.cs" />

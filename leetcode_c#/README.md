@@ -1,5 +1,3 @@
-## 第一周，栈、队列、链表
-
 0. [时间复杂度与空间复杂度](https://www.geeksforgeeks.org/time-complexity-and-space-complexity/)
 
 1. [栈基础知识](https://www.geeksforgeeks.org/introduction-to-stack-data-structure-and-algorithm-tutorials/)
@@ -13,7 +11,6 @@
 2. [队列基础知识](https://www.geeksforgeeks.org/introduction-to-queue-data-structure-and-algorithm-tutorials/)
 - [x] [用栈实现队列](https://leetcode.com/problems/implement-queue-using-stacks/)
 - [x] [*滑动窗口的所有最大值](https://leetcode.com/problems/sliding-window-maximum/)
-- [ ] [设计循环双端队列](https://leetcode.com/problems/design-circular-deque/)
 
 3. [链表基础知识](https://www.geeksforgeeks.org/introduction-to-linked-list-data-structure-and-algorithm-tutorial/)
 - [x] [反转链表](https://leetcode.com/problems/reverse-linked-list/)
@@ -28,8 +25,6 @@
 - [x] [回文链表](https://leetcode.com/problems/palindrome-linked-list/)
 - [x] [奇偶链表](https://leetcode.com/problems/odd-even-linked-list/)
 
-## 第二周，递归、排序、堆
-
 4. [递归基础知识](https://www.geeksforgeeks.org/introduction-to-recursion-data-structure-and-algorithm-tutorials/)
 
 5. [排序基础知识](https://www.geeksforgeeks.org/sorting-algorithms/)
@@ -43,13 +38,10 @@
 - [x] [颜色分类](https://leetcode.com/problems/sort-colors/)
 - [x] [*计算右侧小于当前元素的个数](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
 - [x] [合并k个有序链表](https://leetcode.com/problems/merge-k-sorted-lists/)
-- [ ] [有序数组的平方](https://leetcode.com/problems/squares-of-a-sorted-array/)
-- [ ] [盛最多水的容器](https://leetcode.com/problems/container-with-most-water/)
+- [x] [有序数组的平方](https://leetcode.com/problems/squares-of-a-sorted-array/)
 - [x] [两数之和](https://leetcode.com/problems/two-sum/)
 
 6. [堆基础知识](https://www.geeksforgeeks.org/introduction-to-heap-data-structure-and-algorithm-tutorials/)
-
-## 第三周，二分查找、位运算、回溯
 
 7. [二分查找基础知识](https://www.geeksforgeeks.org/binary-search/)
 - [x] [二分查找](https://leetcode.com/problems/binary-search/)
@@ -87,8 +79,6 @@
 - [ ] 火柴拼正方形(LeetCode 437)
 - [ ] 接雨水 II(LeetCode 407)
 
-## 第四周，二叉树
-
 10. [二叉树基础知识](https://www.geeksforgeeks.org/introduction-to-binary-tree-data-structure-and-algorithm-tutorials/)
 - [x] [二叉树的前序遍历](https://leetcode.com/problems/binary-tree-preorder-traversal/)
 - [x] [*二叉树的中序遍历](https://leetcode.com/problems/binary-tree-inorder-traversal/)
@@ -116,8 +106,6 @@
 - [ ] 二叉搜索树的最小绝对差(LeetCode 530)
 - [ ] 修剪二叉搜索树(LeetCode 669)
 - [ ] 最大二叉树(LeetCode 654)
-
-## 第五周，动态规划、贪心
 
 11. [动态规划基础知识](https://www.geeksforgeeks.org/dynamic-programming/)
 - [x] [斐波那契数](https://leetcode.com/problems/fibonacci-number/)

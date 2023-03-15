@@ -17,12 +17,12 @@ namespace TestMain
     {
         static void Main(string[] args)
         {
-            TestGreedy();
             TestDp();
-            TestBitwise();
             //TestBacktracking();
-            //TestTree();
-            //TestSort();
+            TestTree();
+            TestBitwise();
+            TestGreedy();
+            TestSort();
             TestStackAndQueue();
             TestLinkedList();
             TestSearch();
@@ -153,6 +153,9 @@ namespace TestMain
 
         private static void TestSort()
         {
+            var sortedSquare = new SortedSquares();
+            sortedSquare.Run();
+
             var twoSum = new TwoSum();
             twoSum.Run();
 
