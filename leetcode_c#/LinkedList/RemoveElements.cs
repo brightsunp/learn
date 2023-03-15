@@ -14,9 +14,7 @@ namespace TestMain.LinkedList
 
         private ListNode RemoveElementsInternal(ListNode head, int val)
         {
-            var dummy = new ListNode(0);
-            dummy.next = head;
-
+            var dummy = new ListNode(0, head);
             ListNode pre = dummy;
             while (head != null)
             {

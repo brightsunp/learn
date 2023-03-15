@@ -22,7 +22,7 @@ namespace TestMain
             TestBitwise();
             //TestBacktracking();
             //TestTree();
-            TestSort();
+            //TestSort();
             TestStackAndQueue();
             TestLinkedList();
             TestSearch();
@@ -212,6 +212,9 @@ namespace TestMain
 
             var reverse2 = new ReverseBetween();
             reverse2.Run();
+
+            var reverseK = new ReverseKGroup();
+            reverseK.Run();
 
             var cycle = new GetCycleNode();
             cycle.Run();

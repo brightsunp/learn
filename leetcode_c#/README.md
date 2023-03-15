@@ -18,7 +18,7 @@
 3. [链表基础知识](https://www.geeksforgeeks.org/introduction-to-linked-list-data-structure-and-algorithm-tutorial/)
 - [x] [反转链表](https://leetcode.com/problems/reverse-linked-list/)
 - [x] [反转链表II](https://leetcode.com/problems/reverse-linked-list-ii/)
-- [ ] [k个一组反转链表](https://leetcode.com/problems/reverse-nodes-in-k-group/)
+- [x] [!k个一组反转链表](https://leetcode.com/problems/reverse-nodes-in-k-group/)
 - [x] [相交链表](https://leetcode.com/problems/intersection-of-two-linked-lists/)
 - [x] [合并两个有序链表](https://leetcode.com/problems/merge-two-sorted-lists/)
 - [x] [分隔链表](https://leetcode.com/problems/partition-list/)

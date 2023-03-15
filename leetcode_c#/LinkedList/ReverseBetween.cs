@@ -13,9 +13,7 @@ namespace TestMain.LinkedList
         public override void Run()
         {
             TestOutput(nameof(ReverseBetweenInternal), ReverseBetweenInternal(ListNode.Sample(), 1, 2));
-
             TestOutput(nameof(ReverseBetweenInternal), ReverseBetweenInternal(ListNode.Sample(), 2, 2));
-
             TestOutput(nameof(ReverseBetweenInternal), ReverseBetweenInternal(ListNode.Sample(), 2, 4));
         }
 
@@ -23,27 +21,28 @@ namespace TestMain.LinkedList
         {
             var dummy = new ListNode(0, head);
             ListNode pre = dummy;
-            for (int i = 0; i < left - 1; i++)
+            int pos = 1;
+            while (pos < left)
             {
                 pre = pre.next;
+                pos++;
             }
             ListNode start = pre.next;
             ListNode end = start.next;
-            for (int i = 0; i < right - left; i++)
+            while (pos < right)
             {
                 end = end.next;
+                pos++;
             }
 
-            ListNode newHead = ReverseInternal(start, end);
-            pre.next = newHead;
-
+            pre.next = ReverseHelper(start, end);
             return dummy.next;
         }
 
-        private ListNode ReverseInternal(ListNode head, ListNode end)
+        private ListNode ReverseHelper(ListNode head, ListNode tail)
         {
-            ListNode newHead = end;
-            while (head != end)
+            ListNode newHead = tail;
+            while (head != tail)
             {
                 ListNode tmp = head.next;
                 head.next = newHead;

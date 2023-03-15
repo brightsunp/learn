@@ -10,11 +10,8 @@ namespace TestMain.LinkedList
     {
         public override void Run()
         {
-            var test1 = ListNode.Sample();
-            TestOutput(nameof(PartitionInternal), PartitionInternal(test1, 4));
-
-            var test2 = ListNode.SampleIntersect();
-            TestOutput(nameof(PartitionInternal), PartitionInternal(test2, 4));
+            TestOutput(nameof(PartitionInternal), PartitionInternal(ListNode.Sample(), 4));
+            TestOutput(nameof(PartitionInternal), PartitionInternal(ListNode.SampleIntersect(), 4));
         }
 
         private ListNode PartitionInternal(ListNode head, int x)

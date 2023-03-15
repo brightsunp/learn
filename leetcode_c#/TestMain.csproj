@@ -81,6 +81,7 @@
     <Compile Include="LinkedList\RemoveElements.cs" />
     <Compile Include="LinkedList\Reverse.cs" />
     <Compile Include="LinkedList\ReverseBetween.cs" />
+    <Compile Include="LinkedList\ReverseKGroup.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\BinarySearch.cs" />

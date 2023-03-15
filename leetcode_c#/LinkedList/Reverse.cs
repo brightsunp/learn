@@ -9,26 +9,25 @@ namespace TestMain.LinkedList
     {
         public override void Run()
         {
-            TestOutput(nameof(ReverseInternalRecursive), ReverseInternalRecursive(ListNode.Sample()));
-
-            TestOutput(nameof(ReverseInternalIterative), ReverseInternalIterative(ListNode.Sample()));
+            TestOutput(nameof(ReverseRecursive), ReverseRecursive(ListNode.Sample()));
+            TestOutput(nameof(ReverseIterative), ReverseIterative(ListNode.Sample()));
         }
 
-        private ListNode ReverseInternalRecursive(ListNode head)
+        private ListNode ReverseRecursive(ListNode head)
         {
             if (head == null || head.next == null)
             {
                 return head;
             }
 
-            ListNode newHead = ReverseInternalRecursive(head.next);
+            ListNode newHead = ReverseRecursive(head.next);
             head.next.next = head;
             head.next = null;
 
             return newHead;
         }
 
-        private ListNode ReverseInternalIterative(ListNode head)
+        private ListNode ReverseIterative(ListNode head)
         {
             ListNode newHead = null;
             while (head != null)
