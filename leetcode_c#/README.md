@@ -67,6 +67,7 @@
 - [x] [Hamming Distance](https://leetcode.com/problems/hamming-distance/)
 
 9. [回溯基础知识](https://www.geeksforgeeks.org/introduction-to-backtracking-data-structure-and-algorithm-tutorials/)
+**Recursive**
 - [x] [!全子集](https://leetcode.com/problems/subsets/)
 - [x] [全排列](https://leetcode.com/problems/permutations/)
 - [x] [全组合](https://leetcode.com/problems/combinations/)
@@ -74,54 +75,54 @@
 - [ ] [组合总和III](https://leetcode.com/problems/combination-sum-iii/)
 - [x] [!分割回文串](https://leetcode.com/problems/palindrome-partitioning/)
 - [x] [括号生成](https://leetcode.com/problems/generate-parentheses/)
-- [ ] N皇后(LeetCode 51)
-- [ ] 岛屿数量(LeetCode 200)
-- [ ] 火柴拼正方形(LeetCode 437)
-- [ ] 接雨水 II(LeetCode 407)
+
+**Practical**
+- [ ] [N皇后](https://leetcode.com/problems/n-queens/)
+- [ ] [岛屿数量](https://leetcode.com/problems/number-of-islands/)
+- [ ] [接雨水II](https://leetcode.com/problems/trapping-rain-water-ii/)
 
 10. [二叉树基础知识](https://www.geeksforgeeks.org/introduction-to-binary-tree-data-structure-and-algorithm-tutorials/)
+**Traverse**
 - [x] [二叉树的前序遍历](https://leetcode.com/problems/binary-tree-preorder-traversal/)
 - [x] [*二叉树的中序遍历](https://leetcode.com/problems/binary-tree-inorder-traversal/)
 - [x] [二叉树的后序遍历](https://leetcode.com/problems/binary-tree-postorder-traversal/)
 - [x] [二叉树的层序遍历](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 - [x] [二叉树的锯齿形层序遍历](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
 - [x] [二叉树按前序遍历展开为链表](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
-- [x] [!验证二叉搜索树](https://leetcode.com/problems/validate-binary-search-tree/)
 - [x] [从前序与中序遍历序列构造二叉树](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
-- [x] [将有序数组转换为二叉搜索树](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
-- [x] [验证平衡二叉树](https://leetcode.com/problems/balanced-binary-tree/)
+- [ ] [二叉树的序列化与反序列化](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+- [x] [找树左下角的值](https://leetcode.com/problems/find-bottom-left-tree-value/)
+- [x] [二叉树的右视图](https://leetcode.com/problems/binary-tree-right-side-view/)
+
+**Height/Depth**
 - [x] [二叉树的最大深度](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 - [x] [!二叉树的最小深度](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
 - [x] [左叶子之和](https://leetcode.com/problems/sum-of-left-leaves/)
-- [x] [找树左下角的值](https://leetcode.com/problems/find-bottom-left-tree-value/)
-- [ ] [路径总和II](https://leetcode.com/problems/path-sum-ii/)
-- [ ] [二叉树的右视图](https://leetcode.com/problems/binary-tree-right-side-view/)
+- [x] [验证平衡二叉树](https://leetcode.com/problems/balanced-binary-tree/)
 - [ ] [完全二叉树的节点个数](https://leetcode.com/problems/count-complete-tree-nodes/)
-- [ ] [二叉搜索树的最近公共祖先](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 - [ ] [二叉树的最近公共祖先](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 - [ ] [二叉树的所有路径](https://leetcode.com/problems/binary-tree-paths/)
-- [ ] 二叉树的序列化与反序列化(LeetCode 297)
-- [ ] 把二叉搜索树转换为累加树(LeetCode 538)
-- [ ] 删除二叉搜索树中的节点(LeetCode 450)
-- [ ] 二叉搜索树的最小绝对差(LeetCode 530)
-- [ ] 修剪二叉搜索树(LeetCode 669)
-- [ ] 最大二叉树(LeetCode 654)
+- [ ] [最大二叉树](https://leetcode.com/problems/maximum-binary-tree/)
+- [ ] [路径总和II](https://leetcode.com/problems/path-sum-ii/)
+
+**BST**
+- [x] [!验证二叉搜索树](https://leetcode.com/problems/validate-binary-search-tree/)
+- [x] [将有序数组转换为二叉搜索树](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
+- [ ] [二叉搜索树的最近公共祖先](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+- [ ] [删除二叉搜索树中的节点](https://leetcode.com/problems/delete-node-in-a-bst/)
+- [ ] [二叉搜索树的最小绝对差](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)
+- [ ] [把二叉搜索树转换为累加树](https://leetcode.com/problems/convert-bst-to-greater-tree/)
+- [ ] [修剪二叉搜索树](https://leetcode.com/problems/trim-a-binary-search-tree/)
 
 11. [动态规划基础知识](https://www.geeksforgeeks.org/dynamic-programming/)
+**Fibonacci**
 - [x] [斐波那契数](https://leetcode.com/problems/fibonacci-number/)
 - [x] [爬楼梯](https://leetcode.com/problems/climbing-stairs/)
 - [x] [*解码的方法](https://leetcode.com/problems/decode-ways/)
 - [x] [不同路径](https://leetcode.com/problems/unique-paths/)
 - [x] [最小路径和](https://leetcode.com/problems/minimum-path-sum/)
 
-- [x] [最大连续子序列的和](https://leetcode.com/problems/maximum-subarray/)
-- [x] [最长连续递增子序列](https://leetcode.com/problems/longest-continuous-increasing-subsequence/)
-- [x] [*最长递增子序列](https://leetcode.com/problems/longest-increasing-subsequence/)
-- [x] [最长连续回文子序列](https://leetcode.com/problems/longest-palindromic-substring/)
-- [x] [*最长回文子序列](https://leetcode.com/problems/longest-palindromic-subsequence/)
-- [ ] [最长连续公共子序列](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
-- [ ] [最长公共子序列](https://leetcode.com/problems/longest-common-subsequence/)
-
+**0/1 Knapsack**
 - [ ] [目标和](https://leetcode.com/problems/target-sum/)
 - [x] [*分割等和子集](https://leetcode.com/problems/partition-equal-subset-sum/)
 - [x] [零钱兑换](https://leetcode.com/problems/coin-change/)
@@ -134,6 +135,16 @@
 - [x] [买卖股票的最佳时机含手续费](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
 - [x] [摆动序列](https://leetcode.com/problems/wiggle-subsequence/)
 
+**Subsequence**
+- [x] [最大连续子序列的和](https://leetcode.com/problems/maximum-subarray/)
+- [x] [最长连续递增子序列](https://leetcode.com/problems/longest-continuous-increasing-subsequence/)
+- [x] [*最长递增子序列](https://leetcode.com/problems/longest-increasing-subsequence/)
+- [x] [最长连续回文子序列](https://leetcode.com/problems/longest-palindromic-substring/)
+- [x] [*最长回文子序列](https://leetcode.com/problems/longest-palindromic-subsequence/)
+- [ ] [最长连续公共子序列](https://leetcode.com/problems/maximum-length-of-repeated-subarray/)
+- [ ] [最长公共子序列](https://leetcode.com/problems/longest-common-subsequence/)
+
+**Practical**
 - [x] [打家劫舍](https://leetcode.com/problems/house-robber/)
 - [x] [打家劫舍II](https://leetcode.com/problems/house-robber-ii/)
 - [x] [**打家劫舍III](https://leetcode.com/problems/house-robber-iii/)
