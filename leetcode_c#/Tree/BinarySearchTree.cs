@@ -1,8 +1,8 @@
 ﻿/**
-* A valid binary search tree is defined as follows: 
-* 1. The left subtree of a node contains only nodes with keys less than the node's key. 
-* 2. The right subtree of a node contains only nodes with keys greater than the node's key. 
-* 3. Both the left and right subtrees must also be binary search trees.
+* Binary search tree is classified on the basis of node values:
+*   1. The left subtree of a node contains only nodes with keys less than the node's key. 
+*   2. The right subtree of a node contains only nodes with keys greater than the node's key. 
+*   3. The left and right subtree each must also be a binary search tree.
 */
 using System.Collections.Generic;
 using TestMain.Definitions;

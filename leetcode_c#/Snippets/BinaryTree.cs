@@ -1,10 +1,10 @@
 ﻿/**
 * Recursive traversal implementation are corresponding to how the tree is traversed.
-*   pre-order: print(val) / pre-recursive(left) / pre-recursive(right)
+*   1. pre-order: print(val) / pre-recursive(left) / pre-recursive(right)
 *       Duplicate tree / Prefix expression tree
-*   in-oder: in-recursive(left) / print(val) / in-recursive(right)
+*   2. in-oder: in-recursive(left) / print(val) / in-recursive(right)
 *       Binary search tree
-*   post-order: post-recursive(left) / post-recursive(right) / print(val)
+*   3. post-order: post-recursive(left) / post-recursive(right) / print(val)
 *       Delete tree / Postfix expression tree
 */
 using System;

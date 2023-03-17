@@ -28,30 +28,6 @@ namespace TestMain
             TestSearch();
         }
 
-        private static void TestGreedy()
-        {
-            var triangle = new TriangleNumber();
-            triangle.Run();
-
-            var mergeIntervals = new MergeIntervals();
-            mergeIntervals.Run();
-
-            var jumpGame = new JumpGame();
-            jumpGame.Run();
-
-            var threeSum = new ThreeSum();
-            threeSum.Run();
-
-            var removeKdigits = new RemoveKdigits();
-            removeKdigits.Run();
-
-            var lemonade = new LemonadeChange();
-            lemonade.Run();
-
-            var cookies = new AssignCookies();
-            cookies.Run();
-        }
-
         private static void TestDp()
         {
             var intBreak = new IntegerBreak();
@@ -94,18 +70,6 @@ namespace TestMain
             fibSeries.Run();
         }
 
-        private static void TestBitwise()
-        {
-            var maxProduct = new MaxProduct();
-            maxProduct.Run();
-
-            var singleNumber = new SingleNumbers();
-            singleNumber.Run();
-
-            var bitMain = new BitwiseMain();
-            bitMain.Run();
-        }
-
         private static void TestBacktracking()
         {
             var parenthesis = new GenerateParenthesis();
@@ -117,8 +81,11 @@ namespace TestMain
 
         private static void TestTree()
         {
-            var balanced = new BalancedBinaryTree();
-            balanced.Run();
+            var types = new TypesOfBinaryTree();
+            types.Run();
+
+            var serialize = new SerializeTree();
+            serialize.Run();
 
             var buildTree = new ConstructTree();
             buildTree.Run();
@@ -131,6 +98,18 @@ namespace TestMain
 
             var heap = new HeapMain();
             heap.Run();
+        }
+
+        private static void TestBitwise()
+        {
+            var maxProduct = new MaxProduct();
+            maxProduct.Run();
+
+            var singleNumber = new SingleNumbers();
+            singleNumber.Run();
+
+            var bitMain = new BitwiseMain();
+            bitMain.Run();
         }
 
         private static void TestSearch()
@@ -149,6 +128,30 @@ namespace TestMain
 
             var rotated = new SearchRotated();
             rotated.Run();
+        }
+
+        private static void TestGreedy()
+        {
+            var triangle = new TriangleNumber();
+            triangle.Run();
+
+            var mergeIntervals = new MergeIntervals();
+            mergeIntervals.Run();
+
+            var jumpGame = new JumpGame();
+            jumpGame.Run();
+
+            var threeSum = new ThreeSum();
+            threeSum.Run();
+
+            var removeKdigits = new RemoveKdigits();
+            removeKdigits.Run();
+
+            var lemonade = new LemonadeChange();
+            lemonade.Run();
+
+            var cookies = new AssignCookies();
+            cookies.Run();
         }
 
         private static void TestSort()

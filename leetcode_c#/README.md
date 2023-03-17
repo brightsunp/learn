@@ -90,7 +90,7 @@
 - [x] [二叉树的锯齿形层序遍历](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
 - [x] [二叉树按前序遍历展开为链表](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
 - [x] [从前序与中序遍历序列构造二叉树](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
-- [ ] [二叉树的序列化与反序列化](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+- [x] [*二叉树的序列化与反序列化](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 - [x] [找树左下角的值](https://leetcode.com/problems/find-bottom-left-tree-value/)
 - [x] [二叉树的右视图](https://leetcode.com/problems/binary-tree-right-side-view/)
 
@@ -98,14 +98,14 @@
 - [x] [二叉树的最大深度](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 - [x] [!二叉树的最小深度](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
 - [x] [左叶子之和](https://leetcode.com/problems/sum-of-left-leaves/)
-- [x] [验证平衡二叉树](https://leetcode.com/problems/balanced-binary-tree/)
-- [ ] [完全二叉树的节点个数](https://leetcode.com/problems/count-complete-tree-nodes/)
 - [ ] [二叉树的最近公共祖先](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 - [ ] [二叉树的所有路径](https://leetcode.com/problems/binary-tree-paths/)
 - [ ] [最大二叉树](https://leetcode.com/problems/maximum-binary-tree/)
 - [ ] [路径总和II](https://leetcode.com/problems/path-sum-ii/)
 
-**BST**
+**Types of Binary Tree**
+- [ ] [完全二叉树的节点个数](https://leetcode.com/problems/count-complete-tree-nodes/)
+- [x] [验证平衡二叉树](https://leetcode.com/problems/balanced-binary-tree/)
 - [x] [!验证二叉搜索树](https://leetcode.com/problems/validate-binary-search-tree/)
 - [x] [将有序数组转换为二叉搜索树](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
 - [ ] [二叉搜索树的最近公共祖先](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)

@@ -108,7 +108,8 @@
     <Compile Include="StackAndQueue\StackSequences.cs" />
     <Compile Include="StackAndQueue\TrapRainWater.cs" />
     <Compile Include="StackAndQueue\ValidParentheses.cs" />
-    <Compile Include="Tree\BalancedBinaryTree.cs" />
+    <Compile Include="Tree\SerializeTree.cs" />
+    <Compile Include="Tree\TypesOfBinaryTree.cs" />
     <Compile Include="Tree\BinarySearchTree.cs" />
     <Compile Include="Tree\ConstructTree.cs" />
     <Compile Include="Tree\HeapMain.cs" />

@@ -31,6 +31,20 @@ namespace TestMain.Definitions
             return root;
         }
 
+        public static TreeNode SampleNotPerfect()
+        {
+            var leftNode = new TreeNode(2, null, new TreeNode(5));
+            var rightNode = new TreeNode(3, new TreeNode(6), null);
+            var root = new TreeNode(1, leftNode, rightNode);
+
+            //       1
+            //     /   \
+            //   2      3
+            //    \    / 
+            //     5  6   
+            return root;
+        }
+
         public static TreeNode SampleBST()
         {
             var leftNode = new TreeNode(2, new TreeNode(1), new TreeNode(3));

@@ -1,12 +1,16 @@
 ﻿/**
-* A height-balanced binary tree is a binary tree in which the depth of the two subtrees of every node never differs by more than one.
+* Types of Binary Tree On the basis of the completion of levels: 
+*   1. Complete Binary Tree: all levels are completely filled except possibly the last level, and the last level has all keys as left as possible. 
+*   2. Perfect Binary Tree: all levels are completely filled. (all internal nodes have two children and all leaf nodes are at the same level.) 
+*   3. Balanced Binary Tree: the height is O(log N) where N is the number of nodes. (the heights of left and right subtrees of every node never differ by more than 1.)
+*       - Balanced BST is performance-wise good as it provides O(log N) time for search, insert and delete.
 */
 using System;
 using TestMain.Definitions;
 
 namespace TestMain.Tree
 {
-    class BalancedBinaryTree : Solution
+    class TypesOfBinaryTree : Solution
     {
         public override void Run()
         {
