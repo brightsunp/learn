@@ -94,7 +94,7 @@
 - [x] [找树左下角的值](https://leetcode.com/problems/find-bottom-left-tree-value/)
 - [x] [二叉树的右视图](https://leetcode.com/problems/binary-tree-right-side-view/)
 
-**Height/Depth**
+**Depth**
 - [x] [二叉树的最大深度](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 - [x] [!二叉树的最小深度](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
 - [x] [左叶子之和](https://leetcode.com/problems/sum-of-left-leaves/)

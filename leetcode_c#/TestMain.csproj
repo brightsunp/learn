@@ -109,11 +109,12 @@
     <Compile Include="StackAndQueue\TrapRainWater.cs" />
     <Compile Include="StackAndQueue\ValidParentheses.cs" />
     <Compile Include="Tree\SerializeTree.cs" />
+    <Compile Include="Tree\TreeDepth.cs" />
     <Compile Include="Tree\TypesOfBinaryTree.cs" />
     <Compile Include="Tree\BinarySearchTree.cs" />
     <Compile Include="Tree\ConstructTree.cs" />
     <Compile Include="Tree\HeapMain.cs" />
-    <Compile Include="Tree\TreeMain.cs" />
+    <Compile Include="Tree\TreeTraversals.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

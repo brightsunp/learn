@@ -84,16 +84,19 @@ namespace TestMain
             var types = new TypesOfBinaryTree();
             types.Run();
 
+            var bst = new BinarySearchTree();
+            bst.Run();
+
+            var depth = new TreeDepth();
+            depth.Run();
+
             var serialize = new SerializeTree();
             serialize.Run();
 
             var buildTree = new ConstructTree();
             buildTree.Run();
 
-            var bst = new BinarySearchTree();
-            bst.Run();
-
-            var treeMain = new TreeMain();
+            var treeMain = new TreeTraversals();
             treeMain.Run();
 
             var heap = new HeapMain();

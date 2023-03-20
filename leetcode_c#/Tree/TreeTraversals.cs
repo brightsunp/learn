@@ -7,11 +7,11 @@ using TestMain.Snippets;
 
 namespace TestMain.Tree
 {
-    class TreeMain : Solution
+    class TreeTraversals : Solution
     {
         public override void Run()
         {
-            var actual = TreeNode.Sample();
+            TreeNode actual = TreeNode.Sample();
             var wrapList = new List<IList<int>> { new List<int> { 1 }, new List<int> { 2, 3 }, new List<int> { 4, 5, 6, 7 } };
             AssertEqual(wrapList, actual.LevelOrder());
 
@@ -23,10 +23,6 @@ namespace TestMain.Tree
 
             expected = new List<int> { 4, 5, 2, 6, 7, 3, 1 };
             AssertEqual(expected, actual.PostOrder());
-
-            AssertEqual(3, actual.MaxDepth());
-            AssertEqual(3, actual.MinDepth());
-            AssertEqual(10, actual.SumOfLeftLeaves());
 
             wrapList = new List<IList<int>> { new int[] { 1 }, new int[] { 3, 2 }, new int[] { 4, 5, 6, 7 } };
             AssertEqual(wrapList, actual.ZigzagLevelOrder());
