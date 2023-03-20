@@ -74,10 +74,8 @@ namespace TestMain.Backtracking
                 for (int i = 0; i < nums.Length; i++)
                 {
                     // Skip duplicate number
-                    if (solution.Contains(nums[i]))
-                    {
-                        continue;
-                    }
+                    if (solution.Contains(nums[i])) continue;
+
                     solution.Add(nums[i]);
                     PermuteInternal(nums, solution, solutions);
                     solution.RemoveAt(solution.Count - 1);
@@ -121,11 +119,9 @@ namespace TestMain.Backtracking
 
         private void CombinationSumInternal(int[] nums, int remain, int start, IList<int> solution, IList<IList<int>> solutions)
         {
-            if (remain < 0)
-            {
-                return;
-            }
-            else if (remain == 0)
+            if (remain < 0) return;
+            
+            if (remain == 0)
             {
                 solutions.Add(new List<int>(solution));
             }
@@ -134,10 +130,8 @@ namespace TestMain.Backtracking
                 for (int i = start; i < nums.Length; i++)
                 {
                     // Skip duplicate combinations
-                    if (i > start && nums[i] == nums[i - 1])
-                    {
-                        continue;
-                    }
+                    if (i > start && nums[i] == nums[i - 1]) continue;
+
                     solution.Add(nums[i]);
                     CombinationSumInternal(nums, remain - nums[i], i + 1, solution, solutions);
                     solution.RemoveAt(solution.Count - 1);
@@ -177,12 +171,8 @@ namespace TestMain.Backtracking
         {
             while (lo < hi)
             {
-                if (s[lo++] != s[hi--])
-                {
-                    return false;
-                }
+                if (s[lo++] != s[hi--]) return false;
             }
-
             return true;
         }
     }
