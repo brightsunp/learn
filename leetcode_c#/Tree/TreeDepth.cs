@@ -31,10 +31,15 @@ namespace TestMain.Tree
         private TreeNode FindLCA(TreeNode root, TreeNode p, TreeNode q)
         {
             if (root == null) return null;
-            if (root.val == p.val || root.val == q.val) return root;
 
+            // Find itself as ancestor.
+            if (root.val == p.val || root.val == q.val) return root;
             TreeNode leftLCA = FindLCA(root.left, p, q), rightLCA = FindLCA(root.right, p, q);
+
+            // If can be found in both left subtree and right subtree, root is LCA.
             if (leftLCA != null && rightLCA != null) return root;
+
+            // If cannot be found in left subtree, LCA must be in right subtree; vice versa.
             return leftLCA ?? rightLCA;
         }
 

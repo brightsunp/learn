@@ -108,7 +108,7 @@
 - [x] [验证平衡二叉树](https://leetcode.com/problems/balanced-binary-tree/)
 - [x] [!验证二叉搜索树](https://leetcode.com/problems/validate-binary-search-tree/)
 - [x] [将有序数组转换为二叉搜索树](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
-- [ ] [二叉搜索树的最近公共祖先](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+- [x] [!二叉搜索树的最近公共祖先](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 - [ ] [删除二叉搜索树中的节点](https://leetcode.com/problems/delete-node-in-a-bst/)
 - [ ] [二叉搜索树的最小绝对差](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)
 - [ ] [把二叉搜索树转换为累加树](https://leetcode.com/problems/convert-bst-to-greater-tree/)

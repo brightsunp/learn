@@ -14,8 +14,8 @@ namespace TestMain.Tree
     {
         public override void Run()
         {
-            AssertTrue(IsValidBST(TreeNode.SampleBST()));
-            AssertTrue(!IsValidBST(TreeNode.Sample()));
+            AssertTrue(IsValidBSTRecursive(TreeNode.SampleBST()));
+            AssertTrue(!IsValidBSTRecursive(TreeNode.Sample()));
 
             AssertTrue(IsValidBSTInorder(TreeNode.SampleBST()));
             AssertTrue(!IsValidBSTInorder(TreeNode.Sample()));
@@ -28,7 +28,7 @@ namespace TestMain.Tree
         }
 
         // Given the root of a binary tree, determine if it is a valid BST.
-        private bool IsValidBST(TreeNode root)
+        private bool IsValidBSTRecursive(TreeNode root)
         {
             // Do not use int.MaxValue/MinValue since node.val can be equal to them.
             return IsValidBSTHelper(root, null, null);
@@ -105,6 +105,17 @@ namespace TestMain.Tree
                 left = SortedArrayToBSTHelper(nums, start, mid - 1),
                 right = SortedArrayToBSTHelper(nums, mid + 1, end)
             };
+        }
+
+        // It is much more tricky to find LCA in BST: 
+        //  "leftLCA != null && rightLCA != null" can be translated into "(root.val - p.val) * (root.val - q.val) < 0"
+        private TreeNode FindLcaInBST(TreeNode root, TreeNode p, TreeNode q)
+        {
+            if (root == null) return null;
+
+            if (root.val > p.val && root.val > q.val) return FindLcaInBST(root.left, p, q);
+            if (root.val < p.val && root.val < q.val) return FindLcaInBST(root.right, p, q);
+            return root;
         }
     }
 }

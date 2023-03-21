@@ -2,7 +2,7 @@
 * Types of Binary Tree On the basis of the completion of levels: 
 *   1. Complete Binary Tree: all levels are completely filled except possibly the last level, and the last level has all keys as left as possible. 
 *   2. Perfect Binary Tree: all levels are completely filled. (all internal nodes have two children and all leaf nodes are at the same level.) 
-*       - Note the definition of Full Binary Tree: every node except the leaf nodes have two children. 
+*       - Note it's different from Full Binary Tree: all internal nodes have two children, but leaf nodes may not be at the same level.
 *   3. Balanced Binary Tree: the height is O(log N) where N is the number of nodes. (the heights of left and right subtrees of every node never differ by more than 1.)
 *       - Balanced BST is performance-wise good as it provides O(log N) time for search, insert and delete.
 */
