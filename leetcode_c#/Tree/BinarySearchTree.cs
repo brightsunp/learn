@@ -36,10 +36,7 @@ namespace TestMain.Tree
 
         private bool IsValidBSTHelper(TreeNode node, TreeNode lo, TreeNode hi)
         {
-            if (node == null)
-            {
-                return true;
-            }
+            if (node == null) return true;
 
             // This makes sure grandchildren are also compared with the ancestor.
             if ((lo != null && node.val <= lo.val) || (hi != null && node.val >= hi.val))
@@ -57,20 +54,14 @@ namespace TestMain.Tree
 
             for(int i = 1; i < values.Count; i++)
             {
-                if (values[i] <= values[i - 1])
-                {
-                    return false;
-                }
+                if (values[i] <= values[i - 1]) return false;
             }
             return true;
         }
 
         private void IsValidBSTInorderHelper(TreeNode node, List<int> values)
         {
-            if (node == null)
-            {
-                return;
-            }
+            if (node == null) return;
 
             IsValidBSTInorderHelper(node.left, values);
             values.Add(node.val);
@@ -80,8 +71,7 @@ namespace TestMain.Tree
         private bool IsValieBSTInorderIterative(TreeNode root)
         {
             var stack = new Stack<TreeNode>();
-            TreeNode pre = null;
-            TreeNode cur = root;
+            TreeNode pre = null, cur = root;
             while (cur != null || stack.Count > 0)
             {
                 if (cur != null)
@@ -92,10 +82,7 @@ namespace TestMain.Tree
                 else
                 {
                     cur = stack.Pop();
-                    if (pre != null && pre.val >= cur.val)
-                    {
-                        return false;
-                    }
+                    if (pre != null && pre.val >= cur.val) return false;
                     pre = cur;
                     cur = cur.right;
                 }
@@ -110,17 +97,14 @@ namespace TestMain.Tree
 
         private TreeNode SortedArrayToBSTHelper(int[] nums, int start, int end)
         {
-            if (start > end)
-            {
-                return null;
-            }
+            if (start > end) return null;
+
             int mid = (start + end) >> 1;
-            var root = new TreeNode(nums[mid])
+            return new TreeNode(nums[mid])
             {
                 left = SortedArrayToBSTHelper(nums, start, mid - 1),
                 right = SortedArrayToBSTHelper(nums, mid + 1, end)
             };
-            return root;
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿/**
 * Depth: 
 *   1. Depth of a node is the distance from that node to the deepest node of that subtree. 
-*   2. Depth of a tree is the number of nodes along the longest path from the root node down to the farthest leaf node. 
+*   2. Depth/Height of a tree is the number of nodes along the longest path from the root node down to the farthest leaf node. 
 * 
 * Most of the problems can be solved with Depth First Search recursion.
 */

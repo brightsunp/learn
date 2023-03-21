@@ -24,10 +24,7 @@ namespace TestMain.Tree
         private string Serialize(TreeNode root)
         {
             // Level order traversal: dont't skip null child nodes
-            if (root == null)
-            {
-                return string.Empty;
-            }
+            if (root == null) return string.Empty;
 
             var values = new List<string>();
             var queue = new Queue<TreeNode>();
@@ -56,10 +53,7 @@ namespace TestMain.Tree
         // Decodes the encoded data to tree.
         private TreeNode Deserialize(string data)
         {
-            if (data == string.Empty)
-            {
-                return null;
-            }
+            if (data == string.Empty) return null;
             
             string[] values = data.Split(',');
             var root = new TreeNode(System.Convert.ToInt32(values[0]));

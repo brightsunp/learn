@@ -81,11 +81,11 @@ namespace TestMain
 
         private static void TestTree()
         {
-            var types = new TypesOfBinaryTree();
-            types.Run();
-
             var bst = new BinarySearchTree();
             bst.Run();
+
+            var types = new TypesOfBinaryTree();
+            types.Run();
 
             var depth = new TreeDepth();
             depth.Run();

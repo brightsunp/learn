@@ -104,7 +104,7 @@
 - [x] [!构造最大值二叉树](https://leetcode.com/problems/maximum-binary-tree/)
 
 **Types of Binary Tree**
-- [ ] [完全二叉树的节点个数](https://leetcode.com/problems/count-complete-tree-nodes/)
+- [x] [!完全二叉树的节点个数](https://leetcode.com/problems/count-complete-tree-nodes/)
 - [x] [验证平衡二叉树](https://leetcode.com/problems/balanced-binary-tree/)
 - [x] [!验证二叉搜索树](https://leetcode.com/problems/validate-binary-search-tree/)
 - [x] [将有序数组转换为二叉搜索树](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)

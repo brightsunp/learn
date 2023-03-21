@@ -27,19 +27,15 @@ namespace TestMain.Tree
 
         private TreeNode BuildTreeRecursive(int[] preorder, int[] inorder)
         {
-            if (preorder.Length == 0)
-            {
-                return null;
-            }
+            if (preorder.Length == 0) return null;
             
             int pos = System.Array.IndexOf(inorder, preorder[0]);
             int leftCount = pos, rightCount = inorder.Length - pos - 1;
-            var root = new TreeNode(preorder[0])
+            return new TreeNode(preorder[0])
             {
                 left = BuildTreeRecursive(new List<int>(preorder).GetRange(1, leftCount).ToArray(), new List<int>(inorder).GetRange(0, leftCount).ToArray()),
                 right = BuildTreeRecursive(new List<int>(preorder).GetRange(pos + 1, rightCount).ToArray(), new List<int>(inorder).GetRange(pos + 1, rightCount).ToArray())
             };
-            return root;
         }
 
         private TreeNode BuildTree(int[] preorder, int[] inorder)
@@ -55,18 +51,14 @@ namespace TestMain.Tree
         private TreeNode BuildTreeHelper(int[] preorder, int[] inorder, Dictionary<int, int> indexMap, int preStart, int inStart, int inEnd)
         {
             // preStart > preEnd || inStart > inEnd
-            if (preStart > preorder.Length - 1 || inStart > inEnd)
-            {
-                return null;
-            }
+            if (preStart > preorder.Length - 1 || inStart > inEnd) return null;
             
             int inIndex = indexMap[preorder[preStart]];
-            var root = new TreeNode(preorder[preStart])
+            return new TreeNode(preorder[preStart])
             {
                 left = BuildTreeHelper(preorder, inorder, indexMap, preStart + 1, inStart, inIndex - 1),
                 right = BuildTreeHelper(preorder, inorder, indexMap, preStart + inIndex - inStart + 1, inIndex + 1, inEnd)
             };
-            return root;
         }
     }
 }
