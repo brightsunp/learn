@@ -25,6 +25,11 @@ namespace TestMain.Tree
 
             var inorder = new int[] { 1, 2, 3, 4, 5, 6, 7 };
             AssertEqual(inorder, SortedArrayToBST(inorder).InOrder());
+
+            AssertEqual(1, GetMinimumDifference(TreeNode.SampleBST()));
+
+            var expected = new int[] { 28, 27, 25, 22, 18, 13, 7 };
+            AssertEqual(expected, ConvertBST2GreaterTree(TreeNode.SampleBST()).InOrder());
         }
 
         // Given the root of a binary tree, determine if it is a valid BST.
@@ -175,6 +180,72 @@ namespace TestMain.Tree
 
             // Replace root val with min val.
             root.val = cur.val;
+            return root;
+        }
+
+        private int GetMinimumDifference(TreeNode root)
+        {
+            int res = int.MaxValue;
+            var stack = new Stack<TreeNode>();
+            TreeNode pre = null, cur = root;
+            while (cur != null || stack.Count > 0)
+            {
+                if (cur != null)
+                {
+                    stack.Push(cur);
+                    cur = cur.left;
+                }
+                else
+                {
+                    cur = stack.Pop();
+                    if (pre != null)
+                    {
+                        res = System.Math.Min(res, cur.val - pre.val);
+                    }
+                    pre = cur;
+                    cur = cur.right;
+                }
+            }
+            return res;
+        }
+
+        // Given the root of a binary search tree and the lowest and highest boundaries as low and high, trim the tree so that all its elements lies in [low, high].
+        // Trimming the tree should not change the relative structure of the elements that will remain in the tree. It can be proven that there is a unique answer.
+        // Return the root of the trimmed binary search tree. Note that the root may change depending on the given bounds.
+        private TreeNode TrimBSTRecursive(TreeNode root, int low, int high)
+        {
+            if (root == null) return null;
+            if (root.val < low) return TrimBSTRecursive(root.right, low, high);
+            if (root.val > high) return TrimBSTRecursive(root.left, low, high);
+            
+            root.left = TrimBSTRecursive(root.left, low, high);
+            root.right = TrimBSTRecursive(root.right, low, high);
+            return root;
+        }
+
+        // Given the root of a binary search tree, convert it to a Greater Tree such that:
+        // every key of the original BST is changed to the original key plus the sum of all keys greater than the original key in BST.
+        private TreeNode ConvertBST2GreaterTree(TreeNode root)
+        {
+            // Reverse "in-order" traversal: right subtree -> root -> left subtree.
+            int sum = 0;
+            var stack = new Stack<TreeNode>();
+            TreeNode cur = root;
+            while (cur != null || stack.Count > 0)
+            {
+                if (cur != null)
+                {
+                    stack.Push(cur);
+                    cur = cur.right;
+                }
+                else
+                {
+                    cur = stack.Pop();
+                    cur.val += sum;
+                    sum = cur.val;
+                    cur = cur.left;
+                }
+            }
             return root;
         }
     }

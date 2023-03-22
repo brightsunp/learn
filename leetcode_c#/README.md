@@ -110,9 +110,9 @@
 - [x] [将有序数组转换为二叉搜索树](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
 - [x] [!二叉搜索树的最近公共祖先](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 - [x] [*删除二叉搜索树中的节点](https://leetcode.com/problems/delete-node-in-a-bst/)
-- [ ] [二叉搜索树的最小绝对差](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)
-- [ ] [把二叉搜索树转换为累加树](https://leetcode.com/problems/convert-bst-to-greater-tree/)
-- [ ] [修剪二叉搜索树](https://leetcode.com/problems/trim-a-binary-search-tree/)
+- [x] [修剪二叉搜索树](https://leetcode.com/problems/trim-a-binary-search-tree/)
+- [x] [二叉搜索树的最小绝对差](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)
+- [x] [把二叉搜索树转换为累加树](https://leetcode.com/problems/convert-bst-to-greater-tree/)
 
 11. [动态规划基础知识](https://www.geeksforgeeks.org/dynamic-programming/)
 **Fibonacci**
