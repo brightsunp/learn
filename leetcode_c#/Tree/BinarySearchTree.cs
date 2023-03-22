@@ -107,14 +107,74 @@ namespace TestMain.Tree
             };
         }
 
-        // It is much more tricky to find LCA in BST: 
-        //  "leftLCA != null && rightLCA != null" can be translated into "(root.val - p.val) * (root.val - q.val) < 0"
+        // It is much more tricky to find LCA in BST: "leftLCA ?? rightLCA" can be simply translated.
         private TreeNode FindLcaInBST(TreeNode root, TreeNode p, TreeNode q)
         {
             if (root == null) return null;
 
             if (root.val > p.val && root.val > q.val) return FindLcaInBST(root.left, p, q);
             if (root.val < p.val && root.val < q.val) return FindLcaInBST(root.right, p, q);
+            return root;
+        }
+
+        // Given a root node reference of a BST and a key, delete the node with the given key in the BST. Return the root node reference (possibly updated) of the BST.
+        //  1. Search for a node to remove.
+        //  2. If the node is found, delete the node.
+        private TreeNode DeleteNode(TreeNode root, int key)
+        {
+            TreeNode pre = null, cur = root;
+            while (cur != null && cur.val != key)
+            {
+                pre = cur;
+                if (cur.val > key)
+                {
+                    cur = cur.left;
+                }
+                else
+                {
+                    cur = cur.right;
+                }
+            }
+
+            // Find target at root, or never find target.
+            if (pre == null) return DeleteThisNode(cur);
+            if (pre.left == cur)
+            {
+                pre.left = DeleteThisNode(cur);
+            }
+            else
+            {
+                pre.right = DeleteThisNode(cur);
+            }
+            return root;
+        }
+
+        private TreeNode DeleteThisNode(TreeNode root)
+        {
+            if (root == null) return null;
+            if (root.left == null) return root.right;
+            if (root.right == null) return root.left;
+
+            // Find leftmost successor (min node) in right subtree.
+            TreeNode pre = root, cur = root.right;
+            while (cur.left != null)
+            {
+                pre = cur;
+                cur = cur.left;
+            }
+
+            // Delete min node.
+            if (pre != root)
+            {
+                pre.left = cur.right;
+            }
+            else
+            {
+                pre.right = cur.right;
+            }
+
+            // Replace root val with min val.
+            root.val = cur.val;
             return root;
         }
     }
