@@ -61,7 +61,7 @@
     <Compile Include="DynamicProgramming\MaxSubarray.cs" />
     <Compile Include="DynamicProgramming\PartitionEqualSum.cs" />
     <Compile Include="DynamicProgramming\PerfectSquares.cs" />
-    <Compile Include="DynamicProgramming\StockSeries.cs" />
+    <Compile Include="DynamicProgramming\StockExchangeSeries.cs" />
     <Compile Include="DynamicProgramming\TrianglePathSum.cs" />
     <Compile Include="DynamicProgramming\UniquePaths.cs" />
     <Compile Include="DynamicProgramming\WiggleSubsequence.cs" />

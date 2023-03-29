@@ -123,10 +123,6 @@
 - [x] [最小路径和](https://leetcode.com/problems/minimum-path-sum/)
 
 **0/1 Knapsack**
-- [ ] [目标和](https://leetcode.com/problems/target-sum/)
-- [x] [*分割等和子集](https://leetcode.com/problems/partition-equal-subset-sum/)
-- [x] [零钱兑换](https://leetcode.com/problems/coin-change/)
-- [x] [*零钱兑换II](https://leetcode.com/problems/coin-change-ii/)
 - [x] [买卖股票的最佳时机](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 - [x] [买卖股票的最佳时机II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
 - [x] [*买卖股票的最佳时机III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)
@@ -134,6 +130,10 @@
 - [x] [!买卖股票的最佳时机含冷冻期](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
 - [x] [买卖股票的最佳时机含手续费](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
 - [x] [摆动序列](https://leetcode.com/problems/wiggle-subsequence/)
+- [x] [零钱兑换](https://leetcode.com/problems/coin-change/)
+- [x] [*零钱兑换II](https://leetcode.com/problems/coin-change-ii/)
+- [ ] [目标和](https://leetcode.com/problems/target-sum/)
+- [x] [*分割等和子集](https://leetcode.com/problems/partition-equal-subset-sum/)
 
 **Subsequence**
 - [x] [最大连续子序列的和](https://leetcode.com/problems/maximum-subarray/)

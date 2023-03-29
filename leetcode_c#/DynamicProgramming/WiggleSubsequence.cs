@@ -33,7 +33,6 @@ namespace TestMain.DynamicProgramming
             var down = new int[nums.Length];
             up[0] = 1;
             down[0] = 1;
-
             for (int i = 1; i < nums.Length; i++)
             {
                 if (nums[i] > nums[i - 1])
@@ -52,7 +51,6 @@ namespace TestMain.DynamicProgramming
                     down[i] = down[i - 1];
                 }
             }
-
             return Math.Max(up[nums.Length - 1], down[nums.Length - 1]);
         }
 
@@ -70,7 +68,6 @@ namespace TestMain.DynamicProgramming
                     down = up + 1;
                 }
             }
-
             return Math.Max(up, down);
         }
     }

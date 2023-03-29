@@ -1,10 +1,10 @@
 ﻿/**
-* You are given an array prices where prices[i] is the price of a given stock on the ith day. You can only hold at most one share of the stock at any time.
-* I. You may choose a single day to buy one stock and a different day in the future to sell that stock.
-* II. You may complete as many transactions as you like.
-* III. You may complete at most two (or k) transactions.
-* Plus II. After you sell your stock, you cannot buy stock on the next day (i.e., cooldown one day).
-* Plus II. You need to pay the fee for each transaction.
+* You are given an array prices where prices[i] is the price of a given stock on the ith day. You can only hold at most one share of the stock at any time. 
+*   I. You may choose a single day to buy one stock and a different day in the future to sell that stock.
+*   II. You may complete as many transactions as you like.
+*   III. You may complete at most two (or k) transactions.
+*   Plus II. After you sell your stock, you cannot buy stock on the next day (i.e., cooldown one day).
+*   Plus II. You need to pay the fee for each transaction.
 * 
 * Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0. 
 * 1 <= prices.length <= 1000, 1 <= k <= 100.
@@ -14,7 +14,7 @@ using TestMain.Definitions;
 
 namespace TestMain.DynamicProgramming
 {
-    class StockSeries : Solution
+    class StockExchangeSeries : Solution
     {
         public override void Run()
         {
@@ -38,11 +38,11 @@ namespace TestMain.DynamicProgramming
 
         private int MaxProfit(int[] prices)
         {
-            int curMin = prices[0], res = 0;
+            int preMin = prices[0], res = 0;
             for (int i = 1; i < prices.Length; i++)
             {
-                res = Math.Max(res, prices[i] - curMin);
-                curMin = Math.Min(curMin, prices[i]);
+                res = Math.Max(res, prices[i] - preMin);
+                preMin = Math.Min(preMin, prices[i]);
             }
             return res;
         }
@@ -60,13 +60,13 @@ namespace TestMain.DynamicProgramming
         private int MaxProfitIII(int[] prices)
         {
             // dp[k, i] is the max profit until prices[i] with at most k transactions.
-            //  if not sold on prices[i], dp[k, i] = dp[k, i-1];
-            //  if sold on prices[i], dp[k, i] = dp[k-1, j] + prices[i] - prices[j] where j is in [0, ..., i-1]
-            //      whereas the sub-inner loop can be saved by updating a tmp variable.
-            // If k >= (n>>1), the problem can be converted to MaxProfitII.
+            //   If not sold on prices[i], dp[k, i] = dp[k, i-1];
+            //   If sold on prices[i], dp[k, i] = Max(dp[k-1, j] + prices[i] - prices[j] where j is in [0, ..., i-1]).
+            // If k >= (n>>1), the problem is converted to MaxProfitII since we can gain a profit for every price gap.
             int[,] dp = new int[3, prices.Length];
             for (int k = 1; k < 3; k++)
             {
+                // Use a tmp variable to save inner loop.
                 int tmpMax = dp[k - 1, 0] - prices[0];
                 for (int i = 1; i < prices.Length; i++)
                 {
@@ -74,18 +74,17 @@ namespace TestMain.DynamicProgramming
                     tmpMax = Math.Max(tmpMax, dp[k - 1, i] - prices[i]);
                 }
             }
-
             return dp[2, prices.Length - 1];
         }
 
         private int MaxProfitCooldown(int[] prices)
         {
             // 1. buy[i] is the max profit where the last non-rest action is buy.
-            //  a) if buy on i-th day, buy[i] = sell[i-2] - prices[i-1];
-            //  b) if rest on i-th day, buy[i] = buy[i-1]
+            //   a) if buy on i-th day, buy[i] = sell[i-2] - prices[i-1];
+            //   b) if rest on i-th day, buy[i] = buy[i-1].
             // 2. sell[i] is the max profit where the last non-rest action is sell.
-            //  a) if sell on i-th day, sell[i] = buy[i-1] + prices[i-1];
-            //  b) if rest on i-th day, sell[i] = sell[i-1]
+            //   a) if sell on i-th day, sell[i] = buy[i-1] + prices[i-1];
+            //   b) if rest on i-th day, sell[i] = sell[i-1].
             var buy = new int[prices.Length + 1];
             var sell = new int[prices.Length + 1];
             buy[1] = -prices[0];
@@ -94,7 +93,6 @@ namespace TestMain.DynamicProgramming
                 buy[i] = Math.Max(sell[i - 2] - prices[i - 1], buy[i - 1]);
                 sell[i] = Math.Max(buy[i - 1] + prices[i - 1], sell[i - 1]);
             }
-
             return sell[prices.Length];
         }
 
@@ -108,7 +106,6 @@ namespace TestMain.DynamicProgramming
                 buy[i] = Math.Max(sell[i - 1] - prices[i], buy[i - 1]);
                 sell[i] = Math.Max(buy[i - 1] + prices[i] - fee, sell[i - 1]);
             }
-
             return sell[prices.Length - 1];
         }
     }

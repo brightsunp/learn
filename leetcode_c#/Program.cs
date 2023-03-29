@@ -45,7 +45,7 @@ namespace TestMain
             var wiggle = new WiggleSubsequence();
             wiggle.Run();
 
-            var stockSeries = new StockSeries();
+            var stockSeries = new StockExchangeSeries();
             stockSeries.Run();
 
             var coinSeries = new CoinChangeSeries();
