@@ -1,12 +1,10 @@
 ﻿/**
 * You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. 
-* I. Adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night. 
-* II. All houses at this place are arranged in a circle. Plus constraint I. 
-* III. All houses in this place form a binary tree, and there is only one entrance called root. 
-*   It will automatically contact the police if two directly-linked houses were broken into on the same night.
-*   Given the root of the binary tree, return the maximum amount of money the thief can rob without alerting the police.
+*   I. Adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night. 
+*   II. All houses at this place are arranged in a circle. Plus constraint I. 
+*   III. All houses in this place form a binary tree, and there is only one entrance called root. "if two directly-linked houses were broken into on the same night."
 * 
-* Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.
+* Given an integer array (or root node) representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.
 * 1 <= nums.length <= 100, 0 <= nums[i] <= 400
 */
 using System;

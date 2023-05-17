@@ -173,6 +173,7 @@ namespace TestMain.Backtracking
             {
                 if (s[lo++] != s[hi--]) return false;
             }
+
             return true;
         }
     }

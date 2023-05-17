@@ -1,7 +1,7 @@
 ﻿/**
-* Dynamic Programming is mainly an optimization over plain recursion. 
-* The idea is to simply store the results of sub-problems. Using extra space, it reduces time complexity from exponential to polynomial. 
-* Key point is to figure out the format of each sub problem, and formula between sub problems.
+* Dynamic Programming is mainly an optimization over plain recursion: 
+*   The idea is to simply store the results of sub-problems. Using extra space, it reduces time complexity from exponential to polynomial. 
+*   Key point is to figure out the format of each sub problem, and formula between sub problems.
 * 
 *   "Someone may come up with O(1) space solution directly. But it's better to be generous when you think and be greedy when you implement."
 */

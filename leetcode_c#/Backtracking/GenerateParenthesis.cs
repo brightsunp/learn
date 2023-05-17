@@ -1,6 +1,5 @@
 ﻿/**
-* Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses. 
-* (1 <= n <= 8)
+* Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses. (1 <= n <= 8)
 * 
 * Input: n = 3
 * Output: ["((()))","(()())","(())()","()(())","()()()"]
@@ -27,11 +26,9 @@ namespace TestMain.Backtracking
         // The more parameters, the clearer code logic.
         private void ParenthesisInternal(int left, int right, string solution, IList<string> solutions)
         {
-            if (left > right)
-            {
-                return;
-            }
-            else if (left == 0 && right == 0)
+            if (left > right) return;
+            
+            if (left == 0 && right == 0)
             {
                 solutions.Add(solution);
             }

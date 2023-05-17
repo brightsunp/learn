@@ -1,6 +1,6 @@
-0. [时间复杂度与空间复杂度](https://www.geeksforgeeks.org/time-complexity-and-space-complexity/)
+## 0. [时间复杂度与空间复杂度](https://www.geeksforgeeks.org/time-complexity-and-space-complexity/)
 
-1. [栈基础知识](https://www.geeksforgeeks.org/introduction-to-stack-data-structure-and-algorithm-tutorials/)
+## 1. [栈基础知识](https://www.geeksforgeeks.org/introduction-to-stack-data-structure-and-algorithm-tutorials/)
 - [x] [有效的括号](https://leetcode.com/problems/valid-parentheses/)
 - [x] [基本计算器](https://leetcode.com/problems/basic-calculator/)
 - [x] [*最小栈](https://leetcode.com/problems/min-stack/)
@@ -8,11 +8,11 @@
 - [x] [*每日温度](https://leetcode.com/problems/daily-temperatures/)
 - [x] [接雨水](https://leetcode.com/problems/trapping-rain-water/)
 
-2. [队列基础知识](https://www.geeksforgeeks.org/introduction-to-queue-data-structure-and-algorithm-tutorials/)
+## 2. [队列基础知识](https://www.geeksforgeeks.org/introduction-to-queue-data-structure-and-algorithm-tutorials/)
 - [x] [用栈实现队列](https://leetcode.com/problems/implement-queue-using-stacks/)
 - [x] [*滑动窗口的所有最大值](https://leetcode.com/problems/sliding-window-maximum/)
 
-3. [链表基础知识](https://www.geeksforgeeks.org/introduction-to-linked-list-data-structure-and-algorithm-tutorial/)
+## 3. [链表基础知识](https://www.geeksforgeeks.org/introduction-to-linked-list-data-structure-and-algorithm-tutorial/)
 - [x] [反转链表](https://leetcode.com/problems/reverse-linked-list/)
 - [x] [反转链表II](https://leetcode.com/problems/reverse-linked-list-ii/)
 - [x] [!k个一组反转链表](https://leetcode.com/problems/reverse-nodes-in-k-group/)
@@ -25,9 +25,9 @@
 - [x] [回文链表](https://leetcode.com/problems/palindrome-linked-list/)
 - [x] [奇偶链表](https://leetcode.com/problems/odd-even-linked-list/)
 
-4. [递归基础知识](https://www.geeksforgeeks.org/introduction-to-recursion-data-structure-and-algorithm-tutorials/)
+## 4. [递归基础知识](https://www.geeksforgeeks.org/introduction-to-recursion-data-structure-and-algorithm-tutorials/)
 
-5. [排序基础知识](https://www.geeksforgeeks.org/sorting-algorithms/)
+## 5. [排序基础知识](https://www.geeksforgeeks.org/sorting-algorithms/)
 - [x] [冒泡排序](https://www.geeksforgeeks.org/bubble-sort/)
 - [x] [选择排序](https://www.geeksforgeeks.org/selection-sort/)
 - [x] [插入排序](https://www.geeksforgeeks.org/insertion-sort/)
@@ -41,9 +41,9 @@
 - [x] [有序数组的平方](https://leetcode.com/problems/squares-of-a-sorted-array/)
 - [x] [两数之和](https://leetcode.com/problems/two-sum/)
 
-6. [堆基础知识](https://www.geeksforgeeks.org/introduction-to-heap-data-structure-and-algorithm-tutorials/)
+## 6. [堆基础知识](https://www.geeksforgeeks.org/introduction-to-heap-data-structure-and-algorithm-tutorials/)
 
-7. [二分查找基础知识](https://www.geeksforgeeks.org/binary-search/)
+## 7. [二分查找基础知识](https://www.geeksforgeeks.org/binary-search/)
 - [x] [二分查找](https://leetcode.com/problems/binary-search/)
 - [x] [搜索插入位置](https://leetcode.com/problems/search-insert-position/)
 - [x] [在排序数组中查找元素的第一个和最后一个位置](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
@@ -56,7 +56,7 @@
 - [x] [第一个错误的版本](https://leetcode.com/problems/first-bad-version/)
 - [x] [有效的完全平方数](https://leetcode.com/problems/valid-perfect-square/)
 
-8. [位运算基础知识](https://www.geeksforgeeks.org/introduction-to-bitwise-algorithms-data-structures-and-algorithms-tutorial/)
+## 8. [位运算基础知识](https://www.geeksforgeeks.org/introduction-to-bitwise-algorithms-data-structures-and-algorithms-tutorial/)
 - [x] [丢失的数字](https://leetcode.com/problems/missing-number/)
 - [x] [2的幂](https://leetcode.com/problems/power-of-two/)
 - [x] [比特位计数](https://leetcode.com/problems/counting-bits/)
@@ -66,7 +66,7 @@
 - [x] [*最大单词长度乘积](https://leetcode.com/problems/maximum-product-of-word-lengths/)
 - [x] [Hamming Distance](https://leetcode.com/problems/hamming-distance/)
 
-9. [回溯基础知识](https://www.geeksforgeeks.org/introduction-to-backtracking-data-structure-and-algorithm-tutorials/)
+## 9. [回溯基础知识](https://www.geeksforgeeks.org/introduction-to-backtracking-data-structure-and-algorithm-tutorials/)
 **Recursive**
 - [x] [!全子集](https://leetcode.com/problems/subsets/)
 - [x] [全排列](https://leetcode.com/problems/permutations/)
@@ -81,7 +81,7 @@
 - [ ] [岛屿数量](https://leetcode.com/problems/number-of-islands/)
 - [ ] [接雨水II](https://leetcode.com/problems/trapping-rain-water-ii/)
 
-10. [二叉树基础知识](https://www.geeksforgeeks.org/introduction-to-binary-tree-data-structure-and-algorithm-tutorials/)
+## 10. [二叉树基础知识](https://www.geeksforgeeks.org/introduction-to-binary-tree-data-structure-and-algorithm-tutorials/)
 **Traverse**
 - [x] [二叉树的前序遍历](https://leetcode.com/problems/binary-tree-preorder-traversal/)
 - [x] [*二叉树的中序遍历](https://leetcode.com/problems/binary-tree-inorder-traversal/)
@@ -114,7 +114,7 @@
 - [x] [二叉搜索树的最小绝对差](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)
 - [x] [把二叉搜索树转换为累加树](https://leetcode.com/problems/convert-bst-to-greater-tree/)
 
-11. [动态规划基础知识](https://www.geeksforgeeks.org/dynamic-programming/)
+## 11. [动态规划基础知识](https://www.geeksforgeeks.org/dynamic-programming/)
 **Fibonacci**
 - [x] [斐波那契数](https://leetcode.com/problems/fibonacci-number/)
 - [x] [爬楼梯](https://leetcode.com/problems/climbing-stairs/)
@@ -155,7 +155,7 @@
 - [ ] [地下城游戏](https://leetcode.com/problems/dungeon-game/)
 - [ ] [编辑距离](https://leetcode.com/problems/edit-distance/)
 
-12. [贪心基础知识](https://www.geeksforgeeks.org/greedy-algorithms/)
+## 12. [贪心基础知识](https://www.geeksforgeeks.org/greedy-algorithms/)
 - [x] [分发饼干](https://leetcode.com/problems/assign-cookies/)
 - [x] [柠檬水找零](https://leetcode.com/problems/lemonade-change/)
 - [x] [*移掉k位数字](https://leetcode.com/problems/remove-k-digits/)
